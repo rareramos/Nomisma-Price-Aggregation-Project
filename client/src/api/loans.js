@@ -4,5 +4,5 @@ import {
 } from './urls';
 
 export const fetchLoanTokens = basicGet(
-  getLoanTokens()
+  getLoanTokens(),
 );

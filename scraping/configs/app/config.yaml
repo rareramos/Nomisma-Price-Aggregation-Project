@@ -1,0 +1,7 @@
+PRICE_AGG_DB_URI: 'localhost:27017'
+PRICE_AGG_DB_NAME: 'nomisma-price-aggr'
+PRICE_AGG_DB_QUASI_LIVE_COLLECTION: 'cfd-quasi-live-data'
+PRICE_AGG_DB_SYMBOL_MAPS_COLLECTION: 'cfd-scraping-symbols-map'
+PRICE_AGG_DB_USERNAME: ''
+PRICE_AGG_DB_PASSWORD: ''
+PRICE_AGG_SOCKET_ADDRESS: 'ws://localhost:38495'

@@ -1,0 +1,12 @@
+IG API symbol,Name,Contract,Symbol - Nomisma,Classification,Base,Underlying
+CS.D.BCHUSD.CFD.IP,BCH/USD,Perpetual,BCH/USD - Perpetual,Pair,BCH,USD
+CS.D.BITCOIN.CFD.IP,BTC/USD,Perpetual,BTC/USD - Perpetual,Pair,BTC,USD
+CS.D.EOSUSD.CFD.IP,EOS/USD,Perpetual,EOS/USD - Perpetual,Pair,EOS,USD
+CS.D.ETHUSD.CFD.IP,ETH/USD,Perpetual,ETH/USD - Perpetual,Pair,ETH,USD
+CS.D.LTCUSD.CFD.IP,LTC/USD,Perpetual,LTC/USD - Perpetual,Pair,LTC,USD
+CS.D.NEOUSD.CFD.IP,NEO/USD,Perpetual,NEO/USD - Perpetual,Pair,NEO,USD
+CS.D.XLMUSD.CFD.IP,XLM/USD,Perpetual,XLM/USD - Perpetual,Pair,XLM,USD
+CS.D.XRPUSD.CFD.IP,XRP/USD,Perpetual,XRP/USD - Perpetual,Pair,XRP,USD
+CS.D.CRYPTOB10.CFD.IP,IG Index Crypto 10,Perpetual,IG Index Crypto 10 - Perpetual,Index,CRY,USD
+CS.D.BCHXBT.CFD.IP,BCH/BTC,Perpetual,BCH/BTC - Perpetual,Pair,BCH,BTC
+CS.D.ETHXBT.CFD.IP,ETH/BTC,Perpetual,ETH/BTC - Perpetual,Pair,ETH,BTC

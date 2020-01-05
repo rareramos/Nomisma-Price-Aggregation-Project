@@ -1,10 +1,10 @@
-import { maclaurinBinomialBN } from 'nomisma-smart-contract-helpers';
+import { maclaurinBinomialBN } from '@nomisma/nomisma-smart-contract-helpers';
 import { bnToFloatStringWithFractionDecimals } from '../utils/bn-float';
 import { getWeb3 } from './generic';
 
 const web3 = getWeb3();
 
-const BN = web3.utils.BN;
+const { BN } = web3.utils;
 
 const dayInSeconds = new BN(24 * 60 * 60);
 
@@ -23,7 +23,7 @@ export const calculateLoanApr = ({
   } else {
     const loanTermInSeconds = new BN(timestampEnd)
       .sub(
-        new BN(timestampStart)
+        new BN(timestampStart),
       );
     let interestQ = new BN(principal)
       .div(new BN(interest));

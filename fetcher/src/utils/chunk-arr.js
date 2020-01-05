@@ -1,16 +1,16 @@
 
 export const chunkArr = (arr, chunkSize) => new Array(
   Math.ceil(
-    arr.length / chunkSize
-  )
+    arr.length / chunkSize,
+  ),
 )
   .fill()
   .map(
     (
       _,
-      i
+      i,
     ) => arr.slice(
       i * chunkSize,
-      i * chunkSize + chunkSize
-    )
+      i * chunkSize + chunkSize,
+    ),
   );

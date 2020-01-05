@@ -1,0 +1,16 @@
+<p>Daily Checking Notification.</p>
+
+<div>Timestamp: {{ timestamp }}</div>
+<div>
+  Summary: {{ #summary }}
+  <p>
+    {{ serviceName }}: {{#status}}<b style="color: green;">Successful</b>{{/status}}
+    {{^status}}<b style="color: red;">Unsuccessful</b>{{/status}};
+    <i
+      >{{ matched }} instruments matched; {{ unmatched }} instrument unmatched;<br />
+      {{ countApiInstruments }} instruments from API; {{ countScrapingInstuments }} instruments from
+      data scraper;</i
+    >
+  </p>
+  {{ /summary }}
+</div>

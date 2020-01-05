@@ -1,3 +1,3 @@
 import { selectTableFromState } from './index';
 
-export const selectTableLoadingSelector = (state) => selectTableFromState(state).loading;
+export const selectTableLoadingSelector = state => selectTableFromState(state).loading;

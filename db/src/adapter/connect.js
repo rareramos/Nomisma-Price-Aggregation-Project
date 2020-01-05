@@ -19,16 +19,26 @@ export async function connect(options) {
 
   const uri = !!options && !!options.url ? options.url : environment.database.MONGODB_URI;
   const dbPath = !!options && !!options.db ? options.db : environment.database.DB_PATH;
+  const configPath = environment.database.CONFIG_PATH;
+  /* eslint-disable-next-line import/no-dynamic-require, global-require */
+  const config = configPath ? require(configPath) : {};
 
   try {
     client = await MongoClient.connect(uri, {
       useNewUrlParser: true,
+      ...config,
     });
     db = client.db(dbPath);
-    log.info('MongoDB connection established');
+
+    log.info({
+      message: 'MongoDB connection established',
+    });
+
     return db;
   } catch (error) {
-    log.error('MongoDB connection could not be established');
+    log.error({
+      message: 'MongoDB connection could not be established',
+    });
 
     throw error;
   }
@@ -37,13 +47,17 @@ export async function connect(options) {
 export async function close(code) {
   if (client !== null) {
     const log = getLogger();
-    log.info(`MongoDB connection closing with exit code: ${code}`);
+
+    log.info({
+      message: `MongoDB connection closing with exit code: ${code}`,
+    });
+
     await client.close();
   }
 }
 
 export async function collection(
-  collectionName
+  collectionName,
 ) {
   if (db === null) {
     throw new Error('MongoDB connection is not established');

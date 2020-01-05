@@ -1,7 +1,7 @@
 
 let logger = null;
 
-export const setLogger = env => {
+export const setLogger = (env) => {
   logger = env;
 };
 

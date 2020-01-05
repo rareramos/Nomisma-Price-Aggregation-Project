@@ -1,7 +1,7 @@
-import environment from '../../environment';
 import { stringify } from 'querystring';
 import fetch from 'node-fetch';
 import { CMCConvertResult } from 'price-aggregation-db';
+import environment from '../../environment';
 import { log } from '../utils/logger';
 
 const {
@@ -44,15 +44,25 @@ export const getCurrentConvertRate = async ({
   let toReturn;
   if (!!items && !!items.length) {
     // this is too noisy
-    // log.info(`Using rate ${symbol}-${convert} from db`);
+    log.debug({
+      message: `Using rate ${symbol}-${convert} from db`,
+    });
+
     toReturn = items[0].payload;
   } else {
-    log.info(`Rate for ${symbol}-${convert} not found. fetching`);
+    log.debug({
+      message: `Rate for ${symbol}-${convert} not found. fetching`,
+    });
+
     const payload = await doCmcRequest({
       symbol,
       convert,
     });
-    log.info(`Saving rate ${symbol}-${convert} = ${payload} to db`);
+
+    log.debug({
+      message: `Saving rate ${symbol}-${convert} = ${payload} to db`,
+    });
+
     await CMCConvertResult.insertOne({
       filterId,
       payload,

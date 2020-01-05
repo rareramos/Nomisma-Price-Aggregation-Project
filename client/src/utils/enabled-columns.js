@@ -1,24 +1,24 @@
 import { LoadableTokenIcon } from '../components/common/loadable-token-icon';
-import ViewCell from '../components/table/view-cell';
+import { ViewCell } from '../components/table/view-cell';
 
 const commonColumns = [
   {
     columnName: 'Loan Time',
     key: 'loanFromNow',
-    selector: item => {
+    selector: (item) => {
       const currentTime = new Date().getTime();
       const loanTime = new Date(item.loanTimestamp * 1000);
       let timeId = Math.ceil((currentTime - loanTime) / 1000 / 60);
       if (timeId < 60) {
-        timeId = timeId + ' minutes ago';
+        timeId += ' minutes ago';
       } else if (timeId < 24 * 60) {
-        timeId = Math.ceil(timeId / 60) + ' hours ago';
+        timeId = `${Math.ceil(timeId / 60)} hours ago`;
       } else if (timeId < 24 * 60 * 30) {
-        timeId = Math.ceil(timeId / 60 / 24) + ' days ago';
+        timeId = `${Math.ceil(timeId / 60 / 24)} days ago`;
       } else if (timeId < 24 * 60 * 30 * 12) {
-        timeId = Math.ceil(timeId / 60 / 24 / 30) + ' months ago';
+        timeId = `${Math.ceil(timeId / 60 / 24 / 30)} months ago`;
       } else if (timeId < 24 * 60 * 30 * 12 * 100) {
-        timeId = Math.ceil(timeId / 60 / 24 / 30 / 12) + ' years ago';
+        timeId = `${Math.ceil(timeId / 60 / 24 / 30 / 12)} years ago`;
       }
       return timeId;
     },
@@ -31,7 +31,7 @@ const commonColumns = [
   {
     columnName: 'Loan Amount',
     key: 'loanAmount',
-    selector: item => {
+    selector: (item) => {
       // Loan Amount = {element.principal} {element.tokenSymbol} (${element.principalUsd})
       const loanDollar = (parseFloat(item.principalUsd)).toFixed(4);
       const loanCrypto = (parseFloat(item.principal)).toFixed(4);

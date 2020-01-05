@@ -1,3 +1,4 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import Web3 from 'web3';
 import { utils } from '@nomisma/nomisma-contracts-sdk';
 import { CallMethod } from 'web3-core-method';
@@ -7,22 +8,20 @@ import environment from '../../environment';
 
 const { convertBigNumberToString } = utils;
 
-const getProviderUrl = env => {
-  return env.PROVIDER_URL;
-};
+const getProviderUrl = env => env.PROVIDER_URL;
 
 export const getWeb3 = () => {
   const providerUrl = getProviderUrl(environment.blockchain);
   return new Web3(new Web3.providers.HttpProvider(providerUrl));
 };
 
-const _getContract = web3 => ({
+const getContractData = web3 => ({
   contractAddress,
   abi,
 }) => {
   const underlyingContract = new web3.eth.Contract(
     JSON.parse(abi),
-    contractAddress
+    contractAddress,
   );
   return new Proxy(underlyingContract, {
     get(target, prop) {
@@ -30,7 +29,7 @@ const _getContract = web3 => ({
       if (prop === 'getPastEvents') {
         toReturn = async (...args) => {
           const resultArr = await target.getPastEvents(...args);
-          return resultArr.map(item => {
+          return resultArr.map((item) => {
             if (
               !!item.returnValues
               && !!Object.entries(item.returnValues).length
@@ -67,4 +66,4 @@ export const dataToCallMethod = ({
   return method;
 };
 
-export const getContract = (...rest) => _getContract(getWeb3())(...rest);
+export const getContract = (...rest) => getContractData(getWeb3())(...rest);

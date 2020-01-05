@@ -1,14 +1,14 @@
 import {
+  getCurrentRunnerModelConfig,
+  setCurrentRunnerModelsConfig,
+  DharmaTermsContractRepayParams,
+} from 'price-aggregation-db';
+import {
   dataToCallMethod,
   getContract,
   getWeb3,
 } from '../generic';
 import environment from '../../../environment';
-import {
-  getCurrentRunnerModelConfig,
-  setCurrentRunnerModelsConfig,
-  DharmaTermsContractRepayParams,
-} from 'price-aggregation-db';
 import {
   collateralisedTermsAbi,
   dharmaEventNamesToColumnNamesMapDebtKernel,
@@ -34,7 +34,7 @@ const getTermsContractsHashAndLogEntryEvents = async () => {
   const events = await model.find();
   const termsContractsHash = {};
   const termsContractsToAgreementIdsHash = {};
-  events.forEach(event => {
+  events.forEach((event) => {
     if (!termsContractsHash[event.termsContract]) {
       termsContractsHash[event.termsContract] = true;
     }
@@ -62,26 +62,25 @@ const getRepaymentValues = async ({
   const expectedRepaymentValueMethods = chunk.map(
     (
       agreementId,
-      idx
-    ) =>
-      collateralisedTermsContract.methods.getExpectedRepaymentValue(
-        agreementId,
-        termsEndTimestampPayloads[idx]
-      ).encodeABI(),
+      idx,
+    ) => collateralisedTermsContract.methods.getExpectedRepaymentValue(
+      agreementId,
+      termsEndTimestampPayloads[idx],
+    ).encodeABI(),
   )
     .map(
       data => dataToCallMethod({
         data,
         contractAddress: collateralisedTermsContract.address,
-      })
+      }),
     );
   const repaymentValueBatchRequester = web3.BatchRequest();
-  expectedRepaymentValueMethods.forEach(method => {
+  expectedRepaymentValueMethods.forEach((method) => {
     repaymentValueBatchRequester.add(method);
   });
   const repaymentValuePayload = await repaymentValueBatchRequester.execute();
   return repaymentValuePayload.response.map(
-    item => web3.utils.toBN(item).toString()
+    item => web3.utils.toBN(item).toString(),
   );
 };
 
@@ -91,44 +90,42 @@ const getTermsEndsAndRepaidToDateValuesForChunk = async ({
 }) => {
   const web3 = getWeb3();
   const termsEndTimestampsMethods = chunk.map(
-    agreementId =>
-      collateralisedTermsContract.methods.getTermEndTimestamp(
-        agreementId
-      ).encodeABI(),
+    agreementId => collateralisedTermsContract.methods.getTermEndTimestamp(
+      agreementId,
+    ).encodeABI(),
   )
     .map(
       data => dataToCallMethod({
         data,
         contractAddress: collateralisedTermsContract.address,
-      })
+      }),
     );
   const repaidToDateValuesMethods = chunk.map(
-    agreementId =>
-      collateralisedTermsContract.methods.getValueRepaidToDate(
-        agreementId,
-      ).encodeABI()
+    agreementId => collateralisedTermsContract.methods.getValueRepaidToDate(
+      agreementId,
+    ).encodeABI(),
   )
     .map(
       data => dataToCallMethod({
         data,
         contractAddress: collateralisedTermsContract.address,
-      })
+      }),
     );
   const batchRequester = web3.BatchRequest();
   const concatenatedMethodsArr = [
     ...termsEndTimestampsMethods,
     ...repaidToDateValuesMethods,
   ];
-  concatenatedMethodsArr.forEach(method => {
+  concatenatedMethodsArr.forEach((method) => {
     batchRequester.add(method);
   });
   const concatPayload = await batchRequester.execute();
   const parsedConcatPayload = concatPayload.response.map(
-    item => web3.utils.toBN(item).toString()
+    item => web3.utils.toBN(item).toString(),
   );
   const termsEndTimestampPayloads = parsedConcatPayload.slice(
     0,
-    concatenatedMethodsArr.length / 2
+    concatenatedMethodsArr.length / 2,
   );
   const repaidToDateValuePayloads = parsedConcatPayload.slice(
     concatenatedMethodsArr.length / 2,
@@ -146,7 +143,11 @@ const fetchContractTermsStateParams = async () => {
     termsContractsToAgreementIdsHash,
   } = await getTermsContractsHashAndLogEntryEvents();
   const termsArr = Object.keys(termsHash);
-  log.info(`Starting to fetch contract terms params for ${termsArr.length} terms contracts`);
+
+  log.debug({
+    message: `Starting to fetch contract terms params for ${termsArr.length} terms contracts`,
+  });
+
   const lastBlock = await getToBlock();
   return termsArr.reduce(
     async (
@@ -166,7 +167,7 @@ const fetchContractTermsStateParams = async () => {
         updateBlock: {
           $gt: lastBlock - parseInt(
             environment.blockchain.BALANCES_UPDATE_BLOCK_INTERVAL,
-            10
+            10,
           ),
         },
       });
@@ -177,38 +178,49 @@ const fetchContractTermsStateParams = async () => {
         updateBlock: {
           $lte: lastBlock - parseInt(
             environment.blockchain.BALANCES_UPDATE_BLOCK_INTERVAL,
-            10
+            10,
           ),
         },
       });
       const toUpdateAgreementIdsHash = {};
       toUpdateAgreementIdsObjects.forEach(
-        item => {
+        (item) => {
           toUpdateAgreementIdsHash[item.agreementId] = true;
-        }
+        },
       );
-      log.info(`Wont fetch params for ${
-        toFilterOutAgreementIds.length
-      } agreements as already have recent details on them`);
+
+      log.debug({
+        message: `Wont fetch params for ${
+          toFilterOutAgreementIds.length
+        } agreements as already have recent details on them`,
+      });
+
       const toFilterAgreementIdsHash = {};
-      toFilterOutAgreementIds.forEach(item => {
+      toFilterOutAgreementIds.forEach((item) => {
         toFilterAgreementIdsHash[item.agreementId] = true;
       });
       const filteredAgreementIds = agreementIds.filter(id => !toFilterAgreementIdsHash[id]);
       const chunkedAgreementIds = chunkArr(filteredAgreementIds, 500);
-      log.info(`Starting to fetch contract terms params for contract ${
-        contractAddress
-      } for ${
-        filteredAgreementIds.length
-      } agreements with ${chunkedAgreementIds.length} chunks`
-      );
+
+      log.debug({
+        message: `Starting to fetch contract terms params for contract ${
+          contractAddress
+        } for ${
+          filteredAgreementIds.length
+        } agreements with ${chunkedAgreementIds.length} chunks`,
+      });
+
       return chunkedAgreementIds.reduce(
         async (
           chunksAcc,
-          chunk
+          chunk,
         ) => {
           await chunksAcc;
-          log.info(`Starting to fetch contract terms params for chunk of ${chunk.length} items`);
+
+          log.debug({
+            message: `Starting to fetch contract terms params for chunk of ${chunk.length} items`,
+          });
+
           const {
             repaidToDateValuePayloads,
             termsEndTimestampPayloads,
@@ -232,10 +244,13 @@ const fetchContractTermsStateParams = async () => {
             updateBlock: lastBlock,
           }));
 
-          log.info(`Successfully fetched ${paramsArr.length} params. Saving to db`);
+          log.debug({
+            message: `Successfully fetched ${paramsArr.length} params. Saving to db`,
+          });
+
           const updateArr = [];
           const insertArr = [];
-          paramsArr.forEach(item => {
+          paramsArr.forEach((item) => {
             if (toUpdateAgreementIdsHash[item.agreementId]) {
               updateArr.push(item);
             } else {
@@ -255,10 +270,10 @@ const fetchContractTermsStateParams = async () => {
             );
           }, Promise.resolve());
         },
-        Promise.resolve()
+        Promise.resolve(),
       );
     },
-    Promise.resolve()
+    Promise.resolve(),
   );
 };
 
@@ -284,7 +299,11 @@ const fetchContractTermsEvents = async () => {
           item,
         ) => {
           await acc;
-          log.info(`Determining origin block for terms contract ${contractAddress}`);
+
+          log.debug({
+            message: `Determining origin block for terms contract ${contractAddress}`,
+          });
+
           const lastCursor = await item[1].aggregate([
             {
               $match: {
@@ -301,12 +320,12 @@ const fetchContractTermsEvents = async () => {
             },
           ]);
           const lastArr = await lastCursor.toArray();
-          const last = lastArr[ 0 ];
-          let _fromBlock;
+          const last = lastArr[0];
+          let fromBlock;
           if (last && last.blockNumber > 0) {
-            _fromBlock = last.blockNumber + 1;
+            fromBlock = last.blockNumber + 1;
           } else {
-            _fromBlock = 0;
+            fromBlock = 0;
           }
           return getEventOfTypeFactory({
             contract: collateralisedTermsContract,
@@ -314,15 +333,15 @@ const fetchContractTermsEvents = async () => {
               event => ({
                 ...event,
                 termsContract: contractAddress,
-              })
+              }),
             ),
-            _fromBlock,
+            fromBlock,
           })(innerAcc, item);
         },
-        Promise.resolve()
+        Promise.resolve(),
       );
     },
-    Promise.resolve()
+    Promise.resolve(),
   );
 };
 
@@ -337,7 +356,7 @@ const fetchKernel = async () => {
       getEventOfTypeFactory({
         contract: debtKernelContract,
       }),
-      Promise.resolve()
+      Promise.resolve(),
     );
 };
 
@@ -350,7 +369,7 @@ const fetchDebtRegistry = async () => {
       getEventOfTypeFactory({
         contract: debtRegistryContract,
       }),
-      Promise.resolve()
+      Promise.resolve(),
     );
 };
 
@@ -365,7 +384,7 @@ const fetchCollateraliser = async () => {
       getEventOfTypeFactory({
         contract: collateraliserContract,
       }),
-      Promise.resolve()
+      Promise.resolve(),
     );
 };
 
@@ -380,7 +399,7 @@ const fetchRepaymentRouterEvents = async () => {
       getEventOfTypeFactory({
         contract: repaymentRouterContract,
       }),
-      Promise.resolve()
+      Promise.resolve(),
     );
 };
 

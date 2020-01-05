@@ -25,7 +25,7 @@ const runCompound = async () => {
       getEventOfTypeFactory({
         contract,
       }),
-      Promise.resolve()
+      Promise.resolve(),
     );
 };
 

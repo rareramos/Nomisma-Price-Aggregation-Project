@@ -1,4 +1,6 @@
-import { call, fork, select, takeLatest } from 'redux-saga/effects';
+import {
+  call, fork, select, takeLatest,
+} from 'redux-saga/effects';
 import {
   TABLE_SOURCE_UPDATE,
   TABLE_PAGE_UPDATE,

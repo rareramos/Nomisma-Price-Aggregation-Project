@@ -1,4 +1,5 @@
 # server-side
+
 MongoDB, Express, Node
 
 ## Usage
@@ -6,6 +7,7 @@ MongoDB, Express, Node
 ### Prepare your secret
 
 run the script at the first level: (You need to add a JWT_SECRET in .env to connect to MongoDB)
+
 ```terminal
 // in the root level
 $ echo "JWT_SECRET=YOUR_JWT_SECRET" >> ./server/src/.env
@@ -22,6 +24,7 @@ $ npm run build // this will build the server code to es5 js codes and generate 
 ```
 
 # Dependencies(tech-stack)
+
 | Server-side
 | ---
 | bcrypt-nodejs: ^0.0.3
@@ -34,12 +37,16 @@ $ npm run build // this will build the server code to es5 js codes and generate 
 | morgan: ^1.7.0
 
 ## BUGs or comments
+
 [Create new Issues](https://github.com/amazingandyyy/mern-stack/issues)
 
 ## Author
+
 [Amazingandyyy](amazingandyyy.github.io)
+
 - Feel free to find me on _[GitHub](https://github.com/amazingandyyy)_ and _[LiveCoding](https://www.livecoding.tv/amazingandyyy/)_
 - or visit my _[page](http://amazingandyyy.github.io/)_
 
 ### License
+
 [MIT](https://github.com/amazingandyyy/eventbrite-api/blob/master/LICENSE)

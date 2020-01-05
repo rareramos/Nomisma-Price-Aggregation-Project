@@ -6,13 +6,13 @@ import {
   selectChartPeriodsSelector,
 } from '../../../selectors/chart';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   selectedSource: selectPeriodFromState(state),
   periods: selectChartPeriodsSelector(),
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  onClick: (selected) => dispatch(updateChartPeriod(selected)),
+const mapDispatchToProps = dispatch => ({
+  onClick: selected => dispatch(updateChartPeriod(selected)),
 });
 
 export const Period = connect(mapStateToProps, mapDispatchToProps)(PeriodComp);

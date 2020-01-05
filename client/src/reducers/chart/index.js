@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
-import data from './data';
-import dataSecondary from './data-secondary';
-import loading from './loading';
-import period from './period';
-import source from './source';
-import currency from './currency';
-import compare from './compare';
+import { dataReducer as data } from './data';
+import { dataSecondaryReducer as dataSecondary } from './data-secondary';
+import { loadingReducer as loading } from './loading';
+import { periodReducer as period } from './period';
+import { sourceReducer as source } from './source';
+import { currencyReducer as currency } from './currency';
+import { compareReducer as compare } from './compare';
 
-const chartReducer = combineReducers({
+export const chartReducer = combineReducers({
   loading,
   period,
   source,
@@ -16,5 +16,3 @@ const chartReducer = combineReducers({
   compare,
   dataSecondary,
 });
-
-export default chartReducer;

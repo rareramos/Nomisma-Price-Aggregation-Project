@@ -1,32 +1,37 @@
 import { call, fork } from 'redux-saga/effects';
 
-import {
-  tableSaga,
-} from './table';
+// import {
+//   tableSaga,
+// } from './table';
 
 import {
-  fetchChartSaga,
+  topTabsSaga,
+} from './top-tabs';
+
+import {
+  chartCompareSaga,
+  chartCurrencySaga,
+  chartFetchSecondarySaga,
   chartPeriodSaga,
   chartSourceSaga,
-  chartCurrencySaga,
-  chartCompareSaga,
-  chartFetchSecondarySaga,
+  fetchChartSaga,
 } from './chart';
-
-import { signInSaga, signUpSaga, signOutSaga } from './account';
-
 import { loansSaga } from './loans';
 
+import { cfdSaga } from './cfd';
+
+import { instrumentsSaga } from './instruments';
+
 export function* rootSaga() {
-  yield fork(signInSaga);
-  yield fork(signUpSaga);
-  yield fork(signOutSaga);
-  yield fork(fetchChartSaga);
+  yield fork(cfdSaga);
+  yield fork(chartCompareSaga);
+  yield fork(chartCurrencySaga);
+  yield fork(chartFetchSecondarySaga);
   yield fork(chartPeriodSaga);
   yield fork(chartSourceSaga);
-  yield fork(chartCurrencySaga);
-  yield fork(chartCompareSaga);
-  yield fork(chartFetchSecondarySaga);
+  yield fork(fetchChartSaga);
+  yield fork(instrumentsSaga);
+  yield fork(topTabsSaga);
   yield call(loansSaga);
-  yield call(tableSaga);
+  // yield call(tableSaga);
 }

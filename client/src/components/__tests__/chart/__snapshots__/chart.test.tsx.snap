@@ -1,0 +1,122 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`chart tests matches chart view snapshot 1`] = `
+<div>
+  <styled.div
+    column="160px 328px 196px"
+    columnGap="256px"
+  >
+    <Connect(CurrenciesComp) />
+    <Connect(SourceComp) />
+    <Connect(Period) />
+  </styled.div>
+  <StrikeChart
+    currency="USD"
+    data={Array []}
+    dataName="All"
+    height="400px"
+    hideFunctions={true}
+    id="chartdiv"
+    loading={true}
+    secondaryDataName={false}
+    secondaryDataSet={Array []}
+    width="100%"
+  />
+  <styled.div
+    column="auto 100px"
+  >
+    <styled.div
+      column="90px 50px"
+    >
+      <div>
+        Comapare:
+      </div>
+      <Connect(ComapreComp) />
+    </styled.div>
+  </styled.div>
+</div>
+`;
+
+exports[`chart tests matches compare snapshot 1`] = `
+<Switch
+  checked={false}
+  onChange={[Function]}
+/>
+`;
+
+exports[`chart tests matches currency snapshot 1`] = `
+<ChartTabs
+  navItems={
+    Array [
+      Object {
+        "title": "USD",
+        "type": "usd",
+      },
+      Object {
+        "title": "ETH",
+        "type": "eth",
+      },
+      Object {
+        "title": "BTC",
+        "type": "btc",
+      },
+    ]
+  }
+  selected="usd"
+  setActiveNavItem={[Function]}
+/>
+`;
+
+exports[`chart tests matches period snapshot 1`] = `
+<ChartTabs
+  navItems={
+    Array [
+      Object {
+        "title": "24h",
+        "type": "86400",
+      },
+      Object {
+        "title": "7d",
+        "type": "604800",
+      },
+      Object {
+        "title": "30d",
+        "type": "2592000",
+      },
+      Object {
+        "title": "6m",
+        "type": "15552000",
+      },
+    ]
+  }
+  selected="usd"
+  setActiveNavItem={[Function]}
+/>
+`;
+
+exports[`chart tests matches source snapshot 1`] = `
+<ChartTabs
+  navItems={
+    Array [
+      Object {
+        "title": "All",
+        "type": "all",
+      },
+      Object {
+        "title": "Compound",
+        "type": "compound",
+      },
+      Object {
+        "title": "Dharma",
+        "type": "dharma",
+      },
+      Object {
+        "title": "Maker DAO",
+        "type": "maker",
+      },
+    ]
+  }
+  selected="usd"
+  setActiveNavItem={[Function]}
+/>
+`;

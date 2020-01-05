@@ -1,28 +1,30 @@
 import React from 'react';
-import { func, arrayOf, object, number } from 'prop-types';
 import {
-  Tabs,
-  TabPanel,
-} from '@nomisma/nomisma-ui/beta/tabs';
+  func, arrayOf, object, number,
+} from 'prop-types';
+import { SecondaryNav, TabsSecondaryItem } from '@nomisma/nomisma-ui/tabs/styles';
+import { useTabs } from '@nomisma/nomisma-ui/tabs';
 import { Styled } from './styled';
 
-export const Switcher = ({ tabs, selectedSource, onClick }) => (
-  <Styled>
-    <Tabs
-      selected={ selectedSource }
-      setActiveTab={ (index) => onClick(tabs[index].value) }
-    >
-      {
-        tabs.map((tab) => (
-          <TabPanel
-            key={ tab.value }
-            title={ tab.name }
-          />
-        ))
-      }
-    </Tabs>
-  </Styled>
-);
+export const Switcher = ({ tabs, selectedSource, onClick }) => {
+  const { getTabProps } = useTabs();
+  return (
+    <Styled>
+      <SecondaryNav
+        selected={selectedSource}
+        setActiveTab={index => onClick(tabs[index].value)}
+      >
+        {
+          tabs.map((tab, index) => (
+            <TabsSecondaryItem
+              {...getTabProps(index)}
+            />
+          ))
+        }
+      </SecondaryNav>
+    </Styled>
+  );
+};
 
 Switcher.propTypes = {
   selectedSource: number.isRequired,

@@ -8,35 +8,31 @@
     "install:db": "yarn --cwd db install",
     "install:fetcher": "yarn --cwd fetcher install",
     "install:server": "yarn --cwd server install",
-    "install:all": "yarn install:client && yarn install:db && yarn install:fetcher && yarn install:server",
-    "lint:client": "yarn --cwd client lint",
+    "install:pubsub": "yarn --cwd pubsub install",
+    "install:all": "yarn install & yarn install:client && yarn install:db && yarn install:fetcher && yarn install:server && yarn install:pubsub",
+    "lint:client": "yarn --cwd client lint --fix",
     "lint:db": "yarn --cwd db lint",
     "lint:fetcher": "yarn --cwd fetcher lint",
     "lint:server": "yarn --cwd server lint",
-    "lint:all": "yarn lint:client && yarn lint:db && yarn lint:fetcher && yarn lint:server",
+    "lint:pubsub": "yarn --cwd pubsub lint",
+    "lint:all": "yarn lint:client && yarn lint:db && yarn lint:fetcher && yarn lint:server && yarn lint:pubsub",
+    "format:markdown": "prettier --parser markdown --write ./*.md ./**/*.md",
     "build:client": "yarn --cwd client build",
     "build:db": "yarn --cwd db build",
     "build:all": "yarn build:client && yarn build:db",
-    "test:all": "yarn test:fetcher",
+    "test:all": "yarn test:client && yarn test:server && yarn test:pubsub && yarn test:fetcher",
     "test:fetcher": "yarn --cwd fetcher test:mocha",
+    "test:server": "yarn --cwd server test",
+    "test:pubsub": "yarn --cwd pubsub test",
+    "test:client": "yarn --cwd client test",
     "lint-staged": "lint-staged"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "eslint": "^4.19.1",
-    "eslint-config-logux": "^17.0.0",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-es5": "^1.3.1",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jest": "^21.27.2",
-    "eslint-plugin-node": "^5.2.1",
-    "eslint-plugin-promise": "^3.8.0",
-    "eslint-plugin-react": "^7.12.4",
-    "eslint-plugin-security": "^1.4.0",
-    "eslint-plugin-standard": "^3.1.0",
+    "eslint": "^5.16.0",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.5",
-    "nodemon": "^1.18.10"
+    "nodemon": "^1.18.10",
+    "prettier": "^1.18.2"
   },
   "dependencies": {
     "@babel/core": "^7.4.3",
@@ -45,10 +41,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": [
-        "yarn lint-staged"
-      ],
-      "pre-push": "echo 'pre-push hook fired...'"
+      "pre-commit": "yarn lint-staged",
+      "pre-push": "yarn test:all"
     }
   },
   "lint-staged": {
@@ -57,10 +51,24 @@
         "yarn lint:client",
         "yarn lint:server",
         "yarn lint:fetcher",
-        "yarn lint:db"
+        "yarn lint:pubsub",
+        "yarn lint:db",
+        "git add"
+      ],
+      "*.{ts,tsx}": [
+        "yarn lint:client",
+        "yarn lint:pubsub",
+        "yarn lint:server",
+        "git add"
+      ],
+      "*.md": [
+        "yarn format:markdown",
+        "git add"
       ]
     },
-    "ignore": ["**/lib/"]
+    "ignore": [
+      "**/lib/"
+    ]
   },
   "repository": {
     "type": "git",

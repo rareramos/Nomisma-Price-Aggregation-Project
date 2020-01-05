@@ -1,0 +1,76 @@
+{
+  "fields": [
+    "symbol",
+    "name",
+    "contract",
+    "expiry",
+    "classification",
+    "base",
+    "underlying",
+    "serviceName",
+    "serviceSymbol",
+    "bid",
+    "offer",
+    "fundingLong",
+    "fundingShort",
+    "makerFee",
+    "takerFee",
+    "margin",
+    "marginCcy",
+    "fundingOffer",
+    "fundingOfferTailored",
+    "crossCurrencyBasis",
+    "exposure",
+    "exposureTailored",
+    "recovery",
+    "requiredMargin"
+  ],
+  "scrapingFields":[
+    "scrapingSymbol"
+  ],
+  "currenciesMap": {
+    "XBT": "BTC",
+    "XDG": "DOGE",
+    "XLM": "STR"
+  },
+  "rulesPersistQuasiData": [
+    {
+      "name": "bid-ask",
+      "cronExpr": "* * * * *",
+      "fields": [
+        "bid",
+        "offer"
+      ]
+    },
+    {
+      "name": "dynamic",
+      "cronExpr": "0 * * * *",
+      "fields": [
+        "fundingLong",
+        "fundingShort",
+        "requiredMargin"
+      ]
+    },
+    {
+      "name": "static",
+      "cronExpr": "30 8 * * *",
+      "fields": [
+        "name",
+        "contract",
+        "expiry",
+        "classification",
+        "base",
+        "underlying",
+        "makerFee",
+        "takerFee",
+        "margin",
+        "marginCcy",
+        "fundingOffer",
+        "fundingOfferTailored",
+        "crossCurrencyBasis",
+        "exposure",
+        "recovery"
+      ]
+    }
+  ]
+}

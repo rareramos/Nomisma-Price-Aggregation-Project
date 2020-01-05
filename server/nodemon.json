@@ -1,0 +1,16 @@
+{
+  "execMap": {
+    "js": "babel-node"
+  },
+  "ignore": [
+    "**/tests/*.ts"
+  ],
+  "watch": ["src/"],
+  "env": {
+    "NODE_ENV": "development",
+    "DEBUG": "app*",
+    "DEBUG_COLORS": "1"
+  },
+  "ext": "js,ts,graphql",
+  "exec": "node lib/src/cli/index.js"
+}

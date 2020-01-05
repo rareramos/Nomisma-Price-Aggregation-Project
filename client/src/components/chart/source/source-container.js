@@ -6,13 +6,13 @@ import {
   selectChartSourcesSelector,
 } from '../../../selectors/chart';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   selectedSource: selectChartSourceFromState(state),
   sources: selectChartSourcesSelector(),
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  onClick: (selected) => dispatch(updateChartSource(selected)),
+const mapDispatchToProps = dispatch => ({
+  onClick: selected => dispatch(updateChartSource(selected)),
 });
 
 export const Source = connect(mapStateToProps, mapDispatchToProps)(SourceComp);

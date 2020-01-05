@@ -8,15 +8,19 @@ const parseVars = require('./environment-parse');
 
 module.exports = {
   entry: {
-    app: './src/',
+    app: './src/index.tsx',
     vender: [
       'react', 'react-dom', 'redux',
       'react-redux', 'react-router-dom',
-      'axios', 'prop-types' ],
+      'prop-types'],
   },
   output: {
     path: path.resolve(__dirname, '../docs/'),
     filename: 'js/[name].[chunkhash].js',
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    modules: ['node_modules', 'src'],
   },
   module: {
     rules: [
@@ -29,16 +33,24 @@ module.exports = {
         ],
       },
       {
+        test: /\.tsx?$/,
+        exclude: /node_modules/,
+        use: [
+          'babel-loader',
+          'ts-loader',
+        ],
+      },
+      {
         test: /\.s?css$/,
         exclude: path.resolve(__dirname, 'node_modules'),
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: [ {
+          use: [{
             loader: 'css-loader',
             options: {
               sourceMap: true,
             },
-          }, 'sass-loader' ],
+          }, 'sass-loader'],
         }),
       },
     ],
@@ -57,7 +69,7 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin({
       name: 'manifest',
       filename: 'manifest.js',
-      chunks: [ 'vender' ],
+      chunks: ['vender'],
     }),
     new ExtractTextPlugin({
       filename: 'styles/style.css',

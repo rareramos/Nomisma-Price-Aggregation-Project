@@ -1,24 +1,25 @@
-import { log } from '../../utils/logger';
-import { getWeb3 } from '../generic';
-import { chunkArr } from '../../utils/chunk-arr';
+/* eslint-disable import/no-extraneous-dependencies */
 import {
   getCurrentRunnerModelConfig,
   setCurrentRunnerModelsConfig,
   BlockTimestamp,
 } from 'price-aggregation-db';
-import { compoundEventNamesToColumnNamesMap } from '../compound/config';
-import environment from '../../../environment';
-import { dharmaEventNamesToColumnNamesMapDebtKernel } from '../dharma/config';
 import { GetBlockByNumberMethod } from 'web3-core-method';
 import * as Utils from 'web3-utils';
 import { formatters } from 'web3-core-helpers';
+import { log } from '../../utils/logger';
+import { getWeb3 } from '../generic';
+import { chunkArr } from '../../utils/chunk-arr';
+import { compoundEventNamesToColumnNamesMap } from '../compound/config';
+import environment from '../../../environment';
+import { dharmaEventNamesToColumnNamesMapDebtKernel } from '../dharma/config';
 import { makerSigsModelConfig } from '../maker/config';
 
 const { app } = environment;
 
 const chunkSize = parseInt(app.BATCH_TIMESTAMP_ARR_CHUNK_SIZE, 10);
 
-const blockNumbersToMethods = blockNumbers => blockNumbers.map(blockNumber => {
+const blockNumbersToMethods = blockNumbers => blockNumbers.map((blockNumber) => {
   const method = new GetBlockByNumberMethod(Utils, formatters, {});
   method.setArguments([blockNumber, false]);
   method.callback = () => {};
@@ -27,7 +28,7 @@ const blockNumbersToMethods = blockNumbers => blockNumbers.map(blockNumber => {
 
 export const chunkedEventsReducerFactory = async (
   acc,
-  events
+  events,
 ) => {
   await acc;
   const blockTimestamps = events
@@ -35,30 +36,30 @@ export const chunkedEventsReducerFactory = async (
       (
         {
           blockNumber,
-        }
-      ) => blockNumber
+        },
+      ) => blockNumber,
     );
   const existingBlockDetails = await BlockTimestamp.find(
     {
       blockNumber: {
         $in: blockTimestamps,
       },
-    }
+    },
   );
   let withoutTimestampEvents;
-  if (!!existingBlockDetails.length) {
+  if (existingBlockDetails.length) {
     const blockDetailsHash = existingBlockDetails.reduce(
       (
         fullBlockDetails,
-        detail
+        detail,
       ) => ({
         ...fullBlockDetails,
         [detail.blockNumber]: detail.timestamp,
       }),
-      {}
+      {},
     );
     withoutTimestampEvents = [];
-    events.forEach(evt => {
+    events.forEach((evt) => {
       if (!blockDetailsHash[evt.blockNumber]) {
         withoutTimestampEvents.push(evt);
       }
@@ -67,12 +68,15 @@ export const chunkedEventsReducerFactory = async (
     withoutTimestampEvents = events;
   }
 
-  if (!!withoutTimestampEvents.length) {
-    log.info(`Getting block timestamps for ${withoutTimestampEvents.length} events`);
+  if (withoutTimestampEvents.length) {
+    log.debug({
+      message: `Getting block timestamps for ${withoutTimestampEvents.length} events`,
+    });
+
     const blockNumbers = withoutTimestampEvents.map(({ blockNumber }) => blockNumber);
     const blockNumberMethods = blockNumbersToMethods(blockNumbers);
     const batchRequester = getWeb3().BatchRequest();
-    blockNumberMethods.forEach(method => {
+    blockNumberMethods.forEach((method) => {
       batchRequester.add(method);
     });
 
@@ -87,66 +91,103 @@ export const chunkedEventsReducerFactory = async (
     }));
 
     if (payload.response.length) {
-      log.info(`Saving ${newBlockTimestamps.length} block-timestamps to database`);
+      log.debug({
+        message: `Saving ${newBlockTimestamps.length} block-timestamps to database`,
+      });
 
       await BlockTimestamp.insertMany(newBlockTimestamps);
     }
   }
 };
 
-const singleEventTypeBlockTimestampRunner = async (
-  acc,
-  [
-    eventName,
-    model,
-  ]
-) => {
-  await acc;
-  log.info(`Checking for timestamp availability for event: ${eventName}`);
-  const events = await model.find();
-  const chunkedEvents = chunkArr(events, chunkSize);
-  return chunkedEvents.reduce(
-    chunkedEventsReducerFactory,
-    Promise.resolve(),
+export const chunkedBlockNumberProcessor = async (blockNumbers) => {
+  const existingBlockDetails = await BlockTimestamp.find(
+    {
+      blockNumber: {
+        $in: blockNumbers,
+      },
+    },
   );
-};
-
-const compoundBlockTimestampRunner = async () => {
-  setCurrentRunnerModelsConfig(compoundEventNamesToColumnNamesMap);
-  const modelConfig = getCurrentRunnerModelConfig();
-  await Object.entries(modelConfig)
-    .reduce(
-      singleEventTypeBlockTimestampRunner,
-      Promise.resolve()
+  let withoutTimestampBlocks;
+  if (existingBlockDetails.length) {
+    const blockDetailsHash = existingBlockDetails.reduce(
+      (
+        fullBlockDetails,
+        detail,
+      ) => ({
+        ...fullBlockDetails,
+        [detail.blockNumber]: detail.timestamp,
+      }),
+      {},
     );
+    withoutTimestampBlocks = [];
+    blockNumbers.forEach((blockNumber) => {
+      if (!blockDetailsHash[blockNumber]) {
+        withoutTimestampBlocks.push(blockNumber);
+      }
+    });
+  } else {
+    withoutTimestampBlocks = blockNumbers;
+  }
+
+  if (withoutTimestampBlocks.length) {
+    log.debug({
+      message: `Getting block timestamps for ${withoutTimestampBlocks.length} blocks`,
+    });
+
+    const blockNumberMethods = blockNumbersToMethods(withoutTimestampBlocks);
+    const batchRequester = getWeb3().BatchRequest();
+    blockNumberMethods.forEach((method) => {
+      batchRequester.add(method);
+    });
+
+    const payload = await batchRequester.execute();
+
+    const newBlockTimestamps = payload.response.map(({
+      number,
+      timestamp,
+    }) => ({
+      blockNumber: number,
+      timestamp,
+    }));
+
+    if (payload.response.length) {
+      log.debug({
+        message: `Saving ${newBlockTimestamps.length} block-timestamps to database`,
+      });
+
+      await BlockTimestamp.insertMany(newBlockTimestamps);
+    }
+  }
 };
 
-const dharmaBlockTimestampRunner = async () => {
-  setCurrentRunnerModelsConfig(dharmaEventNamesToColumnNamesMapDebtKernel);
+const getBlockNumberSet = async (eventTableMap) => {
+  setCurrentRunnerModelsConfig(eventTableMap);
   const modelConfig = getCurrentRunnerModelConfig();
-  await Object.entries(modelConfig)
-    .reduce(
-      singleEventTypeBlockTimestampRunner,
-      Promise.resolve()
-    );
-};
-
-const makerBlockTimestampRunner = async () => {
-  setCurrentRunnerModelsConfig(
-    makerSigsModelConfig,
+  const blocks = await Promise.all(
+    Object.values(modelConfig).map(
+      model => model.distinct('blockNumber'),
+    ),
   );
-  const modelConfig = getCurrentRunnerModelConfig();
-  await Object.entries(modelConfig)
-    .reduce(
-      singleEventTypeBlockTimestampRunner,
-      Promise.resolve()
-    );
+  return new Set([].concat(...blocks));
 };
+
+const getCompoundBlocks = async () => getBlockNumberSet(compoundEventNamesToColumnNamesMap);
+
+const getDharmaBlocks = async () => getBlockNumberSet(dharmaEventNamesToColumnNamesMapDebtKernel);
+
+const getMakerBlocks = async () => getBlockNumberSet(makerSigsModelConfig);
 
 const allAdaptersBlockTimestampRunner = async () => {
-  await compoundBlockTimestampRunner();
-  await dharmaBlockTimestampRunner();
-  await makerBlockTimestampRunner();
+  const compoundBlocks = await getCompoundBlocks();
+  const dharmaBlocks = await getDharmaBlocks();
+  const makerBlocks = await getMakerBlocks();
+  const allBlocks = Array.from(
+    new Set([...compoundBlocks, ...dharmaBlocks, ...makerBlocks]),
+  );
+
+  const chunkedBlocks = chunkArr(allBlocks, chunkSize);
+  await Promise.all(chunkedBlocks.map(chunkedBlockNumberProcessor));
 };
 
 export default allAdaptersBlockTimestampRunner;

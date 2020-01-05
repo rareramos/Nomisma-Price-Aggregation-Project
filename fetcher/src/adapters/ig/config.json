@@ -1,0 +1,121 @@
+{
+  "fields": [
+    "symbol",
+    "name",
+    "contract",
+    "expiry",
+    "classification",
+    "base",
+    "underlying",
+    "serviceName",
+    "serviceSymbol",
+    "bid",
+    "offer",
+    "fundingLong",
+    "fundingShort",
+    "guaranteedStop",
+    "guaranteedStopPremium",
+    "margin",
+    "marginCcy",
+    "fundingOffer",
+    "fundingOfferTailored",
+    "crossCurrencyBasis",
+    "exposure",
+    "exposureTailored",
+    "recovery",
+    "requiredMargin"
+  ],
+  "scrapingFields": [
+    "scrapingSymbol"
+  ],
+  "fieldNamesMap": {
+    "BID": "bid",
+    "OFFER": "offer"
+  },
+  "rulesPersistQuasiData": [
+    {
+      "name": "bid-ask",
+      "cronExpr": "* * * * *",
+      "fields": [
+        "bid",
+        "offer"
+      ]
+    },
+    {
+      "name": "dynamic",
+      "cronExpr": "0 * * * *",
+      "fields": [
+        "fundingLong",
+        "fundingShort",
+        "requiredMargin"
+      ]
+    },
+    {
+      "name": "static",
+      "cronExpr": "30 8 * * *",
+      "fields": [
+        "name",
+        "contract",
+        "expiry",
+        "classification",
+        "base",
+        "underlying",
+        "guaranteedStop",
+        "guaranteedStopPremium",
+        "margin",
+        "marginCcy",
+        "fundingOffer",
+        "fundingOfferTailored",
+        "crossCurrencyBasis",
+        "exposure",
+        "recovery"
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "74749261",
+      "name": "Bitcoin"
+    },
+    {
+      "id": "74749246",
+      "name": "Bitcoin Cash"
+    },
+    {
+      "id": "77154443",
+      "name": "Bitcoin Cash/Bitcoin"
+    },
+    {
+      "id": "74796814",
+      "name": "EOS"
+    },
+    {
+      "id": "74749099",
+      "name": "Ether"
+    },
+    {
+      "id": "78446615",
+      "name": "Ether/Bitcoin"
+    },
+    {
+      "id": "74748454",
+      "name": "Litecoin"
+    },
+    {
+      "id": "74797030",
+      "name": "NEO"
+    },
+    {
+      "id": "74748385",
+      "name": "Ripple"
+    },
+    {
+      "id": "74796922",
+      "name": "Stellar"
+    },
+    {
+      "id": "120295838",
+      "name": "Crypto 10 Index"
+    }
+  ]
+}

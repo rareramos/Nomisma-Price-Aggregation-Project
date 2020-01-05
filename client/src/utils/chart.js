@@ -44,6 +44,10 @@ export const sources = [
     title: 'Dharma',
     type: 'dharma',
   },
+  {
+    title: 'Maker DAO',
+    type: 'maker',
+  },
 ];
 
 export const defaultCurrency = {

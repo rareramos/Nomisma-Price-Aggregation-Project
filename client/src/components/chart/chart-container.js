@@ -1,5 +1,5 @@
-import { fetchChartData } from '../../actions/chart';
 import { connect } from 'react-redux';
+import { fetchChartData } from '../../actions/chart';
 import { ChartView } from './chart';
 import { selectChartLoadingSelector } from '../../selectors/chart/loading';
 import {
@@ -22,7 +22,7 @@ const mapStateToProps = state => ({
   protocol: selectChartSourceFromState(state),
   compare: selectChartComapreFromState(state),
 });
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
   fetchChartData: (value, aa) => dispatch(fetchChartData(value, aa)),
 });
 

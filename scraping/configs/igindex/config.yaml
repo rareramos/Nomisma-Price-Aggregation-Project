@@ -1,0 +1,6 @@
+base_url: https://www.ig.com/uk/welcome-page
+PRICE_AGG_IGINDEX_USERNAME: ''
+PRICE_AGG_IGINDEX_PASSWORD: ''
+delays:
+    login: 15
+

@@ -1,4 +1,6 @@
-import { put, takeEvery, call, select } from 'redux-saga/effects';
+import {
+  put, takeEvery, call, select,
+} from 'redux-saga/effects';
 import { CHART_SECONDARY_FETCH } from '../../actions/types';
 import { selectPeriodFromState, selectChartComapreFromState } from '../../selectors/chart';
 import {

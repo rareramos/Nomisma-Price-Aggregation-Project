@@ -1,7 +1,7 @@
 
 let environment = null;
 
-export const setEnvironment = env => {
+export const setEnvironment = (env) => {
   environment = env;
 };
 

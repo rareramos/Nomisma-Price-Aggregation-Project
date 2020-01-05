@@ -3,7 +3,7 @@ import { defaultCurrencyValue } from '../../utils/chart';
 
 const initialState = defaultCurrencyValue;
 
-const currencyReducer = (state = initialState, action) => {
+export const currencyReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.CHART_CURRENCY_SAVE:
       return action.data;
@@ -11,5 +11,3 @@ const currencyReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export default currencyReducer;

@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Lending test matches lending component snapshot 1`] = `
+<styled.div>
+  <Connect(ChartView) />
+  <TableToolbar />
+  <Loading
+    fill="var(--primary)"
+  />
+</styled.div>
+`;

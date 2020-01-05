@@ -1,4 +1,4 @@
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
 
 import { TokenSelector } from './token-selector';
 import { selectLoanTokens } from '../../selectors/loans';
@@ -10,8 +10,8 @@ const mapStateToProps = state => ({
   selectedToken: selectTableToken(state),
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  onSelectToken: (token) => dispatch(updateTableToken(token)),
+const mapDispatchToProps = dispatch => ({
+  onSelectToken: token => dispatch(updateTableToken(token)),
 });
 
 export const TokenSelectorContainer = connect(

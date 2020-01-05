@@ -1,9 +1,9 @@
 import { getWeb3 } from '../../generic';
 
 const web3 = getWeb3();
-const BN = web3.utils.BN;
+const { BN } = web3.utils;
 
-const borrowEventsToHash = borrowEvents => {
+const borrowEventsToHash = (borrowEvents) => {
   const borrowMatrix = {};
   borrowEvents.forEach(
     (
@@ -16,7 +16,7 @@ const borrowEventsToHash = borrowEvents => {
         startingBalance,
         newBalance,
         borrowAmountWithFee,
-      }
+      },
     ) => {
       if (!!borrowMatrix[asset] && !!borrowMatrix[asset][account]) {
         const updatedBalance = borrowMatrix[asset][account].borrowAmount.add(new BN(amount));
@@ -37,7 +37,7 @@ const borrowEventsToHash = borrowEvents => {
           endBalance: borrowMatrix[asset][account].endBalance,
           loans: newLoans,
         };
-      } else if (!!borrowMatrix[asset]) {
+      } else if (borrowMatrix[asset]) {
         borrowMatrix[asset][account] = {
           borrowAmount: new BN(amount),
           endBalance: new BN(0),
@@ -74,7 +74,8 @@ const borrowEventsToHash = borrowEvents => {
           },
         };
       }
-    });
+    },
+  );
   return borrowMatrix;
 };
 
@@ -91,7 +92,7 @@ const borrowRepaidEventsToHash = ({
     blockNumber,
     amount,
   }) => {
-    if (!!borrowMatrix[asset][account].repays) {
+    if (borrowMatrix[asset][account].repays) {
       borrowMatrix[asset][account].repays = [
         ...borrowMatrix[asset][account].repays,
         {
@@ -115,7 +116,7 @@ const borrowRepaidEventsToHash = ({
     }
     borrowMatrix[asset][account].principalWithInterest = borrowMatrix[asset][account].principalWithInterest
       .add(
-        new BN(amount)
+        new BN(amount),
       );
   });
   return borrowMatrix;
@@ -130,24 +131,24 @@ const borrowMatrixToLoansArr = ({
     [
       asset,
       accountsObj,
-    ]
+    ],
   ) => {
     Object.entries(accountsObj).forEach(
       (
-        [
-          ,
+        [,
           accountObj,
-        ]
+        ],
       ) => {
         if (
           !!accountObj.repays
           && !!accountObj.repays.length
         ) {
           accountObj.endBalance = new BN(
-            accountObj.repays[accountObj.repays.length - 1].newBalance
+            accountObj.repays[accountObj.repays.length - 1].newBalance,
           );
         }
-      });
+      },
+    );
     const accountsObjArr = Object.entries(accountsObj).reduce(
       (
         loansAcc,
@@ -160,7 +161,7 @@ const borrowMatrixToLoansArr = ({
             repays,
             borrowAmount,
           },
-        ]
+        ],
       ) => {
         let interest;
         let repaidFixedPercentage;
@@ -228,21 +229,21 @@ const borrowMatrixToLoansArr = ({
             needsBalanceRequest,
             principalWithInterest,
             borrowAmount,
-          })
+          }),
         ) // edge case. loan with 0 borrow amount is not a loan.
           .filter(
-            loan => loan.borrowAmountWithFee && loan.borrowAmountWithFee !== '0'
+            loan => loan.borrowAmountWithFee && loan.borrowAmountWithFee !== '0',
           );
-        return [ ...loansAcc, ...mappedLoans];
+        return [...loansAcc, ...mappedLoans];
       },
-      []
+      [],
     );
     return [
       ...accountsAcc,
       ...accountsObjArr,
     ];
   },
-  []
+  [],
 );
 
 const mapLoansArr = loansArr => loansArr.map(({

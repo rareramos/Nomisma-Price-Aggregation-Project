@@ -1,0 +1,1 @@
+export { TailoredSettings } from './container';

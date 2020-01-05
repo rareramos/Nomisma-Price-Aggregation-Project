@@ -1,0 +1,2062 @@
+"symbol","pair","expiry","nomismaSymbol","classification"
+"BTC Swap","BTC/USD","Perpetual","BTC/USD - Perpetual","Pair"
+"BTC0830","BTC/USD","Aug19","BTC/USD - Aug19","Pair"
+"BTC0927","BTC/USD","Sep19","BTC/USD - Sep19","Pair"
+"BTC1025","BTC/USD","Oct19","BTC/USD - Oct19","Pair"
+"BTC1129","BTC/USD","Nov19","BTC/USD - Nov19","Pair"
+"BTC1227","BTC/USD","Dec19","BTC/USD - Dec19","Pair"
+"BTC0131","BTC/USD","Jan20","BTC/USD - Jan20","Pair"
+"BTC0228","BTC/USD","Feb20","BTC/USD - Feb20","Pair"
+"BTC0327","BTC/USD","Mar20","BTC/USD - Mar20","Pair"
+"BTC0424","BTC/USD","Apr20","BTC/USD - Apr20","Pair"
+"BTC0529","BTC/USD","May20","BTC/USD - May20","Pair"
+"BTC0626","BTC/USD","Jun20","BTC/USD - Jun20","Pair"
+"BTC0731","BTC/USD","Jul20","BTC/USD - Jul20","Pair"
+"BTC0828","BTC/USD","Aug20","BTC/USD - Aug20","Pair"
+"BTC0925","BTC/USD","Sep20","BTC/USD - Sep20","Pair"
+"BTC1030","BTC/USD","Oct20","BTC/USD - Oct20","Pair"
+"BTC1127","BTC/USD","Nov20","BTC/USD - Nov20","Pair"
+"BTC1225","BTC/USD","Dec20","BTC/USD - Dec20","Pair"
+"BTC0129","BTC/USD","Jan21","BTC/USD - Jan21","Pair"
+"BTC0226","BTC/USD","Feb21","BTC/USD - Feb21","Pair"
+"BTC0326","BTC/USD","Mar21","BTC/USD - Mar21","Pair"
+"BTC0430","BTC/USD","Apr21","BTC/USD - Apr21","Pair"
+"BTC0528","BTC/USD","May21","BTC/USD - May21","Pair"
+"BTC0625","BTC/USD","Jun21","BTC/USD - Jun21","Pair"
+"BTC0730","BTC/USD","Jul21","BTC/USD - Jul21","Pair"
+"BTC0827","BTC/USD","Aug21","BTC/USD - Aug21","Pair"
+"BTC0924","BTC/USD","Sep21","BTC/USD - Sep21","Pair"
+"BTC1029","BTC/USD","Oct21","BTC/USD - Oct21","Pair"
+"BTC1126","BTC/USD","Nov21","BTC/USD - Nov21","Pair"
+"BTC1231","BTC/USD","Dec21","BTC/USD - Dec21","Pair"
+"BTC0128","BTC/USD","Jan22","BTC/USD - Jan22","Pair"
+"BTC0225","BTC/USD","Feb22","BTC/USD - Feb22","Pair"
+"BTC0325","BTC/USD","Mar22","BTC/USD - Mar22","Pair"
+"BTC0429","BTC/USD","Apr22","BTC/USD - Apr22","Pair"
+"BTC0527","BTC/USD","May22","BTC/USD - May22","Pair"
+"BTC0624","BTC/USD","Jun22","BTC/USD - Jun22","Pair"
+"BTC0729","BTC/USD","Jul22","BTC/USD - Jul22","Pair"
+"BTC0826","BTC/USD","Aug22","BTC/USD - Aug22","Pair"
+"BTC0930","BTC/USD","Sep22","BTC/USD - Sep22","Pair"
+"BTC1028","BTC/USD","Oct22","BTC/USD - Oct22","Pair"
+"BTC1125","BTC/USD","Nov22","BTC/USD - Nov22","Pair"
+"BTC1230","BTC/USD","Dec22","BTC/USD - Dec22","Pair"
+"BTC0127","BTC/USD","Jan23","BTC/USD - Jan23","Pair"
+"BTC0224","BTC/USD","Feb23","BTC/USD - Feb23","Pair"
+"BTC0331","BTC/USD","Mar23","BTC/USD - Mar23","Pair"
+"BTC0428","BTC/USD","Apr23","BTC/USD - Apr23","Pair"
+"BTC0526","BTC/USD","May23","BTC/USD - May23","Pair"
+"BTC0630","BTC/USD","Jun23","BTC/USD - Jun23","Pair"
+"BTC0728","BTC/USD","Jul23","BTC/USD - Jul23","Pair"
+"BTC0825","BTC/USD","Aug23","BTC/USD - Aug23","Pair"
+"BTC0929","BTC/USD","Sep23","BTC/USD - Sep23","Pair"
+"BTC1027","BTC/USD","Oct23","BTC/USD - Oct23","Pair"
+"BTC1124","BTC/USD","Nov23","BTC/USD - Nov23","Pair"
+"BTC1229","BTC/USD","Dec23","BTC/USD - Dec23","Pair"
+"LTC Swap","LTC/USD","Perpetual","LTC/USD - Perpetual","Pair"
+"LTC0830","LTC/USD","Aug19","LTC/USD - Aug19","Pair"
+"LTC0927","LTC/USD","Sep19","LTC/USD - Sep19","Pair"
+"LTC1025","LTC/USD","Oct19","LTC/USD - Oct19","Pair"
+"LTC1129","LTC/USD","Nov19","LTC/USD - Nov19","Pair"
+"LTC1227","LTC/USD","Dec19","LTC/USD - Dec19","Pair"
+"LTC0131","LTC/USD","Jan20","LTC/USD - Jan20","Pair"
+"LTC0228","LTC/USD","Feb20","LTC/USD - Feb20","Pair"
+"LTC0327","LTC/USD","Mar20","LTC/USD - Mar20","Pair"
+"LTC0424","LTC/USD","Apr20","LTC/USD - Apr20","Pair"
+"LTC0529","LTC/USD","May20","LTC/USD - May20","Pair"
+"LTC0626","LTC/USD","Jun20","LTC/USD - Jun20","Pair"
+"LTC0731","LTC/USD","Jul20","LTC/USD - Jul20","Pair"
+"LTC0828","LTC/USD","Aug20","LTC/USD - Aug20","Pair"
+"LTC0925","LTC/USD","Sep20","LTC/USD - Sep20","Pair"
+"LTC1030","LTC/USD","Oct20","LTC/USD - Oct20","Pair"
+"LTC1127","LTC/USD","Nov20","LTC/USD - Nov20","Pair"
+"LTC1225","LTC/USD","Dec20","LTC/USD - Dec20","Pair"
+"LTC0129","LTC/USD","Jan21","LTC/USD - Jan21","Pair"
+"LTC0226","LTC/USD","Feb21","LTC/USD - Feb21","Pair"
+"LTC0326","LTC/USD","Mar21","LTC/USD - Mar21","Pair"
+"LTC0430","LTC/USD","Apr21","LTC/USD - Apr21","Pair"
+"LTC0528","LTC/USD","May21","LTC/USD - May21","Pair"
+"LTC0625","LTC/USD","Jun21","LTC/USD - Jun21","Pair"
+"LTC0730","LTC/USD","Jul21","LTC/USD - Jul21","Pair"
+"LTC0827","LTC/USD","Aug21","LTC/USD - Aug21","Pair"
+"LTC0924","LTC/USD","Sep21","LTC/USD - Sep21","Pair"
+"LTC1029","LTC/USD","Oct21","LTC/USD - Oct21","Pair"
+"LTC1126","LTC/USD","Nov21","LTC/USD - Nov21","Pair"
+"LTC1231","LTC/USD","Dec21","LTC/USD - Dec21","Pair"
+"LTC0128","LTC/USD","Jan22","LTC/USD - Jan22","Pair"
+"LTC0225","LTC/USD","Feb22","LTC/USD - Feb22","Pair"
+"LTC0325","LTC/USD","Mar22","LTC/USD - Mar22","Pair"
+"LTC0429","LTC/USD","Apr22","LTC/USD - Apr22","Pair"
+"LTC0527","LTC/USD","May22","LTC/USD - May22","Pair"
+"LTC0624","LTC/USD","Jun22","LTC/USD - Jun22","Pair"
+"LTC0729","LTC/USD","Jul22","LTC/USD - Jul22","Pair"
+"LTC0826","LTC/USD","Aug22","LTC/USD - Aug22","Pair"
+"LTC0930","LTC/USD","Sep22","LTC/USD - Sep22","Pair"
+"LTC1028","LTC/USD","Oct22","LTC/USD - Oct22","Pair"
+"LTC1125","LTC/USD","Nov22","LTC/USD - Nov22","Pair"
+"LTC1230","LTC/USD","Dec22","LTC/USD - Dec22","Pair"
+"LTC0127","LTC/USD","Jan23","LTC/USD - Jan23","Pair"
+"LTC0224","LTC/USD","Feb23","LTC/USD - Feb23","Pair"
+"LTC0331","LTC/USD","Mar23","LTC/USD - Mar23","Pair"
+"LTC0428","LTC/USD","Apr23","LTC/USD - Apr23","Pair"
+"LTC0526","LTC/USD","May23","LTC/USD - May23","Pair"
+"LTC0630","LTC/USD","Jun23","LTC/USD - Jun23","Pair"
+"LTC0728","LTC/USD","Jul23","LTC/USD - Jul23","Pair"
+"LTC0825","LTC/USD","Aug23","LTC/USD - Aug23","Pair"
+"LTC0929","LTC/USD","Sep23","LTC/USD - Sep23","Pair"
+"LTC1027","LTC/USD","Oct23","LTC/USD - Oct23","Pair"
+"LTC1124","LTC/USD","Nov23","LTC/USD - Nov23","Pair"
+"LTC1229","LTC/USD","Dec23","LTC/USD - Dec23","Pair"
+"ETH Swap","ETH/USD","Perpetual","ETH/USD - Perpetual","Pair"
+"ETH0830","ETH/USD","Aug19","ETH/USD - Aug19","Pair"
+"ETH0927","ETH/USD","Sep19","ETH/USD - Sep19","Pair"
+"ETH1025","ETH/USD","Oct19","ETH/USD - Oct19","Pair"
+"ETH1129","ETH/USD","Nov19","ETH/USD - Nov19","Pair"
+"ETH1227","ETH/USD","Dec19","ETH/USD - Dec19","Pair"
+"ETH0131","ETH/USD","Jan20","ETH/USD - Jan20","Pair"
+"ETH0228","ETH/USD","Feb20","ETH/USD - Feb20","Pair"
+"ETH0327","ETH/USD","Mar20","ETH/USD - Mar20","Pair"
+"ETH0424","ETH/USD","Apr20","ETH/USD - Apr20","Pair"
+"ETH0529","ETH/USD","May20","ETH/USD - May20","Pair"
+"ETH0626","ETH/USD","Jun20","ETH/USD - Jun20","Pair"
+"ETH0731","ETH/USD","Jul20","ETH/USD - Jul20","Pair"
+"ETH0828","ETH/USD","Aug20","ETH/USD - Aug20","Pair"
+"ETH0925","ETH/USD","Sep20","ETH/USD - Sep20","Pair"
+"ETH1030","ETH/USD","Oct20","ETH/USD - Oct20","Pair"
+"ETH1127","ETH/USD","Nov20","ETH/USD - Nov20","Pair"
+"ETH1225","ETH/USD","Dec20","ETH/USD - Dec20","Pair"
+"ETH0129","ETH/USD","Jan21","ETH/USD - Jan21","Pair"
+"ETH0226","ETH/USD","Feb21","ETH/USD - Feb21","Pair"
+"ETH0326","ETH/USD","Mar21","ETH/USD - Mar21","Pair"
+"ETH0430","ETH/USD","Apr21","ETH/USD - Apr21","Pair"
+"ETH0528","ETH/USD","May21","ETH/USD - May21","Pair"
+"ETH0625","ETH/USD","Jun21","ETH/USD - Jun21","Pair"
+"ETH0730","ETH/USD","Jul21","ETH/USD - Jul21","Pair"
+"ETH0827","ETH/USD","Aug21","ETH/USD - Aug21","Pair"
+"ETH0924","ETH/USD","Sep21","ETH/USD - Sep21","Pair"
+"ETH1029","ETH/USD","Oct21","ETH/USD - Oct21","Pair"
+"ETH1126","ETH/USD","Nov21","ETH/USD - Nov21","Pair"
+"ETH1231","ETH/USD","Dec21","ETH/USD - Dec21","Pair"
+"ETH0128","ETH/USD","Jan22","ETH/USD - Jan22","Pair"
+"ETH0225","ETH/USD","Feb22","ETH/USD - Feb22","Pair"
+"ETH0325","ETH/USD","Mar22","ETH/USD - Mar22","Pair"
+"ETH0429","ETH/USD","Apr22","ETH/USD - Apr22","Pair"
+"ETH0527","ETH/USD","May22","ETH/USD - May22","Pair"
+"ETH0624","ETH/USD","Jun22","ETH/USD - Jun22","Pair"
+"ETH0729","ETH/USD","Jul22","ETH/USD - Jul22","Pair"
+"ETH0826","ETH/USD","Aug22","ETH/USD - Aug22","Pair"
+"ETH0930","ETH/USD","Sep22","ETH/USD - Sep22","Pair"
+"ETH1028","ETH/USD","Oct22","ETH/USD - Oct22","Pair"
+"ETH1125","ETH/USD","Nov22","ETH/USD - Nov22","Pair"
+"ETH1230","ETH/USD","Dec22","ETH/USD - Dec22","Pair"
+"ETH0127","ETH/USD","Jan23","ETH/USD - Jan23","Pair"
+"ETH0224","ETH/USD","Feb23","ETH/USD - Feb23","Pair"
+"ETH0331","ETH/USD","Mar23","ETH/USD - Mar23","Pair"
+"ETH0428","ETH/USD","Apr23","ETH/USD - Apr23","Pair"
+"ETH0526","ETH/USD","May23","ETH/USD - May23","Pair"
+"ETH0630","ETH/USD","Jun23","ETH/USD - Jun23","Pair"
+"ETH0728","ETH/USD","Jul23","ETH/USD - Jul23","Pair"
+"ETH0825","ETH/USD","Aug23","ETH/USD - Aug23","Pair"
+"ETH0929","ETH/USD","Sep23","ETH/USD - Sep23","Pair"
+"ETH1027","ETH/USD","Oct23","ETH/USD - Oct23","Pair"
+"ETH1124","ETH/USD","Nov23","ETH/USD - Nov23","Pair"
+"ETH1229","ETH/USD","Dec23","ETH/USD - Dec23","Pair"
+"ETC Swap","ETC/USD","Perpetual","ETC/USD - Perpetual","Pair"
+"ETC0830","ETC/USD","Aug19","ETC/USD - Aug19","Pair"
+"ETC0927","ETC/USD","Sep19","ETC/USD - Sep19","Pair"
+"ETC1025","ETC/USD","Oct19","ETC/USD - Oct19","Pair"
+"ETC1129","ETC/USD","Nov19","ETC/USD - Nov19","Pair"
+"ETC1227","ETC/USD","Dec19","ETC/USD - Dec19","Pair"
+"ETC0131","ETC/USD","Jan20","ETC/USD - Jan20","Pair"
+"ETC0228","ETC/USD","Feb20","ETC/USD - Feb20","Pair"
+"ETC0327","ETC/USD","Mar20","ETC/USD - Mar20","Pair"
+"ETC0424","ETC/USD","Apr20","ETC/USD - Apr20","Pair"
+"ETC0529","ETC/USD","May20","ETC/USD - May20","Pair"
+"ETC0626","ETC/USD","Jun20","ETC/USD - Jun20","Pair"
+"ETC0731","ETC/USD","Jul20","ETC/USD - Jul20","Pair"
+"ETC0828","ETC/USD","Aug20","ETC/USD - Aug20","Pair"
+"ETC0925","ETC/USD","Sep20","ETC/USD - Sep20","Pair"
+"ETC1030","ETC/USD","Oct20","ETC/USD - Oct20","Pair"
+"ETC1127","ETC/USD","Nov20","ETC/USD - Nov20","Pair"
+"ETC1225","ETC/USD","Dec20","ETC/USD - Dec20","Pair"
+"ETC0129","ETC/USD","Jan21","ETC/USD - Jan21","Pair"
+"ETC0226","ETC/USD","Feb21","ETC/USD - Feb21","Pair"
+"ETC0326","ETC/USD","Mar21","ETC/USD - Mar21","Pair"
+"ETC0430","ETC/USD","Apr21","ETC/USD - Apr21","Pair"
+"ETC0528","ETC/USD","May21","ETC/USD - May21","Pair"
+"ETC0625","ETC/USD","Jun21","ETC/USD - Jun21","Pair"
+"ETC0730","ETC/USD","Jul21","ETC/USD - Jul21","Pair"
+"ETC0827","ETC/USD","Aug21","ETC/USD - Aug21","Pair"
+"ETC0924","ETC/USD","Sep21","ETC/USD - Sep21","Pair"
+"ETC1029","ETC/USD","Oct21","ETC/USD - Oct21","Pair"
+"ETC1126","ETC/USD","Nov21","ETC/USD - Nov21","Pair"
+"ETC1231","ETC/USD","Dec21","ETC/USD - Dec21","Pair"
+"ETC0128","ETC/USD","Jan22","ETC/USD - Jan22","Pair"
+"ETC0225","ETC/USD","Feb22","ETC/USD - Feb22","Pair"
+"ETC0325","ETC/USD","Mar22","ETC/USD - Mar22","Pair"
+"ETC0429","ETC/USD","Apr22","ETC/USD - Apr22","Pair"
+"ETC0527","ETC/USD","May22","ETC/USD - May22","Pair"
+"ETC0624","ETC/USD","Jun22","ETC/USD - Jun22","Pair"
+"ETC0729","ETC/USD","Jul22","ETC/USD - Jul22","Pair"
+"ETC0826","ETC/USD","Aug22","ETC/USD - Aug22","Pair"
+"ETC0930","ETC/USD","Sep22","ETC/USD - Sep22","Pair"
+"ETC1028","ETC/USD","Oct22","ETC/USD - Oct22","Pair"
+"ETC1125","ETC/USD","Nov22","ETC/USD - Nov22","Pair"
+"ETC1230","ETC/USD","Dec22","ETC/USD - Dec22","Pair"
+"ETC0127","ETC/USD","Jan23","ETC/USD - Jan23","Pair"
+"ETC0224","ETC/USD","Feb23","ETC/USD - Feb23","Pair"
+"ETC0331","ETC/USD","Mar23","ETC/USD - Mar23","Pair"
+"ETC0428","ETC/USD","Apr23","ETC/USD - Apr23","Pair"
+"ETC0526","ETC/USD","May23","ETC/USD - May23","Pair"
+"ETC0630","ETC/USD","Jun23","ETC/USD - Jun23","Pair"
+"ETC0728","ETC/USD","Jul23","ETC/USD - Jul23","Pair"
+"ETC0825","ETC/USD","Aug23","ETC/USD - Aug23","Pair"
+"ETC0929","ETC/USD","Sep23","ETC/USD - Sep23","Pair"
+"ETC1027","ETC/USD","Oct23","ETC/USD - Oct23","Pair"
+"ETC1124","ETC/USD","Nov23","ETC/USD - Nov23","Pair"
+"ETC1229","ETC/USD","Dec23","ETC/USD - Dec23","Pair"
+"XRP Swap","XRP/USD","Perpetual","XRP/USD - Perpetual","Pair"
+"XRP0830","XRP/USD","Aug19","XRP/USD - Aug19","Pair"
+"XRP0927","XRP/USD","Sep19","XRP/USD - Sep19","Pair"
+"XRP1025","XRP/USD","Oct19","XRP/USD - Oct19","Pair"
+"XRP1129","XRP/USD","Nov19","XRP/USD - Nov19","Pair"
+"XRP1227","XRP/USD","Dec19","XRP/USD - Dec19","Pair"
+"XRP0131","XRP/USD","Jan20","XRP/USD - Jan20","Pair"
+"XRP0228","XRP/USD","Feb20","XRP/USD - Feb20","Pair"
+"XRP0327","XRP/USD","Mar20","XRP/USD - Mar20","Pair"
+"XRP0424","XRP/USD","Apr20","XRP/USD - Apr20","Pair"
+"XRP0529","XRP/USD","May20","XRP/USD - May20","Pair"
+"XRP0626","XRP/USD","Jun20","XRP/USD - Jun20","Pair"
+"XRP0731","XRP/USD","Jul20","XRP/USD - Jul20","Pair"
+"XRP0828","XRP/USD","Aug20","XRP/USD - Aug20","Pair"
+"XRP0925","XRP/USD","Sep20","XRP/USD - Sep20","Pair"
+"XRP1030","XRP/USD","Oct20","XRP/USD - Oct20","Pair"
+"XRP1127","XRP/USD","Nov20","XRP/USD - Nov20","Pair"
+"XRP1225","XRP/USD","Dec20","XRP/USD - Dec20","Pair"
+"XRP0129","XRP/USD","Jan21","XRP/USD - Jan21","Pair"
+"XRP0226","XRP/USD","Feb21","XRP/USD - Feb21","Pair"
+"XRP0326","XRP/USD","Mar21","XRP/USD - Mar21","Pair"
+"XRP0430","XRP/USD","Apr21","XRP/USD - Apr21","Pair"
+"XRP0528","XRP/USD","May21","XRP/USD - May21","Pair"
+"XRP0625","XRP/USD","Jun21","XRP/USD - Jun21","Pair"
+"XRP0730","XRP/USD","Jul21","XRP/USD - Jul21","Pair"
+"XRP0827","XRP/USD","Aug21","XRP/USD - Aug21","Pair"
+"XRP0924","XRP/USD","Sep21","XRP/USD - Sep21","Pair"
+"XRP1029","XRP/USD","Oct21","XRP/USD - Oct21","Pair"
+"XRP1126","XRP/USD","Nov21","XRP/USD - Nov21","Pair"
+"XRP1231","XRP/USD","Dec21","XRP/USD - Dec21","Pair"
+"XRP0128","XRP/USD","Jan22","XRP/USD - Jan22","Pair"
+"XRP0225","XRP/USD","Feb22","XRP/USD - Feb22","Pair"
+"XRP0325","XRP/USD","Mar22","XRP/USD - Mar22","Pair"
+"XRP0429","XRP/USD","Apr22","XRP/USD - Apr22","Pair"
+"XRP0527","XRP/USD","May22","XRP/USD - May22","Pair"
+"XRP0624","XRP/USD","Jun22","XRP/USD - Jun22","Pair"
+"XRP0729","XRP/USD","Jul22","XRP/USD - Jul22","Pair"
+"XRP0826","XRP/USD","Aug22","XRP/USD - Aug22","Pair"
+"XRP0930","XRP/USD","Sep22","XRP/USD - Sep22","Pair"
+"XRP1028","XRP/USD","Oct22","XRP/USD - Oct22","Pair"
+"XRP1125","XRP/USD","Nov22","XRP/USD - Nov22","Pair"
+"XRP1230","XRP/USD","Dec22","XRP/USD - Dec22","Pair"
+"XRP0127","XRP/USD","Jan23","XRP/USD - Jan23","Pair"
+"XRP0224","XRP/USD","Feb23","XRP/USD - Feb23","Pair"
+"XRP0331","XRP/USD","Mar23","XRP/USD - Mar23","Pair"
+"XRP0428","XRP/USD","Apr23","XRP/USD - Apr23","Pair"
+"XRP0526","XRP/USD","May23","XRP/USD - May23","Pair"
+"XRP0630","XRP/USD","Jun23","XRP/USD - Jun23","Pair"
+"XRP0728","XRP/USD","Jul23","XRP/USD - Jul23","Pair"
+"XRP0825","XRP/USD","Aug23","XRP/USD - Aug23","Pair"
+"XRP0929","XRP/USD","Sep23","XRP/USD - Sep23","Pair"
+"XRP1027","XRP/USD","Oct23","XRP/USD - Oct23","Pair"
+"XRP1124","XRP/USD","Nov23","XRP/USD - Nov23","Pair"
+"XRP1229","XRP/USD","Dec23","XRP/USD - Dec23","Pair"
+"EOS Swap","EOS/USD","Perpetual","EOS/USD - Perpetual","Pair"
+"EOS0830","EOS/USD","Aug19","EOS/USD - Aug19","Pair"
+"EOS0927","EOS/USD","Sep19","EOS/USD - Sep19","Pair"
+"EOS1025","EOS/USD","Oct19","EOS/USD - Oct19","Pair"
+"EOS1129","EOS/USD","Nov19","EOS/USD - Nov19","Pair"
+"EOS1227","EOS/USD","Dec19","EOS/USD - Dec19","Pair"
+"EOS0131","EOS/USD","Jan20","EOS/USD - Jan20","Pair"
+"EOS0228","EOS/USD","Feb20","EOS/USD - Feb20","Pair"
+"EOS0327","EOS/USD","Mar20","EOS/USD - Mar20","Pair"
+"EOS0424","EOS/USD","Apr20","EOS/USD - Apr20","Pair"
+"EOS0529","EOS/USD","May20","EOS/USD - May20","Pair"
+"EOS0626","EOS/USD","Jun20","EOS/USD - Jun20","Pair"
+"EOS0731","EOS/USD","Jul20","EOS/USD - Jul20","Pair"
+"EOS0828","EOS/USD","Aug20","EOS/USD - Aug20","Pair"
+"EOS0925","EOS/USD","Sep20","EOS/USD - Sep20","Pair"
+"EOS1030","EOS/USD","Oct20","EOS/USD - Oct20","Pair"
+"EOS1127","EOS/USD","Nov20","EOS/USD - Nov20","Pair"
+"EOS1225","EOS/USD","Dec20","EOS/USD - Dec20","Pair"
+"EOS0129","EOS/USD","Jan21","EOS/USD - Jan21","Pair"
+"EOS0226","EOS/USD","Feb21","EOS/USD - Feb21","Pair"
+"EOS0326","EOS/USD","Mar21","EOS/USD - Mar21","Pair"
+"EOS0430","EOS/USD","Apr21","EOS/USD - Apr21","Pair"
+"EOS0528","EOS/USD","May21","EOS/USD - May21","Pair"
+"EOS0625","EOS/USD","Jun21","EOS/USD - Jun21","Pair"
+"EOS0730","EOS/USD","Jul21","EOS/USD - Jul21","Pair"
+"EOS0827","EOS/USD","Aug21","EOS/USD - Aug21","Pair"
+"EOS0924","EOS/USD","Sep21","EOS/USD - Sep21","Pair"
+"EOS1029","EOS/USD","Oct21","EOS/USD - Oct21","Pair"
+"EOS1126","EOS/USD","Nov21","EOS/USD - Nov21","Pair"
+"EOS1231","EOS/USD","Dec21","EOS/USD - Dec21","Pair"
+"EOS0128","EOS/USD","Jan22","EOS/USD - Jan22","Pair"
+"EOS0225","EOS/USD","Feb22","EOS/USD - Feb22","Pair"
+"EOS0325","EOS/USD","Mar22","EOS/USD - Mar22","Pair"
+"EOS0429","EOS/USD","Apr22","EOS/USD - Apr22","Pair"
+"EOS0527","EOS/USD","May22","EOS/USD - May22","Pair"
+"EOS0624","EOS/USD","Jun22","EOS/USD - Jun22","Pair"
+"EOS0729","EOS/USD","Jul22","EOS/USD - Jul22","Pair"
+"EOS0826","EOS/USD","Aug22","EOS/USD - Aug22","Pair"
+"EOS0930","EOS/USD","Sep22","EOS/USD - Sep22","Pair"
+"EOS1028","EOS/USD","Oct22","EOS/USD - Oct22","Pair"
+"EOS1125","EOS/USD","Nov22","EOS/USD - Nov22","Pair"
+"EOS1230","EOS/USD","Dec22","EOS/USD - Dec22","Pair"
+"EOS0127","EOS/USD","Jan23","EOS/USD - Jan23","Pair"
+"EOS0224","EOS/USD","Feb23","EOS/USD - Feb23","Pair"
+"EOS0331","EOS/USD","Mar23","EOS/USD - Mar23","Pair"
+"EOS0428","EOS/USD","Apr23","EOS/USD - Apr23","Pair"
+"EOS0526","EOS/USD","May23","EOS/USD - May23","Pair"
+"EOS0630","EOS/USD","Jun23","EOS/USD - Jun23","Pair"
+"EOS0728","EOS/USD","Jul23","EOS/USD - Jul23","Pair"
+"EOS0825","EOS/USD","Aug23","EOS/USD - Aug23","Pair"
+"EOS0929","EOS/USD","Sep23","EOS/USD - Sep23","Pair"
+"EOS1027","EOS/USD","Oct23","EOS/USD - Oct23","Pair"
+"EOS1124","EOS/USD","Nov23","EOS/USD - Nov23","Pair"
+"EOS1229","EOS/USD","Dec23","EOS/USD - Dec23","Pair"
+"BCH Swap","BCH/USD","Perpetual","BCH/USD - Perpetual","Pair"
+"BCH0830","BCH/USD","Aug19","BCH/USD - Aug19","Pair"
+"BCH0927","BCH/USD","Sep19","BCH/USD - Sep19","Pair"
+"BCH1025","BCH/USD","Oct19","BCH/USD - Oct19","Pair"
+"BCH1129","BCH/USD","Nov19","BCH/USD - Nov19","Pair"
+"BCH1227","BCH/USD","Dec19","BCH/USD - Dec19","Pair"
+"BCH0131","BCH/USD","Jan20","BCH/USD - Jan20","Pair"
+"BCH0228","BCH/USD","Feb20","BCH/USD - Feb20","Pair"
+"BCH0327","BCH/USD","Mar20","BCH/USD - Mar20","Pair"
+"BCH0424","BCH/USD","Apr20","BCH/USD - Apr20","Pair"
+"BCH0529","BCH/USD","May20","BCH/USD - May20","Pair"
+"BCH0626","BCH/USD","Jun20","BCH/USD - Jun20","Pair"
+"BCH0731","BCH/USD","Jul20","BCH/USD - Jul20","Pair"
+"BCH0828","BCH/USD","Aug20","BCH/USD - Aug20","Pair"
+"BCH0925","BCH/USD","Sep20","BCH/USD - Sep20","Pair"
+"BCH1030","BCH/USD","Oct20","BCH/USD - Oct20","Pair"
+"BCH1127","BCH/USD","Nov20","BCH/USD - Nov20","Pair"
+"BCH1225","BCH/USD","Dec20","BCH/USD - Dec20","Pair"
+"BCH0129","BCH/USD","Jan21","BCH/USD - Jan21","Pair"
+"BCH0226","BCH/USD","Feb21","BCH/USD - Feb21","Pair"
+"BCH0326","BCH/USD","Mar21","BCH/USD - Mar21","Pair"
+"BCH0430","BCH/USD","Apr21","BCH/USD - Apr21","Pair"
+"BCH0528","BCH/USD","May21","BCH/USD - May21","Pair"
+"BCH0625","BCH/USD","Jun21","BCH/USD - Jun21","Pair"
+"BCH0730","BCH/USD","Jul21","BCH/USD - Jul21","Pair"
+"BCH0827","BCH/USD","Aug21","BCH/USD - Aug21","Pair"
+"BCH0924","BCH/USD","Sep21","BCH/USD - Sep21","Pair"
+"BCH1029","BCH/USD","Oct21","BCH/USD - Oct21","Pair"
+"BCH1126","BCH/USD","Nov21","BCH/USD - Nov21","Pair"
+"BCH1231","BCH/USD","Dec21","BCH/USD - Dec21","Pair"
+"BCH0128","BCH/USD","Jan22","BCH/USD - Jan22","Pair"
+"BCH0225","BCH/USD","Feb22","BCH/USD - Feb22","Pair"
+"BCH0325","BCH/USD","Mar22","BCH/USD - Mar22","Pair"
+"BCH0429","BCH/USD","Apr22","BCH/USD - Apr22","Pair"
+"BCH0527","BCH/USD","May22","BCH/USD - May22","Pair"
+"BCH0624","BCH/USD","Jun22","BCH/USD - Jun22","Pair"
+"BCH0729","BCH/USD","Jul22","BCH/USD - Jul22","Pair"
+"BCH0826","BCH/USD","Aug22","BCH/USD - Aug22","Pair"
+"BCH0930","BCH/USD","Sep22","BCH/USD - Sep22","Pair"
+"BCH1028","BCH/USD","Oct22","BCH/USD - Oct22","Pair"
+"BCH1125","BCH/USD","Nov22","BCH/USD - Nov22","Pair"
+"BCH1230","BCH/USD","Dec22","BCH/USD - Dec22","Pair"
+"BCH0127","BCH/USD","Jan23","BCH/USD - Jan23","Pair"
+"BCH0224","BCH/USD","Feb23","BCH/USD - Feb23","Pair"
+"BCH0331","BCH/USD","Mar23","BCH/USD - Mar23","Pair"
+"BCH0428","BCH/USD","Apr23","BCH/USD - Apr23","Pair"
+"BCH0526","BCH/USD","May23","BCH/USD - May23","Pair"
+"BCH0630","BCH/USD","Jun23","BCH/USD - Jun23","Pair"
+"BCH0728","BCH/USD","Jul23","BCH/USD - Jul23","Pair"
+"BCH0825","BCH/USD","Aug23","BCH/USD - Aug23","Pair"
+"BCH0929","BCH/USD","Sep23","BCH/USD - Sep23","Pair"
+"BCH1027","BCH/USD","Oct23","BCH/USD - Oct23","Pair"
+"BCH1124","BCH/USD","Nov23","BCH/USD - Nov23","Pair"
+"BCH1229","BCH/USD","Dec23","BCH/USD - Dec23","Pair"
+"BSV Swap","BSV/USD","Perpetual","BSV/USD - Perpetual","Pair"
+"BSV0830","BSV/USD","Aug19","BSV/USD - Aug19","Pair"
+"BSV0927","BSV/USD","Sep19","BSV/USD - Sep19","Pair"
+"BSV1025","BSV/USD","Oct19","BSV/USD - Oct19","Pair"
+"BSV1129","BSV/USD","Nov19","BSV/USD - Nov19","Pair"
+"BSV1227","BSV/USD","Dec19","BSV/USD - Dec19","Pair"
+"BSV0131","BSV/USD","Jan20","BSV/USD - Jan20","Pair"
+"BSV0228","BSV/USD","Feb20","BSV/USD - Feb20","Pair"
+"BSV0327","BSV/USD","Mar20","BSV/USD - Mar20","Pair"
+"BSV0424","BSV/USD","Apr20","BSV/USD - Apr20","Pair"
+"BSV0529","BSV/USD","May20","BSV/USD - May20","Pair"
+"BSV0626","BSV/USD","Jun20","BSV/USD - Jun20","Pair"
+"BSV0731","BSV/USD","Jul20","BSV/USD - Jul20","Pair"
+"BSV0828","BSV/USD","Aug20","BSV/USD - Aug20","Pair"
+"BSV0925","BSV/USD","Sep20","BSV/USD - Sep20","Pair"
+"BSV1030","BSV/USD","Oct20","BSV/USD - Oct20","Pair"
+"BSV1127","BSV/USD","Nov20","BSV/USD - Nov20","Pair"
+"BSV1225","BSV/USD","Dec20","BSV/USD - Dec20","Pair"
+"BSV0129","BSV/USD","Jan21","BSV/USD - Jan21","Pair"
+"BSV0226","BSV/USD","Feb21","BSV/USD - Feb21","Pair"
+"BSV0326","BSV/USD","Mar21","BSV/USD - Mar21","Pair"
+"BSV0430","BSV/USD","Apr21","BSV/USD - Apr21","Pair"
+"BSV0528","BSV/USD","May21","BSV/USD - May21","Pair"
+"BSV0625","BSV/USD","Jun21","BSV/USD - Jun21","Pair"
+"BSV0730","BSV/USD","Jul21","BSV/USD - Jul21","Pair"
+"BSV0827","BSV/USD","Aug21","BSV/USD - Aug21","Pair"
+"BSV0924","BSV/USD","Sep21","BSV/USD - Sep21","Pair"
+"BSV1029","BSV/USD","Oct21","BSV/USD - Oct21","Pair"
+"BSV1126","BSV/USD","Nov21","BSV/USD - Nov21","Pair"
+"BSV1231","BSV/USD","Dec21","BSV/USD - Dec21","Pair"
+"BSV0128","BSV/USD","Jan22","BSV/USD - Jan22","Pair"
+"BSV0225","BSV/USD","Feb22","BSV/USD - Feb22","Pair"
+"BSV0325","BSV/USD","Mar22","BSV/USD - Mar22","Pair"
+"BSV0429","BSV/USD","Apr22","BSV/USD - Apr22","Pair"
+"BSV0527","BSV/USD","May22","BSV/USD - May22","Pair"
+"BSV0624","BSV/USD","Jun22","BSV/USD - Jun22","Pair"
+"BSV0729","BSV/USD","Jul22","BSV/USD - Jul22","Pair"
+"BSV0826","BSV/USD","Aug22","BSV/USD - Aug22","Pair"
+"BSV0930","BSV/USD","Sep22","BSV/USD - Sep22","Pair"
+"BSV1028","BSV/USD","Oct22","BSV/USD - Oct22","Pair"
+"BSV1125","BSV/USD","Nov22","BSV/USD - Nov22","Pair"
+"BSV1230","BSV/USD","Dec22","BSV/USD - Dec22","Pair"
+"BSV0127","BSV/USD","Jan23","BSV/USD - Jan23","Pair"
+"BSV0224","BSV/USD","Feb23","BSV/USD - Feb23","Pair"
+"BSV0331","BSV/USD","Mar23","BSV/USD - Mar23","Pair"
+"BSV0428","BSV/USD","Apr23","BSV/USD - Apr23","Pair"
+"BSV0526","BSV/USD","May23","BSV/USD - May23","Pair"
+"BSV0630","BSV/USD","Jun23","BSV/USD - Jun23","Pair"
+"BSV0728","BSV/USD","Jul23","BSV/USD - Jul23","Pair"
+"BSV0825","BSV/USD","Aug23","BSV/USD - Aug23","Pair"
+"BSV0929","BSV/USD","Sep23","BSV/USD - Sep23","Pair"
+"BSV1027","BSV/USD","Oct23","BSV/USD - Oct23","Pair"
+"BSV1124","BSV/USD","Nov23","BSV/USD - Nov23","Pair"
+"BSV1229","BSV/USD","Dec23","BSV/USD - Dec23","Pair"
+"TRX Swap","TRX/USD","Perpetual","TRX/USD - Perpetual","Pair"
+"TRX0830","TRX/USD","Aug19","TRX/USD - Aug19","Pair"
+"TRX0927","TRX/USD","Sep19","TRX/USD - Sep19","Pair"
+"TRX1025","TRX/USD","Oct19","TRX/USD - Oct19","Pair"
+"TRX1129","TRX/USD","Nov19","TRX/USD - Nov19","Pair"
+"TRX1227","TRX/USD","Dec19","TRX/USD - Dec19","Pair"
+"TRX0131","TRX/USD","Jan20","TRX/USD - Jan20","Pair"
+"TRX0228","TRX/USD","Feb20","TRX/USD - Feb20","Pair"
+"TRX0327","TRX/USD","Mar20","TRX/USD - Mar20","Pair"
+"TRX0424","TRX/USD","Apr20","TRX/USD - Apr20","Pair"
+"TRX0529","TRX/USD","May20","TRX/USD - May20","Pair"
+"TRX0626","TRX/USD","Jun20","TRX/USD - Jun20","Pair"
+"TRX0731","TRX/USD","Jul20","TRX/USD - Jul20","Pair"
+"TRX0828","TRX/USD","Aug20","TRX/USD - Aug20","Pair"
+"TRX0925","TRX/USD","Sep20","TRX/USD - Sep20","Pair"
+"TRX1030","TRX/USD","Oct20","TRX/USD - Oct20","Pair"
+"TRX1127","TRX/USD","Nov20","TRX/USD - Nov20","Pair"
+"TRX1225","TRX/USD","Dec20","TRX/USD - Dec20","Pair"
+"TRX0129","TRX/USD","Jan21","TRX/USD - Jan21","Pair"
+"TRX0226","TRX/USD","Feb21","TRX/USD - Feb21","Pair"
+"TRX0326","TRX/USD","Mar21","TRX/USD - Mar21","Pair"
+"TRX0430","TRX/USD","Apr21","TRX/USD - Apr21","Pair"
+"TRX0528","TRX/USD","May21","TRX/USD - May21","Pair"
+"TRX0625","TRX/USD","Jun21","TRX/USD - Jun21","Pair"
+"TRX0730","TRX/USD","Jul21","TRX/USD - Jul21","Pair"
+"TRX0827","TRX/USD","Aug21","TRX/USD - Aug21","Pair"
+"TRX0924","TRX/USD","Sep21","TRX/USD - Sep21","Pair"
+"TRX1029","TRX/USD","Oct21","TRX/USD - Oct21","Pair"
+"TRX1126","TRX/USD","Nov21","TRX/USD - Nov21","Pair"
+"TRX1231","TRX/USD","Dec21","TRX/USD - Dec21","Pair"
+"TRX0128","TRX/USD","Jan22","TRX/USD - Jan22","Pair"
+"TRX0225","TRX/USD","Feb22","TRX/USD - Feb22","Pair"
+"TRX0325","TRX/USD","Mar22","TRX/USD - Mar22","Pair"
+"TRX0429","TRX/USD","Apr22","TRX/USD - Apr22","Pair"
+"TRX0527","TRX/USD","May22","TRX/USD - May22","Pair"
+"TRX0624","TRX/USD","Jun22","TRX/USD - Jun22","Pair"
+"TRX0729","TRX/USD","Jul22","TRX/USD - Jul22","Pair"
+"TRX0826","TRX/USD","Aug22","TRX/USD - Aug22","Pair"
+"TRX0930","TRX/USD","Sep22","TRX/USD - Sep22","Pair"
+"TRX1028","TRX/USD","Oct22","TRX/USD - Oct22","Pair"
+"TRX1125","TRX/USD","Nov22","TRX/USD - Nov22","Pair"
+"TRX1230","TRX/USD","Dec22","TRX/USD - Dec22","Pair"
+"TRX0127","TRX/USD","Jan23","TRX/USD - Jan23","Pair"
+"TRX0224","TRX/USD","Feb23","TRX/USD - Feb23","Pair"
+"TRX0331","TRX/USD","Mar23","TRX/USD - Mar23","Pair"
+"TRX0428","TRX/USD","Apr23","TRX/USD - Apr23","Pair"
+"TRX0526","TRX/USD","May23","TRX/USD - May23","Pair"
+"TRX0630","TRX/USD","Jun23","TRX/USD - Jun23","Pair"
+"TRX0728","TRX/USD","Jul23","TRX/USD - Jul23","Pair"
+"TRX0825","TRX/USD","Aug23","TRX/USD - Aug23","Pair"
+"TRX0929","TRX/USD","Sep23","TRX/USD - Sep23","Pair"
+"TRX1027","TRX/USD","Oct23","TRX/USD - Oct23","Pair"
+"TRX1124","TRX/USD","Nov23","TRX/USD - Nov23","Pair"
+"TRX1229","TRX/USD","Dec23","TRX/USD - Dec23","Pair"
+"BTC0823","Exclude on Combined Table",,,
+"BTC0906","Exclude on Combined Table",,,
+"BTC0913","Exclude on Combined Table",,,
+"BTC0920","Exclude on Combined Table",,,
+"BTC1004","Exclude on Combined Table",,,
+"BTC1011","Exclude on Combined Table",,,
+"BTC1018","Exclude on Combined Table",,,
+"BTC1101","Exclude on Combined Table",,,
+"BTC1108","Exclude on Combined Table",,,
+"BTC1115","Exclude on Combined Table",,,
+"BTC1122","Exclude on Combined Table",,,
+"BTC1206","Exclude on Combined Table",,,
+"BTC1213","Exclude on Combined Table",,,
+"BTC1220","Exclude on Combined Table",,,
+"BTC0103","Exclude on Combined Table",,,
+"BTC0110","Exclude on Combined Table",,,
+"BTC0117","Exclude on Combined Table",,,
+"BTC0124","Exclude on Combined Table",,,
+"BTC0207","Exclude on Combined Table",,,
+"BTC0214","Exclude on Combined Table",,,
+"BTC0221","Exclude on Combined Table",,,
+"BTC0306","Exclude on Combined Table",,,
+"BTC0313","Exclude on Combined Table",,,
+"BTC0320","Exclude on Combined Table",,,
+"BTC0403","Exclude on Combined Table",,,
+"BTC0410","Exclude on Combined Table",,,
+"BTC0417","Exclude on Combined Table",,,
+"BTC0501","Exclude on Combined Table",,,
+"BTC0508","Exclude on Combined Table",,,
+"BTC0515","Exclude on Combined Table",,,
+"BTC0522","Exclude on Combined Table",,,
+"BTC0605","Exclude on Combined Table",,,
+"BTC0612","Exclude on Combined Table",,,
+"BTC0619","Exclude on Combined Table",,,
+"BTC0703","Exclude on Combined Table",,,
+"BTC0710","Exclude on Combined Table",,,
+"BTC0717","Exclude on Combined Table",,,
+"BTC0724","Exclude on Combined Table",,,
+"BTC0807","Exclude on Combined Table",,,
+"BTC0814","Exclude on Combined Table",,,
+"BTC0821","Exclude on Combined Table",,,
+"BTC0904","Exclude on Combined Table",,,
+"BTC0911","Exclude on Combined Table",,,
+"BTC0918","Exclude on Combined Table",,,
+"BTC1002","Exclude on Combined Table",,,
+"BTC1009","Exclude on Combined Table",,,
+"BTC1016","Exclude on Combined Table",,,
+"BTC1023","Exclude on Combined Table",,,
+"BTC1106","Exclude on Combined Table",,,
+"BTC1113","Exclude on Combined Table",,,
+"BTC1120","Exclude on Combined Table",,,
+"BTC1204","Exclude on Combined Table",,,
+"BTC1211","Exclude on Combined Table",,,
+"BTC1218","Exclude on Combined Table",,,
+"BTC0101","Exclude on Combined Table",,,
+"BTC0108","Exclude on Combined Table",,,
+"BTC0115","Exclude on Combined Table",,,
+"BTC0122","Exclude on Combined Table",,,
+"BTC0205","Exclude on Combined Table",,,
+"BTC0212","Exclude on Combined Table",,,
+"BTC0219","Exclude on Combined Table",,,
+"BTC0305","Exclude on Combined Table",,,
+"BTC0312","Exclude on Combined Table",,,
+"BTC0319","Exclude on Combined Table",,,
+"BTC0402","Exclude on Combined Table",,,
+"BTC0409","Exclude on Combined Table",,,
+"BTC0416","Exclude on Combined Table",,,
+"BTC0423","Exclude on Combined Table",,,
+"BTC0507","Exclude on Combined Table",,,
+"BTC0514","Exclude on Combined Table",,,
+"BTC0521","Exclude on Combined Table",,,
+"BTC0604","Exclude on Combined Table",,,
+"BTC0611","Exclude on Combined Table",,,
+"BTC0618","Exclude on Combined Table",,,
+"BTC0702","Exclude on Combined Table",,,
+"BTC0709","Exclude on Combined Table",,,
+"BTC0716","Exclude on Combined Table",,,
+"BTC0723","Exclude on Combined Table",,,
+"BTC0806","Exclude on Combined Table",,,
+"BTC0813","Exclude on Combined Table",,,
+"BTC0820","Exclude on Combined Table",,,
+"BTC0903","Exclude on Combined Table",,,
+"BTC0910","Exclude on Combined Table",,,
+"BTC0917","Exclude on Combined Table",,,
+"BTC1001","Exclude on Combined Table",,,
+"BTC1008","Exclude on Combined Table",,,
+"BTC1015","Exclude on Combined Table",,,
+"BTC1022","Exclude on Combined Table",,,
+"BTC1105","Exclude on Combined Table",,,
+"BTC1112","Exclude on Combined Table",,,
+"BTC1119","Exclude on Combined Table",,,
+"BTC1203","Exclude on Combined Table",,,
+"BTC1210","Exclude on Combined Table",,,
+"BTC1217","Exclude on Combined Table",,,
+"BTC1224","Exclude on Combined Table",,,
+"BTC0107","Exclude on Combined Table",,,
+"BTC0114","Exclude on Combined Table",,,
+"BTC0121","Exclude on Combined Table",,,
+"BTC0204","Exclude on Combined Table",,,
+"BTC0211","Exclude on Combined Table",,,
+"BTC0218","Exclude on Combined Table",,,
+"BTC0304","Exclude on Combined Table",,,
+"BTC0311","Exclude on Combined Table",,,
+"BTC0318","Exclude on Combined Table",,,
+"BTC0401","Exclude on Combined Table",,,
+"BTC0408","Exclude on Combined Table",,,
+"BTC0415","Exclude on Combined Table",,,
+"BTC0422","Exclude on Combined Table",,,
+"BTC0506","Exclude on Combined Table",,,
+"BTC0513","Exclude on Combined Table",,,
+"BTC0520","Exclude on Combined Table",,,
+"BTC0603","Exclude on Combined Table",,,
+"BTC0610","Exclude on Combined Table",,,
+"BTC0617","Exclude on Combined Table",,,
+"BTC0701","Exclude on Combined Table",,,
+"BTC0708","Exclude on Combined Table",,,
+"BTC0715","Exclude on Combined Table",,,
+"BTC0722","Exclude on Combined Table",,,
+"BTC0805","Exclude on Combined Table",,,
+"BTC0812","Exclude on Combined Table",,,
+"BTC0819","Exclude on Combined Table",,,
+"BTC0902","Exclude on Combined Table",,,
+"BTC0909","Exclude on Combined Table",,,
+"BTC0916","Exclude on Combined Table",,,
+"BTC0923","Exclude on Combined Table",,,
+"BTC1007","Exclude on Combined Table",,,
+"BTC1014","Exclude on Combined Table",,,
+"BTC1021","Exclude on Combined Table",,,
+"BTC1104","Exclude on Combined Table",,,
+"BTC1111","Exclude on Combined Table",,,
+"BTC1118","Exclude on Combined Table",,,
+"BTC1202","Exclude on Combined Table",,,
+"BTC1209","Exclude on Combined Table",,,
+"BTC1216","Exclude on Combined Table",,,
+"BTC1223","Exclude on Combined Table",,,
+"BTC0106","Exclude on Combined Table",,,
+"BTC0113","Exclude on Combined Table",,,
+"BTC0120","Exclude on Combined Table",,,
+"BTC0203","Exclude on Combined Table",,,
+"BTC0210","Exclude on Combined Table",,,
+"BTC0217","Exclude on Combined Table",,,
+"BTC0303","Exclude on Combined Table",,,
+"BTC0310","Exclude on Combined Table",,,
+"BTC0317","Exclude on Combined Table",,,
+"BTC0324","Exclude on Combined Table",,,
+"BTC0407","Exclude on Combined Table",,,
+"BTC0414","Exclude on Combined Table",,,
+"BTC0421","Exclude on Combined Table",,,
+"BTC0505","Exclude on Combined Table",,,
+"BTC0512","Exclude on Combined Table",,,
+"BTC0519","Exclude on Combined Table",,,
+"BTC0602","Exclude on Combined Table",,,
+"BTC0609","Exclude on Combined Table",,,
+"BTC0616","Exclude on Combined Table",,,
+"BTC0623","Exclude on Combined Table",,,
+"BTC0707","Exclude on Combined Table",,,
+"BTC0714","Exclude on Combined Table",,,
+"BTC0721","Exclude on Combined Table",,,
+"BTC0804","Exclude on Combined Table",,,
+"BTC0811","Exclude on Combined Table",,,
+"BTC0818","Exclude on Combined Table",,,
+"BTC0901","Exclude on Combined Table",,,
+"BTC0908","Exclude on Combined Table",,,
+"BTC0915","Exclude on Combined Table",,,
+"BTC0922","Exclude on Combined Table",,,
+"BTC1006","Exclude on Combined Table",,,
+"BTC1013","Exclude on Combined Table",,,
+"BTC1020","Exclude on Combined Table",,,
+"BTC1103","Exclude on Combined Table",,,
+"BTC1110","Exclude on Combined Table",,,
+"BTC1117","Exclude on Combined Table",,,
+"BTC1201","Exclude on Combined Table",,,
+"BTC1208","Exclude on Combined Table",,,
+"BTC1215","Exclude on Combined Table",,,
+"BTC1222","Exclude on Combined Table",,,
+"LTC0823","Exclude on Combined Table",,,
+"LTC0906","Exclude on Combined Table",,,
+"LTC0913","Exclude on Combined Table",,,
+"LTC0920","Exclude on Combined Table",,,
+"LTC1004","Exclude on Combined Table",,,
+"LTC1011","Exclude on Combined Table",,,
+"LTC1018","Exclude on Combined Table",,,
+"LTC1101","Exclude on Combined Table",,,
+"LTC1108","Exclude on Combined Table",,,
+"LTC1115","Exclude on Combined Table",,,
+"LTC1122","Exclude on Combined Table",,,
+"LTC1206","Exclude on Combined Table",,,
+"LTC1213","Exclude on Combined Table",,,
+"LTC1220","Exclude on Combined Table",,,
+"LTC0103","Exclude on Combined Table",,,
+"LTC0110","Exclude on Combined Table",,,
+"LTC0117","Exclude on Combined Table",,,
+"LTC0124","Exclude on Combined Table",,,
+"LTC0207","Exclude on Combined Table",,,
+"LTC0214","Exclude on Combined Table",,,
+"LTC0221","Exclude on Combined Table",,,
+"LTC0306","Exclude on Combined Table",,,
+"LTC0313","Exclude on Combined Table",,,
+"LTC0320","Exclude on Combined Table",,,
+"LTC0403","Exclude on Combined Table",,,
+"LTC0410","Exclude on Combined Table",,,
+"LTC0417","Exclude on Combined Table",,,
+"LTC0501","Exclude on Combined Table",,,
+"LTC0508","Exclude on Combined Table",,,
+"LTC0515","Exclude on Combined Table",,,
+"LTC0522","Exclude on Combined Table",,,
+"LTC0605","Exclude on Combined Table",,,
+"LTC0612","Exclude on Combined Table",,,
+"LTC0619","Exclude on Combined Table",,,
+"LTC0703","Exclude on Combined Table",,,
+"LTC0710","Exclude on Combined Table",,,
+"LTC0717","Exclude on Combined Table",,,
+"LTC0724","Exclude on Combined Table",,,
+"LTC0807","Exclude on Combined Table",,,
+"LTC0814","Exclude on Combined Table",,,
+"LTC0821","Exclude on Combined Table",,,
+"LTC0904","Exclude on Combined Table",,,
+"LTC0911","Exclude on Combined Table",,,
+"LTC0918","Exclude on Combined Table",,,
+"LTC1002","Exclude on Combined Table",,,
+"LTC1009","Exclude on Combined Table",,,
+"LTC1016","Exclude on Combined Table",,,
+"LTC1023","Exclude on Combined Table",,,
+"LTC1106","Exclude on Combined Table",,,
+"LTC1113","Exclude on Combined Table",,,
+"LTC1120","Exclude on Combined Table",,,
+"LTC1204","Exclude on Combined Table",,,
+"LTC1211","Exclude on Combined Table",,,
+"LTC1218","Exclude on Combined Table",,,
+"LTC0101","Exclude on Combined Table",,,
+"LTC0108","Exclude on Combined Table",,,
+"LTC0115","Exclude on Combined Table",,,
+"LTC0122","Exclude on Combined Table",,,
+"LTC0205","Exclude on Combined Table",,,
+"LTC0212","Exclude on Combined Table",,,
+"LTC0219","Exclude on Combined Table",,,
+"LTC0305","Exclude on Combined Table",,,
+"LTC0312","Exclude on Combined Table",,,
+"LTC0319","Exclude on Combined Table",,,
+"LTC0402","Exclude on Combined Table",,,
+"LTC0409","Exclude on Combined Table",,,
+"LTC0416","Exclude on Combined Table",,,
+"LTC0423","Exclude on Combined Table",,,
+"LTC0507","Exclude on Combined Table",,,
+"LTC0514","Exclude on Combined Table",,,
+"LTC0521","Exclude on Combined Table",,,
+"LTC0604","Exclude on Combined Table",,,
+"LTC0611","Exclude on Combined Table",,,
+"LTC0618","Exclude on Combined Table",,,
+"LTC0702","Exclude on Combined Table",,,
+"LTC0709","Exclude on Combined Table",,,
+"LTC0716","Exclude on Combined Table",,,
+"LTC0723","Exclude on Combined Table",,,
+"LTC0806","Exclude on Combined Table",,,
+"LTC0813","Exclude on Combined Table",,,
+"LTC0820","Exclude on Combined Table",,,
+"LTC0903","Exclude on Combined Table",,,
+"LTC0910","Exclude on Combined Table",,,
+"LTC0917","Exclude on Combined Table",,,
+"LTC1001","Exclude on Combined Table",,,
+"LTC1008","Exclude on Combined Table",,,
+"LTC1015","Exclude on Combined Table",,,
+"LTC1022","Exclude on Combined Table",,,
+"LTC1105","Exclude on Combined Table",,,
+"LTC1112","Exclude on Combined Table",,,
+"LTC1119","Exclude on Combined Table",,,
+"LTC1203","Exclude on Combined Table",,,
+"LTC1210","Exclude on Combined Table",,,
+"LTC1217","Exclude on Combined Table",,,
+"LTC1224","Exclude on Combined Table",,,
+"LTC0107","Exclude on Combined Table",,,
+"LTC0114","Exclude on Combined Table",,,
+"LTC0121","Exclude on Combined Table",,,
+"LTC0204","Exclude on Combined Table",,,
+"LTC0211","Exclude on Combined Table",,,
+"LTC0218","Exclude on Combined Table",,,
+"LTC0304","Exclude on Combined Table",,,
+"LTC0311","Exclude on Combined Table",,,
+"LTC0318","Exclude on Combined Table",,,
+"LTC0401","Exclude on Combined Table",,,
+"LTC0408","Exclude on Combined Table",,,
+"LTC0415","Exclude on Combined Table",,,
+"LTC0422","Exclude on Combined Table",,,
+"LTC0506","Exclude on Combined Table",,,
+"LTC0513","Exclude on Combined Table",,,
+"LTC0520","Exclude on Combined Table",,,
+"LTC0603","Exclude on Combined Table",,,
+"LTC0610","Exclude on Combined Table",,,
+"LTC0617","Exclude on Combined Table",,,
+"LTC0701","Exclude on Combined Table",,,
+"LTC0708","Exclude on Combined Table",,,
+"LTC0715","Exclude on Combined Table",,,
+"LTC0722","Exclude on Combined Table",,,
+"LTC0805","Exclude on Combined Table",,,
+"LTC0812","Exclude on Combined Table",,,
+"LTC0819","Exclude on Combined Table",,,
+"LTC0902","Exclude on Combined Table",,,
+"LTC0909","Exclude on Combined Table",,,
+"LTC0916","Exclude on Combined Table",,,
+"LTC0923","Exclude on Combined Table",,,
+"LTC1007","Exclude on Combined Table",,,
+"LTC1014","Exclude on Combined Table",,,
+"LTC1021","Exclude on Combined Table",,,
+"LTC1104","Exclude on Combined Table",,,
+"LTC1111","Exclude on Combined Table",,,
+"LTC1118","Exclude on Combined Table",,,
+"LTC1202","Exclude on Combined Table",,,
+"LTC1209","Exclude on Combined Table",,,
+"LTC1216","Exclude on Combined Table",,,
+"LTC1223","Exclude on Combined Table",,,
+"LTC0106","Exclude on Combined Table",,,
+"LTC0113","Exclude on Combined Table",,,
+"LTC0120","Exclude on Combined Table",,,
+"LTC0203","Exclude on Combined Table",,,
+"LTC0210","Exclude on Combined Table",,,
+"LTC0217","Exclude on Combined Table",,,
+"LTC0303","Exclude on Combined Table",,,
+"LTC0310","Exclude on Combined Table",,,
+"LTC0317","Exclude on Combined Table",,,
+"LTC0324","Exclude on Combined Table",,,
+"LTC0407","Exclude on Combined Table",,,
+"LTC0414","Exclude on Combined Table",,,
+"LTC0421","Exclude on Combined Table",,,
+"LTC0505","Exclude on Combined Table",,,
+"LTC0512","Exclude on Combined Table",,,
+"LTC0519","Exclude on Combined Table",,,
+"LTC0602","Exclude on Combined Table",,,
+"LTC0609","Exclude on Combined Table",,,
+"LTC0616","Exclude on Combined Table",,,
+"LTC0623","Exclude on Combined Table",,,
+"LTC0707","Exclude on Combined Table",,,
+"LTC0714","Exclude on Combined Table",,,
+"LTC0721","Exclude on Combined Table",,,
+"LTC0804","Exclude on Combined Table",,,
+"LTC0811","Exclude on Combined Table",,,
+"LTC0818","Exclude on Combined Table",,,
+"LTC0901","Exclude on Combined Table",,,
+"LTC0908","Exclude on Combined Table",,,
+"LTC0915","Exclude on Combined Table",,,
+"LTC0922","Exclude on Combined Table",,,
+"LTC1006","Exclude on Combined Table",,,
+"LTC1013","Exclude on Combined Table",,,
+"LTC1020","Exclude on Combined Table",,,
+"LTC1103","Exclude on Combined Table",,,
+"LTC1110","Exclude on Combined Table",,,
+"LTC1117","Exclude on Combined Table",,,
+"LTC1201","Exclude on Combined Table",,,
+"LTC1208","Exclude on Combined Table",,,
+"LTC1215","Exclude on Combined Table",,,
+"LTC1222","Exclude on Combined Table",,,
+"ETH0823","Exclude on Combined Table",,,
+"ETH0906","Exclude on Combined Table",,,
+"ETH0913","Exclude on Combined Table",,,
+"ETH0920","Exclude on Combined Table",,,
+"ETH1004","Exclude on Combined Table",,,
+"ETH1011","Exclude on Combined Table",,,
+"ETH1018","Exclude on Combined Table",,,
+"ETH1101","Exclude on Combined Table",,,
+"ETH1108","Exclude on Combined Table",,,
+"ETH1115","Exclude on Combined Table",,,
+"ETH1122","Exclude on Combined Table",,,
+"ETH1206","Exclude on Combined Table",,,
+"ETH1213","Exclude on Combined Table",,,
+"ETH1220","Exclude on Combined Table",,,
+"ETH0103","Exclude on Combined Table",,,
+"ETH0110","Exclude on Combined Table",,,
+"ETH0117","Exclude on Combined Table",,,
+"ETH0124","Exclude on Combined Table",,,
+"ETH0207","Exclude on Combined Table",,,
+"ETH0214","Exclude on Combined Table",,,
+"ETH0221","Exclude on Combined Table",,,
+"ETH0306","Exclude on Combined Table",,,
+"ETH0313","Exclude on Combined Table",,,
+"ETH0320","Exclude on Combined Table",,,
+"ETH0403","Exclude on Combined Table",,,
+"ETH0410","Exclude on Combined Table",,,
+"ETH0417","Exclude on Combined Table",,,
+"ETH0501","Exclude on Combined Table",,,
+"ETH0508","Exclude on Combined Table",,,
+"ETH0515","Exclude on Combined Table",,,
+"ETH0522","Exclude on Combined Table",,,
+"ETH0605","Exclude on Combined Table",,,
+"ETH0612","Exclude on Combined Table",,,
+"ETH0619","Exclude on Combined Table",,,
+"ETH0703","Exclude on Combined Table",,,
+"ETH0710","Exclude on Combined Table",,,
+"ETH0717","Exclude on Combined Table",,,
+"ETH0724","Exclude on Combined Table",,,
+"ETH0807","Exclude on Combined Table",,,
+"ETH0814","Exclude on Combined Table",,,
+"ETH0821","Exclude on Combined Table",,,
+"ETH0904","Exclude on Combined Table",,,
+"ETH0911","Exclude on Combined Table",,,
+"ETH0918","Exclude on Combined Table",,,
+"ETH1002","Exclude on Combined Table",,,
+"ETH1009","Exclude on Combined Table",,,
+"ETH1016","Exclude on Combined Table",,,
+"ETH1023","Exclude on Combined Table",,,
+"ETH1106","Exclude on Combined Table",,,
+"ETH1113","Exclude on Combined Table",,,
+"ETH1120","Exclude on Combined Table",,,
+"ETH1204","Exclude on Combined Table",,,
+"ETH1211","Exclude on Combined Table",,,
+"ETH1218","Exclude on Combined Table",,,
+"ETH0101","Exclude on Combined Table",,,
+"ETH0108","Exclude on Combined Table",,,
+"ETH0115","Exclude on Combined Table",,,
+"ETH0122","Exclude on Combined Table",,,
+"ETH0205","Exclude on Combined Table",,,
+"ETH0212","Exclude on Combined Table",,,
+"ETH0219","Exclude on Combined Table",,,
+"ETH0305","Exclude on Combined Table",,,
+"ETH0312","Exclude on Combined Table",,,
+"ETH0319","Exclude on Combined Table",,,
+"ETH0402","Exclude on Combined Table",,,
+"ETH0409","Exclude on Combined Table",,,
+"ETH0416","Exclude on Combined Table",,,
+"ETH0423","Exclude on Combined Table",,,
+"ETH0507","Exclude on Combined Table",,,
+"ETH0514","Exclude on Combined Table",,,
+"ETH0521","Exclude on Combined Table",,,
+"ETH0604","Exclude on Combined Table",,,
+"ETH0611","Exclude on Combined Table",,,
+"ETH0618","Exclude on Combined Table",,,
+"ETH0702","Exclude on Combined Table",,,
+"ETH0709","Exclude on Combined Table",,,
+"ETH0716","Exclude on Combined Table",,,
+"ETH0723","Exclude on Combined Table",,,
+"ETH0806","Exclude on Combined Table",,,
+"ETH0813","Exclude on Combined Table",,,
+"ETH0820","Exclude on Combined Table",,,
+"ETH0903","Exclude on Combined Table",,,
+"ETH0910","Exclude on Combined Table",,,
+"ETH0917","Exclude on Combined Table",,,
+"ETH1001","Exclude on Combined Table",,,
+"ETH1008","Exclude on Combined Table",,,
+"ETH1015","Exclude on Combined Table",,,
+"ETH1022","Exclude on Combined Table",,,
+"ETH1105","Exclude on Combined Table",,,
+"ETH1112","Exclude on Combined Table",,,
+"ETH1119","Exclude on Combined Table",,,
+"ETH1203","Exclude on Combined Table",,,
+"ETH1210","Exclude on Combined Table",,,
+"ETH1217","Exclude on Combined Table",,,
+"ETH1224","Exclude on Combined Table",,,
+"ETH0107","Exclude on Combined Table",,,
+"ETH0114","Exclude on Combined Table",,,
+"ETH0121","Exclude on Combined Table",,,
+"ETH0204","Exclude on Combined Table",,,
+"ETH0211","Exclude on Combined Table",,,
+"ETH0218","Exclude on Combined Table",,,
+"ETH0304","Exclude on Combined Table",,,
+"ETH0311","Exclude on Combined Table",,,
+"ETH0318","Exclude on Combined Table",,,
+"ETH0401","Exclude on Combined Table",,,
+"ETH0408","Exclude on Combined Table",,,
+"ETH0415","Exclude on Combined Table",,,
+"ETH0422","Exclude on Combined Table",,,
+"ETH0506","Exclude on Combined Table",,,
+"ETH0513","Exclude on Combined Table",,,
+"ETH0520","Exclude on Combined Table",,,
+"ETH0603","Exclude on Combined Table",,,
+"ETH0610","Exclude on Combined Table",,,
+"ETH0617","Exclude on Combined Table",,,
+"ETH0701","Exclude on Combined Table",,,
+"ETH0708","Exclude on Combined Table",,,
+"ETH0715","Exclude on Combined Table",,,
+"ETH0722","Exclude on Combined Table",,,
+"ETH0805","Exclude on Combined Table",,,
+"ETH0812","Exclude on Combined Table",,,
+"ETH0819","Exclude on Combined Table",,,
+"ETH0902","Exclude on Combined Table",,,
+"ETH0909","Exclude on Combined Table",,,
+"ETH0916","Exclude on Combined Table",,,
+"ETH0923","Exclude on Combined Table",,,
+"ETH1007","Exclude on Combined Table",,,
+"ETH1014","Exclude on Combined Table",,,
+"ETH1021","Exclude on Combined Table",,,
+"ETH1104","Exclude on Combined Table",,,
+"ETH1111","Exclude on Combined Table",,,
+"ETH1118","Exclude on Combined Table",,,
+"ETH1202","Exclude on Combined Table",,,
+"ETH1209","Exclude on Combined Table",,,
+"ETH1216","Exclude on Combined Table",,,
+"ETH1223","Exclude on Combined Table",,,
+"ETH0106","Exclude on Combined Table",,,
+"ETH0113","Exclude on Combined Table",,,
+"ETH0120","Exclude on Combined Table",,,
+"ETH0203","Exclude on Combined Table",,,
+"ETH0210","Exclude on Combined Table",,,
+"ETH0217","Exclude on Combined Table",,,
+"ETH0303","Exclude on Combined Table",,,
+"ETH0310","Exclude on Combined Table",,,
+"ETH0317","Exclude on Combined Table",,,
+"ETH0324","Exclude on Combined Table",,,
+"ETH0407","Exclude on Combined Table",,,
+"ETH0414","Exclude on Combined Table",,,
+"ETH0421","Exclude on Combined Table",,,
+"ETH0505","Exclude on Combined Table",,,
+"ETH0512","Exclude on Combined Table",,,
+"ETH0519","Exclude on Combined Table",,,
+"ETH0602","Exclude on Combined Table",,,
+"ETH0609","Exclude on Combined Table",,,
+"ETH0616","Exclude on Combined Table",,,
+"ETH0623","Exclude on Combined Table",,,
+"ETH0707","Exclude on Combined Table",,,
+"ETH0714","Exclude on Combined Table",,,
+"ETH0721","Exclude on Combined Table",,,
+"ETH0804","Exclude on Combined Table",,,
+"ETH0811","Exclude on Combined Table",,,
+"ETH0818","Exclude on Combined Table",,,
+"ETH0901","Exclude on Combined Table",,,
+"ETH0908","Exclude on Combined Table",,,
+"ETH0915","Exclude on Combined Table",,,
+"ETH0922","Exclude on Combined Table",,,
+"ETH1006","Exclude on Combined Table",,,
+"ETH1013","Exclude on Combined Table",,,
+"ETH1020","Exclude on Combined Table",,,
+"ETH1103","Exclude on Combined Table",,,
+"ETH1110","Exclude on Combined Table",,,
+"ETH1117","Exclude on Combined Table",,,
+"ETH1201","Exclude on Combined Table",,,
+"ETH1208","Exclude on Combined Table",,,
+"ETH1215","Exclude on Combined Table",,,
+"ETH1222","Exclude on Combined Table",,,
+"ETC0823","Exclude on Combined Table",,,
+"ETC0906","Exclude on Combined Table",,,
+"ETC0913","Exclude on Combined Table",,,
+"ETC0920","Exclude on Combined Table",,,
+"ETC1004","Exclude on Combined Table",,,
+"ETC1011","Exclude on Combined Table",,,
+"ETC1018","Exclude on Combined Table",,,
+"ETC1101","Exclude on Combined Table",,,
+"ETC1108","Exclude on Combined Table",,,
+"ETC1115","Exclude on Combined Table",,,
+"ETC1122","Exclude on Combined Table",,,
+"ETC1206","Exclude on Combined Table",,,
+"ETC1213","Exclude on Combined Table",,,
+"ETC1220","Exclude on Combined Table",,,
+"ETC0103","Exclude on Combined Table",,,
+"ETC0110","Exclude on Combined Table",,,
+"ETC0117","Exclude on Combined Table",,,
+"ETC0124","Exclude on Combined Table",,,
+"ETC0207","Exclude on Combined Table",,,
+"ETC0214","Exclude on Combined Table",,,
+"ETC0221","Exclude on Combined Table",,,
+"ETC0306","Exclude on Combined Table",,,
+"ETC0313","Exclude on Combined Table",,,
+"ETC0320","Exclude on Combined Table",,,
+"ETC0403","Exclude on Combined Table",,,
+"ETC0410","Exclude on Combined Table",,,
+"ETC0417","Exclude on Combined Table",,,
+"ETC0501","Exclude on Combined Table",,,
+"ETC0508","Exclude on Combined Table",,,
+"ETC0515","Exclude on Combined Table",,,
+"ETC0522","Exclude on Combined Table",,,
+"ETC0605","Exclude on Combined Table",,,
+"ETC0612","Exclude on Combined Table",,,
+"ETC0619","Exclude on Combined Table",,,
+"ETC0703","Exclude on Combined Table",,,
+"ETC0710","Exclude on Combined Table",,,
+"ETC0717","Exclude on Combined Table",,,
+"ETC0724","Exclude on Combined Table",,,
+"ETC0807","Exclude on Combined Table",,,
+"ETC0814","Exclude on Combined Table",,,
+"ETC0821","Exclude on Combined Table",,,
+"ETC0904","Exclude on Combined Table",,,
+"ETC0911","Exclude on Combined Table",,,
+"ETC0918","Exclude on Combined Table",,,
+"ETC1002","Exclude on Combined Table",,,
+"ETC1009","Exclude on Combined Table",,,
+"ETC1016","Exclude on Combined Table",,,
+"ETC1023","Exclude on Combined Table",,,
+"ETC1106","Exclude on Combined Table",,,
+"ETC1113","Exclude on Combined Table",,,
+"ETC1120","Exclude on Combined Table",,,
+"ETC1204","Exclude on Combined Table",,,
+"ETC1211","Exclude on Combined Table",,,
+"ETC1218","Exclude on Combined Table",,,
+"ETC0101","Exclude on Combined Table",,,
+"ETC0108","Exclude on Combined Table",,,
+"ETC0115","Exclude on Combined Table",,,
+"ETC0122","Exclude on Combined Table",,,
+"ETC0205","Exclude on Combined Table",,,
+"ETC0212","Exclude on Combined Table",,,
+"ETC0219","Exclude on Combined Table",,,
+"ETC0305","Exclude on Combined Table",,,
+"ETC0312","Exclude on Combined Table",,,
+"ETC0319","Exclude on Combined Table",,,
+"ETC0402","Exclude on Combined Table",,,
+"ETC0409","Exclude on Combined Table",,,
+"ETC0416","Exclude on Combined Table",,,
+"ETC0423","Exclude on Combined Table",,,
+"ETC0507","Exclude on Combined Table",,,
+"ETC0514","Exclude on Combined Table",,,
+"ETC0521","Exclude on Combined Table",,,
+"ETC0604","Exclude on Combined Table",,,
+"ETC0611","Exclude on Combined Table",,,
+"ETC0618","Exclude on Combined Table",,,
+"ETC0702","Exclude on Combined Table",,,
+"ETC0709","Exclude on Combined Table",,,
+"ETC0716","Exclude on Combined Table",,,
+"ETC0723","Exclude on Combined Table",,,
+"ETC0806","Exclude on Combined Table",,,
+"ETC0813","Exclude on Combined Table",,,
+"ETC0820","Exclude on Combined Table",,,
+"ETC0903","Exclude on Combined Table",,,
+"ETC0910","Exclude on Combined Table",,,
+"ETC0917","Exclude on Combined Table",,,
+"ETC1001","Exclude on Combined Table",,,
+"ETC1008","Exclude on Combined Table",,,
+"ETC1015","Exclude on Combined Table",,,
+"ETC1022","Exclude on Combined Table",,,
+"ETC1105","Exclude on Combined Table",,,
+"ETC1112","Exclude on Combined Table",,,
+"ETC1119","Exclude on Combined Table",,,
+"ETC1203","Exclude on Combined Table",,,
+"ETC1210","Exclude on Combined Table",,,
+"ETC1217","Exclude on Combined Table",,,
+"ETC1224","Exclude on Combined Table",,,
+"ETC0107","Exclude on Combined Table",,,
+"ETC0114","Exclude on Combined Table",,,
+"ETC0121","Exclude on Combined Table",,,
+"ETC0204","Exclude on Combined Table",,,
+"ETC0211","Exclude on Combined Table",,,
+"ETC0218","Exclude on Combined Table",,,
+"ETC0304","Exclude on Combined Table",,,
+"ETC0311","Exclude on Combined Table",,,
+"ETC0318","Exclude on Combined Table",,,
+"ETC0401","Exclude on Combined Table",,,
+"ETC0408","Exclude on Combined Table",,,
+"ETC0415","Exclude on Combined Table",,,
+"ETC0422","Exclude on Combined Table",,,
+"ETC0506","Exclude on Combined Table",,,
+"ETC0513","Exclude on Combined Table",,,
+"ETC0520","Exclude on Combined Table",,,
+"ETC0603","Exclude on Combined Table",,,
+"ETC0610","Exclude on Combined Table",,,
+"ETC0617","Exclude on Combined Table",,,
+"ETC0701","Exclude on Combined Table",,,
+"ETC0708","Exclude on Combined Table",,,
+"ETC0715","Exclude on Combined Table",,,
+"ETC0722","Exclude on Combined Table",,,
+"ETC0805","Exclude on Combined Table",,,
+"ETC0812","Exclude on Combined Table",,,
+"ETC0819","Exclude on Combined Table",,,
+"ETC0902","Exclude on Combined Table",,,
+"ETC0909","Exclude on Combined Table",,,
+"ETC0916","Exclude on Combined Table",,,
+"ETC0923","Exclude on Combined Table",,,
+"ETC1007","Exclude on Combined Table",,,
+"ETC1014","Exclude on Combined Table",,,
+"ETC1021","Exclude on Combined Table",,,
+"ETC1104","Exclude on Combined Table",,,
+"ETC1111","Exclude on Combined Table",,,
+"ETC1118","Exclude on Combined Table",,,
+"ETC1202","Exclude on Combined Table",,,
+"ETC1209","Exclude on Combined Table",,,
+"ETC1216","Exclude on Combined Table",,,
+"ETC1223","Exclude on Combined Table",,,
+"ETC0106","Exclude on Combined Table",,,
+"ETC0113","Exclude on Combined Table",,,
+"ETC0120","Exclude on Combined Table",,,
+"ETC0203","Exclude on Combined Table",,,
+"ETC0210","Exclude on Combined Table",,,
+"ETC0217","Exclude on Combined Table",,,
+"ETC0303","Exclude on Combined Table",,,
+"ETC0310","Exclude on Combined Table",,,
+"ETC0317","Exclude on Combined Table",,,
+"ETC0324","Exclude on Combined Table",,,
+"ETC0407","Exclude on Combined Table",,,
+"ETC0414","Exclude on Combined Table",,,
+"ETC0421","Exclude on Combined Table",,,
+"ETC0505","Exclude on Combined Table",,,
+"ETC0512","Exclude on Combined Table",,,
+"ETC0519","Exclude on Combined Table",,,
+"ETC0602","Exclude on Combined Table",,,
+"ETC0609","Exclude on Combined Table",,,
+"ETC0616","Exclude on Combined Table",,,
+"ETC0623","Exclude on Combined Table",,,
+"ETC0707","Exclude on Combined Table",,,
+"ETC0714","Exclude on Combined Table",,,
+"ETC0721","Exclude on Combined Table",,,
+"ETC0804","Exclude on Combined Table",,,
+"ETC0811","Exclude on Combined Table",,,
+"ETC0818","Exclude on Combined Table",,,
+"ETC0901","Exclude on Combined Table",,,
+"ETC0908","Exclude on Combined Table",,,
+"ETC0915","Exclude on Combined Table",,,
+"ETC0922","Exclude on Combined Table",,,
+"ETC1006","Exclude on Combined Table",,,
+"ETC1013","Exclude on Combined Table",,,
+"ETC1020","Exclude on Combined Table",,,
+"ETC1103","Exclude on Combined Table",,,
+"ETC1110","Exclude on Combined Table",,,
+"ETC1117","Exclude on Combined Table",,,
+"ETC1201","Exclude on Combined Table",,,
+"ETC1208","Exclude on Combined Table",,,
+"ETC1215","Exclude on Combined Table",,,
+"ETC1222","Exclude on Combined Table",,,
+"XRP0823","Exclude on Combined Table",,,
+"XRP0906","Exclude on Combined Table",,,
+"XRP0913","Exclude on Combined Table",,,
+"XRP0920","Exclude on Combined Table",,,
+"XRP1004","Exclude on Combined Table",,,
+"XRP1011","Exclude on Combined Table",,,
+"XRP1018","Exclude on Combined Table",,,
+"XRP1101","Exclude on Combined Table",,,
+"XRP1108","Exclude on Combined Table",,,
+"XRP1115","Exclude on Combined Table",,,
+"XRP1122","Exclude on Combined Table",,,
+"XRP1206","Exclude on Combined Table",,,
+"XRP1213","Exclude on Combined Table",,,
+"XRP1220","Exclude on Combined Table",,,
+"XRP0103","Exclude on Combined Table",,,
+"XRP0110","Exclude on Combined Table",,,
+"XRP0117","Exclude on Combined Table",,,
+"XRP0124","Exclude on Combined Table",,,
+"XRP0207","Exclude on Combined Table",,,
+"XRP0214","Exclude on Combined Table",,,
+"XRP0221","Exclude on Combined Table",,,
+"XRP0306","Exclude on Combined Table",,,
+"XRP0313","Exclude on Combined Table",,,
+"XRP0320","Exclude on Combined Table",,,
+"XRP0403","Exclude on Combined Table",,,
+"XRP0410","Exclude on Combined Table",,,
+"XRP0417","Exclude on Combined Table",,,
+"XRP0501","Exclude on Combined Table",,,
+"XRP0508","Exclude on Combined Table",,,
+"XRP0515","Exclude on Combined Table",,,
+"XRP0522","Exclude on Combined Table",,,
+"XRP0605","Exclude on Combined Table",,,
+"XRP0612","Exclude on Combined Table",,,
+"XRP0619","Exclude on Combined Table",,,
+"XRP0703","Exclude on Combined Table",,,
+"XRP0710","Exclude on Combined Table",,,
+"XRP0717","Exclude on Combined Table",,,
+"XRP0724","Exclude on Combined Table",,,
+"XRP0807","Exclude on Combined Table",,,
+"XRP0814","Exclude on Combined Table",,,
+"XRP0821","Exclude on Combined Table",,,
+"XRP0904","Exclude on Combined Table",,,
+"XRP0911","Exclude on Combined Table",,,
+"XRP0918","Exclude on Combined Table",,,
+"XRP1002","Exclude on Combined Table",,,
+"XRP1009","Exclude on Combined Table",,,
+"XRP1016","Exclude on Combined Table",,,
+"XRP1023","Exclude on Combined Table",,,
+"XRP1106","Exclude on Combined Table",,,
+"XRP1113","Exclude on Combined Table",,,
+"XRP1120","Exclude on Combined Table",,,
+"XRP1204","Exclude on Combined Table",,,
+"XRP1211","Exclude on Combined Table",,,
+"XRP1218","Exclude on Combined Table",,,
+"XRP0101","Exclude on Combined Table",,,
+"XRP0108","Exclude on Combined Table",,,
+"XRP0115","Exclude on Combined Table",,,
+"XRP0122","Exclude on Combined Table",,,
+"XRP0205","Exclude on Combined Table",,,
+"XRP0212","Exclude on Combined Table",,,
+"XRP0219","Exclude on Combined Table",,,
+"XRP0305","Exclude on Combined Table",,,
+"XRP0312","Exclude on Combined Table",,,
+"XRP0319","Exclude on Combined Table",,,
+"XRP0402","Exclude on Combined Table",,,
+"XRP0409","Exclude on Combined Table",,,
+"XRP0416","Exclude on Combined Table",,,
+"XRP0423","Exclude on Combined Table",,,
+"XRP0507","Exclude on Combined Table",,,
+"XRP0514","Exclude on Combined Table",,,
+"XRP0521","Exclude on Combined Table",,,
+"XRP0604","Exclude on Combined Table",,,
+"XRP0611","Exclude on Combined Table",,,
+"XRP0618","Exclude on Combined Table",,,
+"XRP0702","Exclude on Combined Table",,,
+"XRP0709","Exclude on Combined Table",,,
+"XRP0716","Exclude on Combined Table",,,
+"XRP0723","Exclude on Combined Table",,,
+"XRP0806","Exclude on Combined Table",,,
+"XRP0813","Exclude on Combined Table",,,
+"XRP0820","Exclude on Combined Table",,,
+"XRP0903","Exclude on Combined Table",,,
+"XRP0910","Exclude on Combined Table",,,
+"XRP0917","Exclude on Combined Table",,,
+"XRP1001","Exclude on Combined Table",,,
+"XRP1008","Exclude on Combined Table",,,
+"XRP1015","Exclude on Combined Table",,,
+"XRP1022","Exclude on Combined Table",,,
+"XRP1105","Exclude on Combined Table",,,
+"XRP1112","Exclude on Combined Table",,,
+"XRP1119","Exclude on Combined Table",,,
+"XRP1203","Exclude on Combined Table",,,
+"XRP1210","Exclude on Combined Table",,,
+"XRP1217","Exclude on Combined Table",,,
+"XRP1224","Exclude on Combined Table",,,
+"XRP0107","Exclude on Combined Table",,,
+"XRP0114","Exclude on Combined Table",,,
+"XRP0121","Exclude on Combined Table",,,
+"XRP0204","Exclude on Combined Table",,,
+"XRP0211","Exclude on Combined Table",,,
+"XRP0218","Exclude on Combined Table",,,
+"XRP0304","Exclude on Combined Table",,,
+"XRP0311","Exclude on Combined Table",,,
+"XRP0318","Exclude on Combined Table",,,
+"XRP0401","Exclude on Combined Table",,,
+"XRP0408","Exclude on Combined Table",,,
+"XRP0415","Exclude on Combined Table",,,
+"XRP0422","Exclude on Combined Table",,,
+"XRP0506","Exclude on Combined Table",,,
+"XRP0513","Exclude on Combined Table",,,
+"XRP0520","Exclude on Combined Table",,,
+"XRP0603","Exclude on Combined Table",,,
+"XRP0610","Exclude on Combined Table",,,
+"XRP0617","Exclude on Combined Table",,,
+"XRP0701","Exclude on Combined Table",,,
+"XRP0708","Exclude on Combined Table",,,
+"XRP0715","Exclude on Combined Table",,,
+"XRP0722","Exclude on Combined Table",,,
+"XRP0805","Exclude on Combined Table",,,
+"XRP0812","Exclude on Combined Table",,,
+"XRP0819","Exclude on Combined Table",,,
+"XRP0902","Exclude on Combined Table",,,
+"XRP0909","Exclude on Combined Table",,,
+"XRP0916","Exclude on Combined Table",,,
+"XRP0923","Exclude on Combined Table",,,
+"XRP1007","Exclude on Combined Table",,,
+"XRP1014","Exclude on Combined Table",,,
+"XRP1021","Exclude on Combined Table",,,
+"XRP1104","Exclude on Combined Table",,,
+"XRP1111","Exclude on Combined Table",,,
+"XRP1118","Exclude on Combined Table",,,
+"XRP1202","Exclude on Combined Table",,,
+"XRP1209","Exclude on Combined Table",,,
+"XRP1216","Exclude on Combined Table",,,
+"XRP1223","Exclude on Combined Table",,,
+"XRP0106","Exclude on Combined Table",,,
+"XRP0113","Exclude on Combined Table",,,
+"XRP0120","Exclude on Combined Table",,,
+"XRP0203","Exclude on Combined Table",,,
+"XRP0210","Exclude on Combined Table",,,
+"XRP0217","Exclude on Combined Table",,,
+"XRP0303","Exclude on Combined Table",,,
+"XRP0310","Exclude on Combined Table",,,
+"XRP0317","Exclude on Combined Table",,,
+"XRP0324","Exclude on Combined Table",,,
+"XRP0407","Exclude on Combined Table",,,
+"XRP0414","Exclude on Combined Table",,,
+"XRP0421","Exclude on Combined Table",,,
+"XRP0505","Exclude on Combined Table",,,
+"XRP0512","Exclude on Combined Table",,,
+"XRP0519","Exclude on Combined Table",,,
+"XRP0602","Exclude on Combined Table",,,
+"XRP0609","Exclude on Combined Table",,,
+"XRP0616","Exclude on Combined Table",,,
+"XRP0623","Exclude on Combined Table",,,
+"XRP0707","Exclude on Combined Table",,,
+"XRP0714","Exclude on Combined Table",,,
+"XRP0721","Exclude on Combined Table",,,
+"XRP0804","Exclude on Combined Table",,,
+"XRP0811","Exclude on Combined Table",,,
+"XRP0818","Exclude on Combined Table",,,
+"XRP0901","Exclude on Combined Table",,,
+"XRP0908","Exclude on Combined Table",,,
+"XRP0915","Exclude on Combined Table",,,
+"XRP0922","Exclude on Combined Table",,,
+"XRP1006","Exclude on Combined Table",,,
+"XRP1013","Exclude on Combined Table",,,
+"XRP1020","Exclude on Combined Table",,,
+"XRP1103","Exclude on Combined Table",,,
+"XRP1110","Exclude on Combined Table",,,
+"XRP1117","Exclude on Combined Table",,,
+"XRP1201","Exclude on Combined Table",,,
+"XRP1208","Exclude on Combined Table",,,
+"XRP1215","Exclude on Combined Table",,,
+"XRP1222","Exclude on Combined Table",,,
+"EOS0823","Exclude on Combined Table",,,
+"EOS0906","Exclude on Combined Table",,,
+"EOS0913","Exclude on Combined Table",,,
+"EOS0920","Exclude on Combined Table",,,
+"EOS1004","Exclude on Combined Table",,,
+"EOS1011","Exclude on Combined Table",,,
+"EOS1018","Exclude on Combined Table",,,
+"EOS1101","Exclude on Combined Table",,,
+"EOS1108","Exclude on Combined Table",,,
+"EOS1115","Exclude on Combined Table",,,
+"EOS1122","Exclude on Combined Table",,,
+"EOS1206","Exclude on Combined Table",,,
+"EOS1213","Exclude on Combined Table",,,
+"EOS1220","Exclude on Combined Table",,,
+"EOS0103","Exclude on Combined Table",,,
+"EOS0110","Exclude on Combined Table",,,
+"EOS0117","Exclude on Combined Table",,,
+"EOS0124","Exclude on Combined Table",,,
+"EOS0207","Exclude on Combined Table",,,
+"EOS0214","Exclude on Combined Table",,,
+"EOS0221","Exclude on Combined Table",,,
+"EOS0306","Exclude on Combined Table",,,
+"EOS0313","Exclude on Combined Table",,,
+"EOS0320","Exclude on Combined Table",,,
+"EOS0403","Exclude on Combined Table",,,
+"EOS0410","Exclude on Combined Table",,,
+"EOS0417","Exclude on Combined Table",,,
+"EOS0501","Exclude on Combined Table",,,
+"EOS0508","Exclude on Combined Table",,,
+"EOS0515","Exclude on Combined Table",,,
+"EOS0522","Exclude on Combined Table",,,
+"EOS0605","Exclude on Combined Table",,,
+"EOS0612","Exclude on Combined Table",,,
+"EOS0619","Exclude on Combined Table",,,
+"EOS0703","Exclude on Combined Table",,,
+"EOS0710","Exclude on Combined Table",,,
+"EOS0717","Exclude on Combined Table",,,
+"EOS0724","Exclude on Combined Table",,,
+"EOS0807","Exclude on Combined Table",,,
+"EOS0814","Exclude on Combined Table",,,
+"EOS0821","Exclude on Combined Table",,,
+"EOS0904","Exclude on Combined Table",,,
+"EOS0911","Exclude on Combined Table",,,
+"EOS0918","Exclude on Combined Table",,,
+"EOS1002","Exclude on Combined Table",,,
+"EOS1009","Exclude on Combined Table",,,
+"EOS1016","Exclude on Combined Table",,,
+"EOS1023","Exclude on Combined Table",,,
+"EOS1106","Exclude on Combined Table",,,
+"EOS1113","Exclude on Combined Table",,,
+"EOS1120","Exclude on Combined Table",,,
+"EOS1204","Exclude on Combined Table",,,
+"EOS1211","Exclude on Combined Table",,,
+"EOS1218","Exclude on Combined Table",,,
+"EOS0101","Exclude on Combined Table",,,
+"EOS0108","Exclude on Combined Table",,,
+"EOS0115","Exclude on Combined Table",,,
+"EOS0122","Exclude on Combined Table",,,
+"EOS0205","Exclude on Combined Table",,,
+"EOS0212","Exclude on Combined Table",,,
+"EOS0219","Exclude on Combined Table",,,
+"EOS0305","Exclude on Combined Table",,,
+"EOS0312","Exclude on Combined Table",,,
+"EOS0319","Exclude on Combined Table",,,
+"EOS0402","Exclude on Combined Table",,,
+"EOS0409","Exclude on Combined Table",,,
+"EOS0416","Exclude on Combined Table",,,
+"EOS0423","Exclude on Combined Table",,,
+"EOS0507","Exclude on Combined Table",,,
+"EOS0514","Exclude on Combined Table",,,
+"EOS0521","Exclude on Combined Table",,,
+"EOS0604","Exclude on Combined Table",,,
+"EOS0611","Exclude on Combined Table",,,
+"EOS0618","Exclude on Combined Table",,,
+"EOS0702","Exclude on Combined Table",,,
+"EOS0709","Exclude on Combined Table",,,
+"EOS0716","Exclude on Combined Table",,,
+"EOS0723","Exclude on Combined Table",,,
+"EOS0806","Exclude on Combined Table",,,
+"EOS0813","Exclude on Combined Table",,,
+"EOS0820","Exclude on Combined Table",,,
+"EOS0903","Exclude on Combined Table",,,
+"EOS0910","Exclude on Combined Table",,,
+"EOS0917","Exclude on Combined Table",,,
+"EOS1001","Exclude on Combined Table",,,
+"EOS1008","Exclude on Combined Table",,,
+"EOS1015","Exclude on Combined Table",,,
+"EOS1022","Exclude on Combined Table",,,
+"EOS1105","Exclude on Combined Table",,,
+"EOS1112","Exclude on Combined Table",,,
+"EOS1119","Exclude on Combined Table",,,
+"EOS1203","Exclude on Combined Table",,,
+"EOS1210","Exclude on Combined Table",,,
+"EOS1217","Exclude on Combined Table",,,
+"EOS1224","Exclude on Combined Table",,,
+"EOS0107","Exclude on Combined Table",,,
+"EOS0114","Exclude on Combined Table",,,
+"EOS0121","Exclude on Combined Table",,,
+"EOS0204","Exclude on Combined Table",,,
+"EOS0211","Exclude on Combined Table",,,
+"EOS0218","Exclude on Combined Table",,,
+"EOS0304","Exclude on Combined Table",,,
+"EOS0311","Exclude on Combined Table",,,
+"EOS0318","Exclude on Combined Table",,,
+"EOS0401","Exclude on Combined Table",,,
+"EOS0408","Exclude on Combined Table",,,
+"EOS0415","Exclude on Combined Table",,,
+"EOS0422","Exclude on Combined Table",,,
+"EOS0506","Exclude on Combined Table",,,
+"EOS0513","Exclude on Combined Table",,,
+"EOS0520","Exclude on Combined Table",,,
+"EOS0603","Exclude on Combined Table",,,
+"EOS0610","Exclude on Combined Table",,,
+"EOS0617","Exclude on Combined Table",,,
+"EOS0701","Exclude on Combined Table",,,
+"EOS0708","Exclude on Combined Table",,,
+"EOS0715","Exclude on Combined Table",,,
+"EOS0722","Exclude on Combined Table",,,
+"EOS0805","Exclude on Combined Table",,,
+"EOS0812","Exclude on Combined Table",,,
+"EOS0819","Exclude on Combined Table",,,
+"EOS0902","Exclude on Combined Table",,,
+"EOS0909","Exclude on Combined Table",,,
+"EOS0916","Exclude on Combined Table",,,
+"EOS0923","Exclude on Combined Table",,,
+"EOS1007","Exclude on Combined Table",,,
+"EOS1014","Exclude on Combined Table",,,
+"EOS1021","Exclude on Combined Table",,,
+"EOS1104","Exclude on Combined Table",,,
+"EOS1111","Exclude on Combined Table",,,
+"EOS1118","Exclude on Combined Table",,,
+"EOS1202","Exclude on Combined Table",,,
+"EOS1209","Exclude on Combined Table",,,
+"EOS1216","Exclude on Combined Table",,,
+"EOS1223","Exclude on Combined Table",,,
+"EOS0106","Exclude on Combined Table",,,
+"EOS0113","Exclude on Combined Table",,,
+"EOS0120","Exclude on Combined Table",,,
+"EOS0203","Exclude on Combined Table",,,
+"EOS0210","Exclude on Combined Table",,,
+"EOS0217","Exclude on Combined Table",,,
+"EOS0303","Exclude on Combined Table",,,
+"EOS0310","Exclude on Combined Table",,,
+"EOS0317","Exclude on Combined Table",,,
+"EOS0324","Exclude on Combined Table",,,
+"EOS0407","Exclude on Combined Table",,,
+"EOS0414","Exclude on Combined Table",,,
+"EOS0421","Exclude on Combined Table",,,
+"EOS0505","Exclude on Combined Table",,,
+"EOS0512","Exclude on Combined Table",,,
+"EOS0519","Exclude on Combined Table",,,
+"EOS0602","Exclude on Combined Table",,,
+"EOS0609","Exclude on Combined Table",,,
+"EOS0616","Exclude on Combined Table",,,
+"EOS0623","Exclude on Combined Table",,,
+"EOS0707","Exclude on Combined Table",,,
+"EOS0714","Exclude on Combined Table",,,
+"EOS0721","Exclude on Combined Table",,,
+"EOS0804","Exclude on Combined Table",,,
+"EOS0811","Exclude on Combined Table",,,
+"EOS0818","Exclude on Combined Table",,,
+"EOS0901","Exclude on Combined Table",,,
+"EOS0908","Exclude on Combined Table",,,
+"EOS0915","Exclude on Combined Table",,,
+"EOS0922","Exclude on Combined Table",,,
+"EOS1006","Exclude on Combined Table",,,
+"EOS1013","Exclude on Combined Table",,,
+"EOS1020","Exclude on Combined Table",,,
+"EOS1103","Exclude on Combined Table",,,
+"EOS1110","Exclude on Combined Table",,,
+"EOS1117","Exclude on Combined Table",,,
+"EOS1201","Exclude on Combined Table",,,
+"EOS1208","Exclude on Combined Table",,,
+"EOS1215","Exclude on Combined Table",,,
+"EOS1222","Exclude on Combined Table",,,
+"BCH0823","Exclude on Combined Table",,,
+"BCH0906","Exclude on Combined Table",,,
+"BCH0913","Exclude on Combined Table",,,
+"BCH0920","Exclude on Combined Table",,,
+"BCH1004","Exclude on Combined Table",,,
+"BCH1011","Exclude on Combined Table",,,
+"BCH1018","Exclude on Combined Table",,,
+"BCH1101","Exclude on Combined Table",,,
+"BCH1108","Exclude on Combined Table",,,
+"BCH1115","Exclude on Combined Table",,,
+"BCH1122","Exclude on Combined Table",,,
+"BCH1206","Exclude on Combined Table",,,
+"BCH1213","Exclude on Combined Table",,,
+"BCH1220","Exclude on Combined Table",,,
+"BCH0103","Exclude on Combined Table",,,
+"BCH0110","Exclude on Combined Table",,,
+"BCH0117","Exclude on Combined Table",,,
+"BCH0124","Exclude on Combined Table",,,
+"BCH0207","Exclude on Combined Table",,,
+"BCH0214","Exclude on Combined Table",,,
+"BCH0221","Exclude on Combined Table",,,
+"BCH0306","Exclude on Combined Table",,,
+"BCH0313","Exclude on Combined Table",,,
+"BCH0320","Exclude on Combined Table",,,
+"BCH0403","Exclude on Combined Table",,,
+"BCH0410","Exclude on Combined Table",,,
+"BCH0417","Exclude on Combined Table",,,
+"BCH0501","Exclude on Combined Table",,,
+"BCH0508","Exclude on Combined Table",,,
+"BCH0515","Exclude on Combined Table",,,
+"BCH0522","Exclude on Combined Table",,,
+"BCH0605","Exclude on Combined Table",,,
+"BCH0612","Exclude on Combined Table",,,
+"BCH0619","Exclude on Combined Table",,,
+"BCH0703","Exclude on Combined Table",,,
+"BCH0710","Exclude on Combined Table",,,
+"BCH0717","Exclude on Combined Table",,,
+"BCH0724","Exclude on Combined Table",,,
+"BCH0807","Exclude on Combined Table",,,
+"BCH0814","Exclude on Combined Table",,,
+"BCH0821","Exclude on Combined Table",,,
+"BCH0904","Exclude on Combined Table",,,
+"BCH0911","Exclude on Combined Table",,,
+"BCH0918","Exclude on Combined Table",,,
+"BCH1002","Exclude on Combined Table",,,
+"BCH1009","Exclude on Combined Table",,,
+"BCH1016","Exclude on Combined Table",,,
+"BCH1023","Exclude on Combined Table",,,
+"BCH1106","Exclude on Combined Table",,,
+"BCH1113","Exclude on Combined Table",,,
+"BCH1120","Exclude on Combined Table",,,
+"BCH1204","Exclude on Combined Table",,,
+"BCH1211","Exclude on Combined Table",,,
+"BCH1218","Exclude on Combined Table",,,
+"BCH0101","Exclude on Combined Table",,,
+"BCH0108","Exclude on Combined Table",,,
+"BCH0115","Exclude on Combined Table",,,
+"BCH0122","Exclude on Combined Table",,,
+"BCH0205","Exclude on Combined Table",,,
+"BCH0212","Exclude on Combined Table",,,
+"BCH0219","Exclude on Combined Table",,,
+"BCH0305","Exclude on Combined Table",,,
+"BCH0312","Exclude on Combined Table",,,
+"BCH0319","Exclude on Combined Table",,,
+"BCH0402","Exclude on Combined Table",,,
+"BCH0409","Exclude on Combined Table",,,
+"BCH0416","Exclude on Combined Table",,,
+"BCH0423","Exclude on Combined Table",,,
+"BCH0507","Exclude on Combined Table",,,
+"BCH0514","Exclude on Combined Table",,,
+"BCH0521","Exclude on Combined Table",,,
+"BCH0604","Exclude on Combined Table",,,
+"BCH0611","Exclude on Combined Table",,,
+"BCH0618","Exclude on Combined Table",,,
+"BCH0702","Exclude on Combined Table",,,
+"BCH0709","Exclude on Combined Table",,,
+"BCH0716","Exclude on Combined Table",,,
+"BCH0723","Exclude on Combined Table",,,
+"BCH0806","Exclude on Combined Table",,,
+"BCH0813","Exclude on Combined Table",,,
+"BCH0820","Exclude on Combined Table",,,
+"BCH0903","Exclude on Combined Table",,,
+"BCH0910","Exclude on Combined Table",,,
+"BCH0917","Exclude on Combined Table",,,
+"BCH1001","Exclude on Combined Table",,,
+"BCH1008","Exclude on Combined Table",,,
+"BCH1015","Exclude on Combined Table",,,
+"BCH1022","Exclude on Combined Table",,,
+"BCH1105","Exclude on Combined Table",,,
+"BCH1112","Exclude on Combined Table",,,
+"BCH1119","Exclude on Combined Table",,,
+"BCH1203","Exclude on Combined Table",,,
+"BCH1210","Exclude on Combined Table",,,
+"BCH1217","Exclude on Combined Table",,,
+"BCH1224","Exclude on Combined Table",,,
+"BCH0107","Exclude on Combined Table",,,
+"BCH0114","Exclude on Combined Table",,,
+"BCH0121","Exclude on Combined Table",,,
+"BCH0204","Exclude on Combined Table",,,
+"BCH0211","Exclude on Combined Table",,,
+"BCH0218","Exclude on Combined Table",,,
+"BCH0304","Exclude on Combined Table",,,
+"BCH0311","Exclude on Combined Table",,,
+"BCH0318","Exclude on Combined Table",,,
+"BCH0401","Exclude on Combined Table",,,
+"BCH0408","Exclude on Combined Table",,,
+"BCH0415","Exclude on Combined Table",,,
+"BCH0422","Exclude on Combined Table",,,
+"BCH0506","Exclude on Combined Table",,,
+"BCH0513","Exclude on Combined Table",,,
+"BCH0520","Exclude on Combined Table",,,
+"BCH0603","Exclude on Combined Table",,,
+"BCH0610","Exclude on Combined Table",,,
+"BCH0617","Exclude on Combined Table",,,
+"BCH0701","Exclude on Combined Table",,,
+"BCH0708","Exclude on Combined Table",,,
+"BCH0715","Exclude on Combined Table",,,
+"BCH0722","Exclude on Combined Table",,,
+"BCH0805","Exclude on Combined Table",,,
+"BCH0812","Exclude on Combined Table",,,
+"BCH0819","Exclude on Combined Table",,,
+"BCH0902","Exclude on Combined Table",,,
+"BCH0909","Exclude on Combined Table",,,
+"BCH0916","Exclude on Combined Table",,,
+"BCH0923","Exclude on Combined Table",,,
+"BCH1007","Exclude on Combined Table",,,
+"BCH1014","Exclude on Combined Table",,,
+"BCH1021","Exclude on Combined Table",,,
+"BCH1104","Exclude on Combined Table",,,
+"BCH1111","Exclude on Combined Table",,,
+"BCH1118","Exclude on Combined Table",,,
+"BCH1202","Exclude on Combined Table",,,
+"BCH1209","Exclude on Combined Table",,,
+"BCH1216","Exclude on Combined Table",,,
+"BCH1223","Exclude on Combined Table",,,
+"BCH0106","Exclude on Combined Table",,,
+"BCH0113","Exclude on Combined Table",,,
+"BCH0120","Exclude on Combined Table",,,
+"BCH0203","Exclude on Combined Table",,,
+"BCH0210","Exclude on Combined Table",,,
+"BCH0217","Exclude on Combined Table",,,
+"BCH0303","Exclude on Combined Table",,,
+"BCH0310","Exclude on Combined Table",,,
+"BCH0317","Exclude on Combined Table",,,
+"BCH0324","Exclude on Combined Table",,,
+"BCH0407","Exclude on Combined Table",,,
+"BCH0414","Exclude on Combined Table",,,
+"BCH0421","Exclude on Combined Table",,,
+"BCH0505","Exclude on Combined Table",,,
+"BCH0512","Exclude on Combined Table",,,
+"BCH0519","Exclude on Combined Table",,,
+"BCH0602","Exclude on Combined Table",,,
+"BCH0609","Exclude on Combined Table",,,
+"BCH0616","Exclude on Combined Table",,,
+"BCH0623","Exclude on Combined Table",,,
+"BCH0707","Exclude on Combined Table",,,
+"BCH0714","Exclude on Combined Table",,,
+"BCH0721","Exclude on Combined Table",,,
+"BCH0804","Exclude on Combined Table",,,
+"BCH0811","Exclude on Combined Table",,,
+"BCH0818","Exclude on Combined Table",,,
+"BCH0901","Exclude on Combined Table",,,
+"BCH0908","Exclude on Combined Table",,,
+"BCH0915","Exclude on Combined Table",,,
+"BCH0922","Exclude on Combined Table",,,
+"BCH1006","Exclude on Combined Table",,,
+"BCH1013","Exclude on Combined Table",,,
+"BCH1020","Exclude on Combined Table",,,
+"BCH1103","Exclude on Combined Table",,,
+"BCH1110","Exclude on Combined Table",,,
+"BCH1117","Exclude on Combined Table",,,
+"BCH1201","Exclude on Combined Table",,,
+"BCH1208","Exclude on Combined Table",,,
+"BCH1215","Exclude on Combined Table",,,
+"BCH1222","Exclude on Combined Table",,,
+"BSV0823","Exclude on Combined Table",,,
+"BSV0906","Exclude on Combined Table",,,
+"BSV0913","Exclude on Combined Table",,,
+"BSV0920","Exclude on Combined Table",,,
+"BSV1004","Exclude on Combined Table",,,
+"BSV1011","Exclude on Combined Table",,,
+"BSV1018","Exclude on Combined Table",,,
+"BSV1101","Exclude on Combined Table",,,
+"BSV1108","Exclude on Combined Table",,,
+"BSV1115","Exclude on Combined Table",,,
+"BSV1122","Exclude on Combined Table",,,
+"BSV1206","Exclude on Combined Table",,,
+"BSV1213","Exclude on Combined Table",,,
+"BSV1220","Exclude on Combined Table",,,
+"BSV0103","Exclude on Combined Table",,,
+"BSV0110","Exclude on Combined Table",,,
+"BSV0117","Exclude on Combined Table",,,
+"BSV0124","Exclude on Combined Table",,,
+"BSV0207","Exclude on Combined Table",,,
+"BSV0214","Exclude on Combined Table",,,
+"BSV0221","Exclude on Combined Table",,,
+"BSV0306","Exclude on Combined Table",,,
+"BSV0313","Exclude on Combined Table",,,
+"BSV0320","Exclude on Combined Table",,,
+"BSV0403","Exclude on Combined Table",,,
+"BSV0410","Exclude on Combined Table",,,
+"BSV0417","Exclude on Combined Table",,,
+"BSV0501","Exclude on Combined Table",,,
+"BSV0508","Exclude on Combined Table",,,
+"BSV0515","Exclude on Combined Table",,,
+"BSV0522","Exclude on Combined Table",,,
+"BSV0605","Exclude on Combined Table",,,
+"BSV0612","Exclude on Combined Table",,,
+"BSV0619","Exclude on Combined Table",,,
+"BSV0703","Exclude on Combined Table",,,
+"BSV0710","Exclude on Combined Table",,,
+"BSV0717","Exclude on Combined Table",,,
+"BSV0724","Exclude on Combined Table",,,
+"BSV0807","Exclude on Combined Table",,,
+"BSV0814","Exclude on Combined Table",,,
+"BSV0821","Exclude on Combined Table",,,
+"BSV0904","Exclude on Combined Table",,,
+"BSV0911","Exclude on Combined Table",,,
+"BSV0918","Exclude on Combined Table",,,
+"BSV1002","Exclude on Combined Table",,,
+"BSV1009","Exclude on Combined Table",,,
+"BSV1016","Exclude on Combined Table",,,
+"BSV1023","Exclude on Combined Table",,,
+"BSV1106","Exclude on Combined Table",,,
+"BSV1113","Exclude on Combined Table",,,
+"BSV1120","Exclude on Combined Table",,,
+"BSV1204","Exclude on Combined Table",,,
+"BSV1211","Exclude on Combined Table",,,
+"BSV1218","Exclude on Combined Table",,,
+"BSV0101","Exclude on Combined Table",,,
+"BSV0108","Exclude on Combined Table",,,
+"BSV0115","Exclude on Combined Table",,,
+"BSV0122","Exclude on Combined Table",,,
+"BSV0205","Exclude on Combined Table",,,
+"BSV0212","Exclude on Combined Table",,,
+"BSV0219","Exclude on Combined Table",,,
+"BSV0305","Exclude on Combined Table",,,
+"BSV0312","Exclude on Combined Table",,,
+"BSV0319","Exclude on Combined Table",,,
+"BSV0402","Exclude on Combined Table",,,
+"BSV0409","Exclude on Combined Table",,,
+"BSV0416","Exclude on Combined Table",,,
+"BSV0423","Exclude on Combined Table",,,
+"BSV0507","Exclude on Combined Table",,,
+"BSV0514","Exclude on Combined Table",,,
+"BSV0521","Exclude on Combined Table",,,
+"BSV0604","Exclude on Combined Table",,,
+"BSV0611","Exclude on Combined Table",,,
+"BSV0618","Exclude on Combined Table",,,
+"BSV0702","Exclude on Combined Table",,,
+"BSV0709","Exclude on Combined Table",,,
+"BSV0716","Exclude on Combined Table",,,
+"BSV0723","Exclude on Combined Table",,,
+"BSV0806","Exclude on Combined Table",,,
+"BSV0813","Exclude on Combined Table",,,
+"BSV0820","Exclude on Combined Table",,,
+"BSV0903","Exclude on Combined Table",,,
+"BSV0910","Exclude on Combined Table",,,
+"BSV0917","Exclude on Combined Table",,,
+"BSV1001","Exclude on Combined Table",,,
+"BSV1008","Exclude on Combined Table",,,
+"BSV1015","Exclude on Combined Table",,,
+"BSV1022","Exclude on Combined Table",,,
+"BSV1105","Exclude on Combined Table",,,
+"BSV1112","Exclude on Combined Table",,,
+"BSV1119","Exclude on Combined Table",,,
+"BSV1203","Exclude on Combined Table",,,
+"BSV1210","Exclude on Combined Table",,,
+"BSV1217","Exclude on Combined Table",,,
+"BSV1224","Exclude on Combined Table",,,
+"BSV0107","Exclude on Combined Table",,,
+"BSV0114","Exclude on Combined Table",,,
+"BSV0121","Exclude on Combined Table",,,
+"BSV0204","Exclude on Combined Table",,,
+"BSV0211","Exclude on Combined Table",,,
+"BSV0218","Exclude on Combined Table",,,
+"BSV0304","Exclude on Combined Table",,,
+"BSV0311","Exclude on Combined Table",,,
+"BSV0318","Exclude on Combined Table",,,
+"BSV0401","Exclude on Combined Table",,,
+"BSV0408","Exclude on Combined Table",,,
+"BSV0415","Exclude on Combined Table",,,
+"BSV0422","Exclude on Combined Table",,,
+"BSV0506","Exclude on Combined Table",,,
+"BSV0513","Exclude on Combined Table",,,
+"BSV0520","Exclude on Combined Table",,,
+"BSV0603","Exclude on Combined Table",,,
+"BSV0610","Exclude on Combined Table",,,
+"BSV0617","Exclude on Combined Table",,,
+"BSV0701","Exclude on Combined Table",,,
+"BSV0708","Exclude on Combined Table",,,
+"BSV0715","Exclude on Combined Table",,,
+"BSV0722","Exclude on Combined Table",,,
+"BSV0805","Exclude on Combined Table",,,
+"BSV0812","Exclude on Combined Table",,,
+"BSV0819","Exclude on Combined Table",,,
+"BSV0902","Exclude on Combined Table",,,
+"BSV0909","Exclude on Combined Table",,,
+"BSV0916","Exclude on Combined Table",,,
+"BSV0923","Exclude on Combined Table",,,
+"BSV1007","Exclude on Combined Table",,,
+"BSV1014","Exclude on Combined Table",,,
+"BSV1021","Exclude on Combined Table",,,
+"BSV1104","Exclude on Combined Table",,,
+"BSV1111","Exclude on Combined Table",,,
+"BSV1118","Exclude on Combined Table",,,
+"BSV1202","Exclude on Combined Table",,,
+"BSV1209","Exclude on Combined Table",,,
+"BSV1216","Exclude on Combined Table",,,
+"BSV1223","Exclude on Combined Table",,,
+"BSV0106","Exclude on Combined Table",,,
+"BSV0113","Exclude on Combined Table",,,
+"BSV0120","Exclude on Combined Table",,,
+"BSV0203","Exclude on Combined Table",,,
+"BSV0210","Exclude on Combined Table",,,
+"BSV0217","Exclude on Combined Table",,,
+"BSV0303","Exclude on Combined Table",,,
+"BSV0310","Exclude on Combined Table",,,
+"BSV0317","Exclude on Combined Table",,,
+"BSV0324","Exclude on Combined Table",,,
+"BSV0407","Exclude on Combined Table",,,
+"BSV0414","Exclude on Combined Table",,,
+"BSV0421","Exclude on Combined Table",,,
+"BSV0505","Exclude on Combined Table",,,
+"BSV0512","Exclude on Combined Table",,,
+"BSV0519","Exclude on Combined Table",,,
+"BSV0602","Exclude on Combined Table",,,
+"BSV0609","Exclude on Combined Table",,,
+"BSV0616","Exclude on Combined Table",,,
+"BSV0623","Exclude on Combined Table",,,
+"BSV0707","Exclude on Combined Table",,,
+"BSV0714","Exclude on Combined Table",,,
+"BSV0721","Exclude on Combined Table",,,
+"BSV0804","Exclude on Combined Table",,,
+"BSV0811","Exclude on Combined Table",,,
+"BSV0818","Exclude on Combined Table",,,
+"BSV0901","Exclude on Combined Table",,,
+"BSV0908","Exclude on Combined Table",,,
+"BSV0915","Exclude on Combined Table",,,
+"BSV0922","Exclude on Combined Table",,,
+"BSV1006","Exclude on Combined Table",,,
+"BSV1013","Exclude on Combined Table",,,
+"BSV1020","Exclude on Combined Table",,,
+"BSV1103","Exclude on Combined Table",,,
+"BSV1110","Exclude on Combined Table",,,
+"BSV1117","Exclude on Combined Table",,,
+"BSV1201","Exclude on Combined Table",,,
+"BSV1208","Exclude on Combined Table",,,
+"BSV1215","Exclude on Combined Table",,,
+"BSV1222","Exclude on Combined Table",,,
+"TRX0823","Exclude on Combined Table",,,
+"TRX0906","Exclude on Combined Table",,,
+"TRX0913","Exclude on Combined Table",,,
+"TRX0920","Exclude on Combined Table",,,
+"TRX1004","Exclude on Combined Table",,,
+"TRX1011","Exclude on Combined Table",,,
+"TRX1018","Exclude on Combined Table",,,
+"TRX1101","Exclude on Combined Table",,,
+"TRX1108","Exclude on Combined Table",,,
+"TRX1115","Exclude on Combined Table",,,
+"TRX1122","Exclude on Combined Table",,,
+"TRX1206","Exclude on Combined Table",,,
+"TRX1213","Exclude on Combined Table",,,
+"TRX1220","Exclude on Combined Table",,,
+"TRX0103","Exclude on Combined Table",,,
+"TRX0110","Exclude on Combined Table",,,
+"TRX0117","Exclude on Combined Table",,,
+"TRX0124","Exclude on Combined Table",,,
+"TRX0207","Exclude on Combined Table",,,
+"TRX0214","Exclude on Combined Table",,,
+"TRX0221","Exclude on Combined Table",,,
+"TRX0306","Exclude on Combined Table",,,
+"TRX0313","Exclude on Combined Table",,,
+"TRX0320","Exclude on Combined Table",,,
+"TRX0403","Exclude on Combined Table",,,
+"TRX0410","Exclude on Combined Table",,,
+"TRX0417","Exclude on Combined Table",,,
+"TRX0501","Exclude on Combined Table",,,
+"TRX0508","Exclude on Combined Table",,,
+"TRX0515","Exclude on Combined Table",,,
+"TRX0522","Exclude on Combined Table",,,
+"TRX0605","Exclude on Combined Table",,,
+"TRX0612","Exclude on Combined Table",,,
+"TRX0619","Exclude on Combined Table",,,
+"TRX0703","Exclude on Combined Table",,,
+"TRX0710","Exclude on Combined Table",,,
+"TRX0717","Exclude on Combined Table",,,
+"TRX0724","Exclude on Combined Table",,,
+"TRX0807","Exclude on Combined Table",,,
+"TRX0814","Exclude on Combined Table",,,
+"TRX0821","Exclude on Combined Table",,,
+"TRX0904","Exclude on Combined Table",,,
+"TRX0911","Exclude on Combined Table",,,
+"TRX0918","Exclude on Combined Table",,,
+"TRX1002","Exclude on Combined Table",,,
+"TRX1009","Exclude on Combined Table",,,
+"TRX1016","Exclude on Combined Table",,,
+"TRX1023","Exclude on Combined Table",,,
+"TRX1106","Exclude on Combined Table",,,
+"TRX1113","Exclude on Combined Table",,,
+"TRX1120","Exclude on Combined Table",,,
+"TRX1204","Exclude on Combined Table",,,
+"TRX1211","Exclude on Combined Table",,,
+"TRX1218","Exclude on Combined Table",,,
+"TRX0101","Exclude on Combined Table",,,
+"TRX0108","Exclude on Combined Table",,,
+"TRX0115","Exclude on Combined Table",,,
+"TRX0122","Exclude on Combined Table",,,
+"TRX0205","Exclude on Combined Table",,,
+"TRX0212","Exclude on Combined Table",,,
+"TRX0219","Exclude on Combined Table",,,
+"TRX0305","Exclude on Combined Table",,,
+"TRX0312","Exclude on Combined Table",,,
+"TRX0319","Exclude on Combined Table",,,
+"TRX0402","Exclude on Combined Table",,,
+"TRX0409","Exclude on Combined Table",,,
+"TRX0416","Exclude on Combined Table",,,
+"TRX0423","Exclude on Combined Table",,,
+"TRX0507","Exclude on Combined Table",,,
+"TRX0514","Exclude on Combined Table",,,
+"TRX0521","Exclude on Combined Table",,,
+"TRX0604","Exclude on Combined Table",,,
+"TRX0611","Exclude on Combined Table",,,
+"TRX0618","Exclude on Combined Table",,,
+"TRX0702","Exclude on Combined Table",,,
+"TRX0709","Exclude on Combined Table",,,
+"TRX0716","Exclude on Combined Table",,,
+"TRX0723","Exclude on Combined Table",,,
+"TRX0806","Exclude on Combined Table",,,
+"TRX0813","Exclude on Combined Table",,,
+"TRX0820","Exclude on Combined Table",,,
+"TRX0903","Exclude on Combined Table",,,
+"TRX0910","Exclude on Combined Table",,,
+"TRX0917","Exclude on Combined Table",,,
+"TRX1001","Exclude on Combined Table",,,
+"TRX1008","Exclude on Combined Table",,,
+"TRX1015","Exclude on Combined Table",,,
+"TRX1022","Exclude on Combined Table",,,
+"TRX1105","Exclude on Combined Table",,,
+"TRX1112","Exclude on Combined Table",,,
+"TRX1119","Exclude on Combined Table",,,
+"TRX1203","Exclude on Combined Table",,,
+"TRX1210","Exclude on Combined Table",,,
+"TRX1217","Exclude on Combined Table",,,
+"TRX1224","Exclude on Combined Table",,,
+"TRX0107","Exclude on Combined Table",,,
+"TRX0114","Exclude on Combined Table",,,
+"TRX0121","Exclude on Combined Table",,,
+"TRX0204","Exclude on Combined Table",,,
+"TRX0211","Exclude on Combined Table",,,
+"TRX0218","Exclude on Combined Table",,,
+"TRX0304","Exclude on Combined Table",,,
+"TRX0311","Exclude on Combined Table",,,
+"TRX0318","Exclude on Combined Table",,,
+"TRX0401","Exclude on Combined Table",,,
+"TRX0408","Exclude on Combined Table",,,
+"TRX0415","Exclude on Combined Table",,,
+"TRX0422","Exclude on Combined Table",,,
+"TRX0506","Exclude on Combined Table",,,
+"TRX0513","Exclude on Combined Table",,,
+"TRX0520","Exclude on Combined Table",,,
+"TRX0603","Exclude on Combined Table",,,
+"TRX0610","Exclude on Combined Table",,,
+"TRX0617","Exclude on Combined Table",,,
+"TRX0701","Exclude on Combined Table",,,
+"TRX0708","Exclude on Combined Table",,,
+"TRX0715","Exclude on Combined Table",,,
+"TRX0722","Exclude on Combined Table",,,
+"TRX0805","Exclude on Combined Table",,,
+"TRX0812","Exclude on Combined Table",,,
+"TRX0819","Exclude on Combined Table",,,
+"TRX0902","Exclude on Combined Table",,,
+"TRX0909","Exclude on Combined Table",,,
+"TRX0916","Exclude on Combined Table",,,
+"TRX0923","Exclude on Combined Table",,,
+"TRX1007","Exclude on Combined Table",,,
+"TRX1014","Exclude on Combined Table",,,
+"TRX1021","Exclude on Combined Table",,,
+"TRX1104","Exclude on Combined Table",,,
+"TRX1111","Exclude on Combined Table",,,
+"TRX1118","Exclude on Combined Table",,,
+"TRX1202","Exclude on Combined Table",,,
+"TRX1209","Exclude on Combined Table",,,
+"TRX1216","Exclude on Combined Table",,,
+"TRX1223","Exclude on Combined Table",,,
+"TRX0106","Exclude on Combined Table",,,
+"TRX0113","Exclude on Combined Table",,,
+"TRX0120","Exclude on Combined Table",,,
+"TRX0203","Exclude on Combined Table",,,
+"TRX0210","Exclude on Combined Table",,,
+"TRX0217","Exclude on Combined Table",,,
+"TRX0303","Exclude on Combined Table",,,
+"TRX0310","Exclude on Combined Table",,,
+"TRX0317","Exclude on Combined Table",,,
+"TRX0324","Exclude on Combined Table",,,
+"TRX0407","Exclude on Combined Table",,,
+"TRX0414","Exclude on Combined Table",,,
+"TRX0421","Exclude on Combined Table",,,
+"TRX0505","Exclude on Combined Table",,,
+"TRX0512","Exclude on Combined Table",,,
+"TRX0519","Exclude on Combined Table",,,
+"TRX0602","Exclude on Combined Table",,,
+"TRX0609","Exclude on Combined Table",,,
+"TRX0616","Exclude on Combined Table",,,
+"TRX0623","Exclude on Combined Table",,,
+"TRX0707","Exclude on Combined Table",,,
+"TRX0714","Exclude on Combined Table",,,
+"TRX0721","Exclude on Combined Table",,,
+"TRX0804","Exclude on Combined Table",,,
+"TRX0811","Exclude on Combined Table",,,
+"TRX0818","Exclude on Combined Table",,,
+"TRX0901","Exclude on Combined Table",,,
+"TRX0908","Exclude on Combined Table",,,
+"TRX0915","Exclude on Combined Table",,,
+"TRX0922","Exclude on Combined Table",,,
+"TRX1006","Exclude on Combined Table",,,
+"TRX1013","Exclude on Combined Table",,,
+"TRX1020","Exclude on Combined Table",,,
+"TRX1103","Exclude on Combined Table",,,
+"TRX1110","Exclude on Combined Table",,,
+"TRX1117","Exclude on Combined Table",,,
+"TRX1201","Exclude on Combined Table",,,
+"TRX1208","Exclude on Combined Table",,,
+"TRX1215","Exclude on Combined Table",,,
+"TRX1222","Exclude on Combined Table",,,

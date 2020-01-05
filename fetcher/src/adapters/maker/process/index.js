@@ -18,9 +18,16 @@ import { getToBlock } from '../../timestamp/common';
 const chunkSize = 1000;
 
 const runMaker = async () => {
-  log.info('Staring maker processing');
+  log.info({
+    message: 'Staring maker processing',
+  });
+
   const cupsCount = await getCupsCount();
-  log.info(`Cups count ${cupsCount}`);
+
+  log.debug({
+    message: `Cups count ${cupsCount}`,
+  });
+
   let chunks = Math.floor(cupsCount / chunkSize);
   if (chunks * chunkSize < cupsCount) {
     chunks += 1;
@@ -31,15 +38,23 @@ const runMaker = async () => {
   await offsets.reduce(
     async (
       acc,
-      offset
+      offset,
     ) => {
       await acc;
       let toReturn;
-      log.info(`Processing cups with offset ${offset} and chunk size ${chunkSize}`);
+
+      log.debug({
+        message: `Processing cups with offset ${offset} and chunk size ${chunkSize}`,
+      });
+
       const cups = await chunkGetCups(offset, chunkSize);
-      log.info(`Got ${cups.length} cups to process, starting,`);
+
+      log.debug({
+        message: `Got ${cups.length} cups to process, starting,`,
+      });
+
       const cupsToDrawsHash = await mapCupsToDrawsHash(cups);
-      if (!!Object.keys(cupsToDrawsHash).length) {
+      if (Object.keys(cupsToDrawsHash).length) {
         const cupsToLocksHash = await mapCupsToLockHash(cups);
         const collateralisationHash = buildCollateralizationHash({
           cups,
@@ -54,15 +69,18 @@ const runMaker = async () => {
         const withOutstandingFeesHash = await mapHashToOutstandingInterestFees(fullHash);
         toReturn = fullHashToTable(
           withOutstandingFeesHash,
-          lastBlock
+          lastBlock,
         );
       } else {
-        log.info('No draws for this cups chunk');
+        log.debug({
+          message: 'No draws for this cups chunk',
+        });
+
         toReturn = null;
       }
       return toReturn;
     },
-    Promise.resolve()
+    Promise.resolve(),
   );
   await updateCurrentLastBlock(lastBlock);
 };

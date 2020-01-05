@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { array, func, string, bool } from 'prop-types';
+import {
+  arrayOf, func, string, bool,
+  shape, instanceOf, number,
+} from 'prop-types';
 import { StrikeChart } from '@nomisma/nomisma-ui/charts/strike-chart';
 import { Grid } from '@nomisma/nomisma-ui/grid';
 import { Period } from './period';
@@ -8,15 +11,16 @@ import { Currencies } from './currency';
 import { Compare } from './compare';
 
 export class ChartView extends Component {
-  componentWillMount() {
-    const {
-      period,
-    } = this.props;
-    this.props.fetchChartData('all', period);
+  static capitalize(stringValue) {
+    return stringValue.charAt(0).toUpperCase() + stringValue.slice(1);
   }
 
-  Capitilize(stringValue) {
-    return stringValue.charAt(0).toUpperCase() + stringValue.slice(1);
+  componentWillMount() {
+    const {
+      period, fetchChartData,
+    } = this.props;
+
+    fetchChartData('all', period);
   }
 
   render() {
@@ -31,33 +35,33 @@ export class ChartView extends Component {
     return (
       <div>
         <Grid
-          column='160px 223px 200px'
-          columnGap='25%'
+          column="160px 328px 196px"
+          columnGap="256px"
         >
-          <Currencies/>
-          <Source/>
-          <Period/>
+          <Currencies />
+          <Source />
+          <Period />
         </Grid>
         <StrikeChart
-          id='chartdiv'
-          data={ chartData }
-          width='100%'
-          height='400px'
-          currency={ currency.toUpperCase() }
+          id="chartdiv"
+          data={chartData}
+          width="100%"
+          height="400px"
+          currency={currency.toUpperCase()}
           hideFunctions
-          loading={ loading }
-          dataName={ compare ?  'Compound' : this.Capitilize(protocol) }
-          secondaryDataSet={ chartDataSecondary }
-          secondaryDataName={ this.props.chartDataSecondary.length > 0 && 'Dharma' }
+          loading={loading}
+          dataName={compare ? 'Compound' : ChartView.capitalize(protocol)}
+          secondaryDataSet={chartDataSecondary}
+          secondaryDataName={chartDataSecondary.length > 0 && 'Dharma'}
         />
         <Grid
-          column='auto 100px'
+          column="auto 100px"
         >
           <Grid
-            column='90px 50px'
+            column="90px 50px"
           >
             <div>Comapare:</div>
-            <Compare/>
+            <Compare />
           </Grid>
         </Grid>
       </div>
@@ -65,10 +69,20 @@ export class ChartView extends Component {
   }
 }
 
+ChartView.defaultProps = {
+  chartData: [],
+  chartDataSecondary: [],
+  protocol: 'all',
+  period: '24h',
+  loading: true,
+  currency: 'usd',
+  compare: false,
+};
+
 ChartView.propTypes = {
   fetchChartData: func.isRequired,
-  chartData: array,
-  chartDataSecondary: array,
+  chartData: arrayOf(shape({ date: instanceOf(Date), value: number })),
+  chartDataSecondary: arrayOf(shape({ date: instanceOf(Date), value: number })),
   protocol: string,
   period: string,
   loading: bool,

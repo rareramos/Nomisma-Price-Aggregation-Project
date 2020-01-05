@@ -3,7 +3,7 @@ import { put, select } from 'redux-saga/effects';
 import { selectTableFilter } from '../../selectors/table';
 import { updateTableFilter } from '../../actions/table';
 
-export function* handleSourceChange({data}) {
+export function* handleSourceChange({ data }) {
   const filter = yield select(selectTableFilter);
   yield put(updateTableFilter({
     ...filter,
@@ -11,7 +11,7 @@ export function* handleSourceChange({data}) {
   }));
 }
 
-export function* handlePageChange({data}) {
+export function* handlePageChange({ data }) {
   const filter = yield select(selectTableFilter);
   yield put(updateTableFilter({
     ...filter,
@@ -19,7 +19,7 @@ export function* handlePageChange({data}) {
   }));
 }
 
-export function* handleTokenChange({data}) {
+export function* handleTokenChange({ data }) {
   const filter = yield select(selectTableFilter);
   yield put(updateTableFilter({
     ...filter,
@@ -27,7 +27,7 @@ export function* handleTokenChange({data}) {
   }));
 }
 
-export function* handleSortBy({data}) {
+export function* handleSortBy({ data }) {
   const filter = yield select(selectTableFilter);
   let sort = data;
   let order = 1;

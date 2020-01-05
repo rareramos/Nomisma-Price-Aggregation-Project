@@ -40,7 +40,7 @@ const FaviconsWebpackPluginConfig = new FaviconsWebpackPlugin({
   },
 });
 
-const CleanWebpackPluginConfig =  new CleanWebpackPlugin(['dist'], {
+const CleanWebpackPluginConfig = new CleanWebpackPlugin(['dist'], {
   root: resolve('.'),
 });
 

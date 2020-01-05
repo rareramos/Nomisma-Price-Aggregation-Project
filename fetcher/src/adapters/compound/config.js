@@ -5,8 +5,8 @@ export const supplyReceivedEventName = 'SupplyReceived';
 
 export const compoundEventNamesToColumnNamesMap = {
   [supplyReceivedEventName]: 'compound-supply-received',
-  'SupplyWithdrawn': 'compound-supply-withdrawn',
+  SupplyWithdrawn: 'compound-supply-withdrawn',
   [borrowEventName]: 'compound-borrow-taken',
   [borrowRepaidEventName]: 'compound-borrow-repaid',
-  'BorrowLiquidated': 'compound-borrow-liquidated',
+  BorrowLiquidated: 'compound-borrow-liquidated',
 };

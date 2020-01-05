@@ -74,6 +74,9 @@ $ yarn && yarn simple-pipeline
 
 ```
 $ cd fetcher           // go to fetcher folder
+$ yarn mapping-symbols // for the first time you are running cfd-pipeline, this will make internal currency mapping in the DB, otherwise cfd-pipeline won't work
+$ yarn import-all-data // for the first time you are running cfd-pipeline, this will import cfd data in the DB, otherwise cfd-pipeline won't work
+$ yarn upgrade price-aggregation-db // if you get error on fetcher, 'find of undefined` while excuting the fetcher, then run this command to upfrade the price-aggregation-db
 $ yarn cfd-pipeline    // run it locally
 ```
 

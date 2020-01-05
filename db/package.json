@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel src --out-dir lib",
     "postinstall": "yarn build",
-    "lint": "eslint ./src"
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
   },
   "author": "",
   "license": "ISC",
@@ -16,9 +16,12 @@
     "@babel/polyfill": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
     "@babel/register": "^7.4.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-import": "^2.17.1",
+    "@nomisma/nomisma-logger": "^1.0.0-dev.2",
     "mongodb": "^3.2.3"
+  },
+  "devDependencies": {
+    "@nomisma/eslint-config-shared": "^1.1.0-dev.1",
+    "eslint": "^5.16.0",
+    "typescript": "3.5.3"
   }
 }

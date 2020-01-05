@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Table components tests matches Viewcell snapshot 1`] = `
+<a
+  href="https://etherscan.io/tx/usd"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  View
+</a>
+`;

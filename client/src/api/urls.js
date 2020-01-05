@@ -1,4 +1,5 @@
 import querystring from 'querystring';
+
 export const ROOT_URL = process.env.API_URI || 'http://localhost:8000';
 
 export const getLoanscanFetchApiUrl = ({
@@ -55,10 +56,13 @@ export const getChartApiUrl = ({
 
 export const getLoanTokens = () => `${API_URI}/loans/tokens`;
 
-export const signinAPIURL = () => {
-  return 'https://localhost:8000/signin';
-};
+export const signinAPIURL = () => 'https://localhost:8000/signin';
 
-export const signupAPIURL = () => {
-  return 'https://localhost:8000/signup';
-};
+export const signupAPIURL = () => 'https://localhost:8000/signup';
+
+export const getCfdQuasiLiveURL = queryParams => `${ROOT_URL}/cfd/quasi?${querystring.stringify(queryParams)}`;
+
+export const getInstrumentsURL = (
+  queryParams,
+  type = 'quasi-live',
+) => `${ROOT_URL}/instruments/${type}?${querystring.stringify(queryParams)}`;

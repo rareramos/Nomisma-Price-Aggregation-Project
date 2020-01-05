@@ -1,0 +1,90 @@
+<table width="100%" border="0" cellspacing="0" cellpadding="0" bgcolor="#f2f2f2">
+  <tbody>
+    <tr>
+      <td align="center" style="padding-left:0px;padding-right:0px">
+        <table width="808" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td align="center" style="padding-top:29px;padding-bottom:25px">
+                <a href="{{ sender.company.website }}" target="_blank">
+                  <img src="{{ sender.company.logo }}" alt="{{ sender.company.name }}" width="500" border="0" />
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table width="808" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td>
+                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tbody>
+                    <tr>
+                      <td>
+                        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tbody>
+                            <tr>
+                              <td bgcolor="#FFFFFF" style="width:800px" width="800" valign="top">
+                                <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tbody>
+                                    <tr>
+                                      <td
+                                        style="font-family:Helvetica,Arial,sans-serif;font-size:16px;line-height:24px;color:#222222;padding:30px;"
+                                        align="left">
+                                        <p style="font-size: 18px;">Hello {{ recipient.name }}</p>
+                                        <div>{{{content}}}</div>
+                                        <p>Regards,<br />{{ sender.company.name }}</p>
+                                        <p>
+                                          <small>If you have any questions please connect with your
+                                            {{ sender.company.name }}. </small>
+                                        </p>
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tbody>
+            <tr>
+              <td align="center" height="25">
+                {{#sender.company.footerLinks}}
+                <a href="{{ url }}">{{ title }}</a>
+                {{/sender.company.footerLinks}}
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <table width="808" border="0" cellspacing="0" cellpadding="0" style="width:808px" align="center">
+          <tbody>
+            <tr>
+              <td align="center"
+                style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:24px;color:#656565;">
+                If you do not want to receive more emails from this site, you can
+                <a href="{{ sender.company.website }}/unsubscribe/{{ recipient._id }}" target="_blank">unsubscribe</a>
+              </td>
+            </tr>
+            <tr>
+              <td align="center"
+                style="font-family:Helvetica,Arial,sans-serif;font-size:12px;line-height:24px;color:#656565;">
+                Powered by <a href="{{ sender.company.website }}">{{ sender.company.name }}</a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>

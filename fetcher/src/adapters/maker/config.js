@@ -36,7 +36,7 @@ export const makerSigsModelConfig = {
    * withdraw converts amount of Peth to Weth, at the Weth to
    * Peth Ratio
    */
-  'exit': 'maker-exit',
+  exit: 'maker-exit',
 
   /**
    * free (cup bytes32, wad uint256)
@@ -45,7 +45,7 @@ export const makerSigsModelConfig = {
    * free PETH that's locked in excess of 150% of the CDP's
    * outstanding debt.
    */
-  'free': 'maker-free',
+  free: 'maker-free',
 
   [makerLockEventName]: 'maker-lock', // post collateral (cup bytes32, wad uint256)
 
@@ -65,7 +65,7 @@ export const makerSigsModelConfig = {
    *
    * This would call `wipe` and then `free`
    */
-  'shut': 'maker-shut',
+  shut: 'maker-shut',
 };
 
 export const getSaiTubContract = () => getContract({

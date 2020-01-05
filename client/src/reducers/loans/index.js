@@ -1,9 +1,6 @@
 import { combineReducers } from 'redux';
+import { tokensReducer as tokens } from './tokens';
 
-import tokens from './tokens';
-
-const loansReducer = combineReducers({
+export const loansReducer = combineReducers({
   tokens,
 });
-
-export default loansReducer;

@@ -1,11 +1,11 @@
 import React from 'react';
-import { func,  bool } from 'prop-types';
-import { SwitchBeta } from '@nomisma/nomisma-ui/beta/switch';
+import { func, bool } from 'prop-types';
+import { Switch } from '@nomisma/nomisma-ui/charts/switch';
 
 export const ComapreComp = ({ isInComapreMode, onClick }) => (
-  <SwitchBeta
-    checked={ isInComapreMode }
-    onChange={ () => onClick(!isInComapreMode) }
+  <Switch
+    checked={isInComapreMode}
+    onChange={() => onClick(!isInComapreMode)}
   />
 );
 

@@ -27,6 +27,7 @@ export const createCollection = (collectionName) => {
         'insertOne',
         'insertMany',
         'updateOne',
+        'updateMany',
         'deleteMany',
         'aggregate',
         'replaceOne',

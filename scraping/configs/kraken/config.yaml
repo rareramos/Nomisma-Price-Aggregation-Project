@@ -1,0 +1,6 @@
+instruments_url: https://futures.kraken.com/derivatives/api/v4/instruments
+perpetual_contract_specs_url: 'https://www.cryptofacilities.com/resources/hc/en-us/articles/
+360008643453-Perpetual-Futures-Contract-Specifications'
+futures_contract_specs_url: 'https://www.cryptofacilities.com/resources/hc/en-us/articles/
+115002795913-Fixed-Maturity-Futures-Contract-specifications'
+margin_schedule_url: 'https://www.cryptofacilities.com/resources/hc/en-us/articles/360005154753-Margin-Schedule'

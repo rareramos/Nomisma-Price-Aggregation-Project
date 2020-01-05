@@ -6,13 +6,13 @@ import {
   selectTableTabIndex,
 } from '../../selectors/table';
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = state => ({
   selectedSource: selectTableTabIndex(state),
   tabs: selectTableSwitcherTabsSelector(),
 });
 
-const mapDispatchToProps = (dispatch) => ({
-  onClick: (selected) => dispatch(updateTableSource(selected)),
+const mapDispatchToProps = dispatch => ({
+  onClick: selected => dispatch(updateTableSource(selected)),
 });
 
 export const Switcher = connect(mapStateToProps, mapDispatchToProps)(SwitcherComp);

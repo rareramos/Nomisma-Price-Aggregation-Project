@@ -27,7 +27,7 @@ export const bnToFloatString = (
   if (!fractionMatch) {
     throw new Error('Fraction match error. Possible negative value provided.');
   }
-  fraction = fractionMatch[1];
+  [, fraction] = fractionMatch;
   const whole = inputBN.div(baseBN).toString(10);
 
   return `${whole}${fraction === '0' ? '' : `.${fraction}`}`;

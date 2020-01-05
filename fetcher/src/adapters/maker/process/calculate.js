@@ -1,3 +1,7 @@
+import {
+  MakerTableData,
+  MakerDataCurrentTimestamp,
+} from 'price-aggregation-db';
 import { getWeb3 } from '../../generic';
 import {
   calculateLoanApr,
@@ -8,14 +12,10 @@ import { bnToFloatStringWithFractionDecimals } from '../../../utils/bn-float';
 import { getCurrentConvertRate } from '../../exchange-rates';
 import { getCacheAllTokens } from '../../tokens';
 import { log } from '../../../utils/logger';
-import {
-  MakerTableData,
-  MakerDataCurrentTimestamp,
-} from 'price-aggregation-db';
 
 const web3 = getWeb3();
 
-const BN = web3.utils.BN;
+const { BN } = web3.utils;
 
 const lastBlockRecordName = 'maker-last-block';
 
@@ -24,8 +24,8 @@ const getTokenBySymbol = (tokensHash, tokenSymbol) => Object.values(tokensHash)
     (
       {
         symbol,
-      }
-    ) => symbol === tokenSymbol
+      },
+    ) => symbol === tokenSymbol,
   );
 
 const getInterestAmountInDaiForCup = async ({
@@ -42,10 +42,9 @@ const getInterestAmountInDaiForCup = async ({
   const interestAmountInMakerBN = fees.reduce(
     (
       feeAcc,
-      { amount }
-    ) =>
-      feeAcc
-        .add(new BN(amount)),
+      { amount },
+    ) => feeAcc
+      .add(new BN(amount)),
     new BN('0'),
   )
     .add(new BN(outstandingFee));
@@ -53,12 +52,13 @@ const getInterestAmountInDaiForCup = async ({
     .mul(exchangeRateBN)
     .mul(new BN(10).pow(new BN(daiDecimals)))
     .div(new BN(10).pow(new BN(mkrDecimals)))
-    .div(RATE_PRECISION).toString();
+    .div(RATE_PRECISION)
+    .toString();
 };
 
 const calculateHashParams = (
   fullHash,
-  tokens
+  tokens,
 ) => {
   const daiDecimals = getTokenBySymbol(tokens, 'DAI').decimals;
   const mkrDecimals = getTokenBySymbol(tokens, 'MKR').decimals;
@@ -75,7 +75,7 @@ const calculateHashParams = (
           outstandingFee,
           timestampEnd,
         },
-      ]
+      ],
     ) => {
       const newAcc = await acc;
       const timestampStart = draws[0].timestamp;
@@ -84,17 +84,16 @@ const calculateHashParams = (
           total,
           {
             wad,
-          }
-        ) =>
-          total.add(new BN(wad)),
-        new BN(0)
+          },
+        ) => total.add(new BN(wad)),
+        new BN(0),
       ).toString();
       const principalToUSDExchangeRate = await getCurrentConvertRate({
         symbol: 'DAI',
         convert: 'USD',
       });
       const principlaToUSDExchangeRateBN = new BN(
-        principalToUSDExchangeRate * RATE_PRECISION.toNumber()
+        principalToUSDExchangeRate * RATE_PRECISION.toNumber(),
       );
       const principalUsdInBase = new BN(totalPrincipal)
         .mul(principlaToUSDExchangeRateBN)
@@ -109,7 +108,7 @@ const calculateHashParams = (
         .sub(
           new BN(balance)
             .mul(RATE_PRECISION)
-            .div(new BN(totalPrincipal))
+            .div(new BN(totalPrincipal)),
         )
         .mul(new BN('100'));
       // for some reason sometimes balance is much greater than
@@ -122,7 +121,7 @@ const calculateHashParams = (
       const repaidPercentage = bnToFloatStringWithFractionDecimals(
         repaidPercentageBN.toString(),
         RATE_PRECISION_POWER,
-        3
+        3,
       );
       const interestAmountInDai = await getInterestAmountInDaiForCup({
         fees,
@@ -153,9 +152,9 @@ const calculateHashParams = (
               locksAcc,
               {
                 wad: lockWad,
-              }
+              },
             ) => locksAcc.add(new BN(lockWad)),
-            new BN('0')
+            new BN('0'),
           );
           // This selects all draws that occurred before or at
           // the same block as current draw and also sums up
@@ -167,16 +166,15 @@ const calculateHashParams = (
               {
                 blockNumber: filterDrawBlockNumber,
               },
-            ) =>
-              filterDrawBlockNumber <= blockNumber
+            ) => filterDrawBlockNumber <= blockNumber,
           ).reduce(
             (
               drawsAcc,
               {
                 wad: drawWad,
-              }
+              },
             ) => drawsAcc.add(new BN(drawWad)),
-            new BN('0')
+            new BN('0'),
           );
 
           const collateralExchangeRate = await getCurrentConvertRate({
@@ -184,7 +182,7 @@ const calculateHashParams = (
             convert: 'DAI',
           });
           const collateralToDaiExchangeRateBN = new BN(
-            collateralExchangeRate * RATE_PRECISION.toNumber()
+            collateralExchangeRate * RATE_PRECISION.toNumber(),
           );
           const collateralInDaiTermsInBaseBN = locksTotalAmtInEthBN
             .mul(collateralToDaiExchangeRateBN)
@@ -241,7 +239,11 @@ const writeLoansToTable = async (
     ...item,
     updateBlock: lastBlock,
   }));
-  log.info(`Saving ${itemsWithBlock.length} Maker loan records to db.`);
+
+  log.info({
+    message: `Saving ${itemsWithBlock.length} Maker loan records to db.`,
+  });
+
   await MakerTableData.insertMany(itemsWithBlock);
 };
 

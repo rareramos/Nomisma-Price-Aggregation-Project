@@ -2,7 +2,7 @@ import * as types from '../../actions/types';
 
 const initialState = false;
 
-const compareReducer = (state = initialState, action) => {
+export const compareReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.CHART_COMPARE_SAVE:
       return action.data;
@@ -10,5 +10,3 @@ const compareReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export default compareReducer;

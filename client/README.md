@@ -1,9 +1,11 @@
 # client-side
+
 React/Redux
 
 # Usage(make it run on your machine)
 
 ## Client-side usage(PORT: 3000)
+
 ```terminal
 $ cd client   // go to client folder
 $ npm i       // npm install pacakges
@@ -15,6 +17,7 @@ $ npm run start // this will run the files in docs, this behavior is exactly the
 ```
 
 # Dependencies(tech-stack)
+
 | Server-side
 | ---
 | bcrypt-nodejs: ^0.0.3
@@ -38,12 +41,16 @@ After signing in user can go to account page and make request to token-protected
 ![After signing in user can go to account page](http://i.imgur.com/FzLB51u.png)
 
 ## BUGs or comments
+
 [Create new Issues](https://github.com/amazingandyyy/mern-stack/issues)
 
 ## Author
+
 [Amazingandyyy](amazingandyyy.github.io)
+
 - Feel free to find me on _[GitHub](https://github.com/amazingandyyy)_ and _[LiveCoding](https://www.livecoding.tv/amazingandyyy/)_
 - or visit my _[page](http://amazingandyyy.github.io/)_
 
 ### License
+
 [MIT](https://github.com/amazingandyyy/eventbrite-api/blob/master/LICENSE)

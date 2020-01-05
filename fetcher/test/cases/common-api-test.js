@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import assert from 'assert';
 import {
   getEventOfTypeChunkingFetcher,
@@ -15,7 +16,7 @@ describe('common-api', () => {
       }) => {
         if (!errorThrown) {
           errorThrown = true;
-          throw new Error('Chunk here please.');
+          throw new Error('query returned more than 1000 results');
         }
         chunkIntervals.push({
           fromBlock,
@@ -65,7 +66,7 @@ describe('common-api', () => {
       }) => {
         if (!errorThrown) {
           errorThrown = true;
-          throw new Error('Chunk here please.');
+          throw new Error('query returned more than 1000 results');
         }
         chunkIntervals.push({
           fromBlock,

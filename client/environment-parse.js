@@ -1,18 +1,18 @@
 
 const reduceVars = (
   vars,
-  transform
+  transform,
 ) => vars.reduce(
-  (acc, [ key, value ]) => {
+  (acc, [key, value]) => {
     if (typeof value === 'object') {
       const flattened = reduceVars(
         Object.entries(value),
-        transform
+        transform,
       );
       return Object.assign(
         {},
         acc,
-        flattened
+        flattened,
       );
     }
 
@@ -21,20 +21,20 @@ const reduceVars = (
       acc,
       {
         [key]: transform(value),
-      }
+      },
     );
   },
-  {}
+  {},
 );
 
 const parseVars = (
   config,
-  transform = value => JSON.stringify(value)
+  transform = value => JSON.stringify(value),
 ) => reduceVars(
   Object.entries(
-    config
+    config,
   ),
-  transform
+  transform,
 );
 
 module.exports = parseVars;

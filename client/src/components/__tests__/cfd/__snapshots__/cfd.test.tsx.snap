@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CFD pipeline snapshot test matches cfd snapshot 1`] = `
+<styled.div
+  column="1fr 10fr 1fr"
+>
+  <div />
+  <div>
+    <Connect(Preferences) />
+    <Connect(CfdTable) />
+  </div>
+  <div />
+</styled.div>
+`;
+
+exports[`CFD pipeline snapshot test matches cfd table snapshot 1`] = `<styled.div />`;

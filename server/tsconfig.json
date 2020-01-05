@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "jsx": "preserve",
+    "lib": ["es6", "dom"],
+    "allowJs": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es6",
+    "removeComments": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "esModuleInterop": true,
+    "outDir": "./lib/",
+    "types" : ["node", "jest", "express"],
+    "typeRoots": ["./src/types", "./node_modules/@types"]
+  },
+  "exclude": [
+    "node_modules",
+    "typings/",
+    "**/**/*.test.ts",
+    "**/__tests__/*.ts",
+    "**/__mocks__/*.ts"
+  ],
+  "include": [
+        "src/**/*"
+  ]
+}

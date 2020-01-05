@@ -15,35 +15,27 @@ import {
   CHART_SECONDARY_SAVE,
 } from '../types';
 
-export const fetchChartData = (protocol, value) => {
-  return {
-    type: CHART_FETCH,
-    data: { protocol, value },
-  };
-};
+export const fetchChartData = (protocol, value) => ({
+  type: CHART_FETCH,
+  data: { protocol, value },
+});
 
-export const fetchChartSuccess = (data) => {
-  return {
-    type: CHART_SAVE,
-    data,
-  };
-};
+export const fetchChartSuccess = data => ({
+  type: CHART_SAVE,
+  data,
+});
 
-export const fetchChartDataSecondary = (protocol, value) => {
-  return {
-    type: CHART_SECONDARY_FETCH,
-    data: { protocol, value },
-  };
-};
+export const fetchChartDataSecondary = (protocol, value) => ({
+  type: CHART_SECONDARY_FETCH,
+  data: { protocol, value },
+});
 
-export const fetchChartDataSecondarySuccess = (data) => {
-  return {
-    type: CHART_SECONDARY_SAVE,
-    data,
-  };
-};
+export const fetchChartDataSecondarySuccess = data => ({
+  type: CHART_SECONDARY_SAVE,
+  data,
+});
 
-export const fetchChartError = (data) => ({
+export const fetchChartError = data => ({
   type: CHART_ERROR,
   data,
 });
@@ -52,44 +44,42 @@ export const toggleChartLoading = () => ({
   type: CHART_LOADING_TOGGLE,
 });
 
-export const updateChartPeriod = (data) => ({
+export const updateChartPeriod = data => ({
   type: CHART_PERIOD_UPDATE,
   data,
 });
 
-export const saveChartPeriod = (data) => ({
+export const saveChartPeriod = data => ({
   type: CHART_PERIOD_SAVE,
   data,
 });
 
-export const updateChartSource = (data) => ({
+export const updateChartSource = data => ({
   type: CHART_SOURCE_UPDATE,
   data,
 });
 
-export const saveChartSource = (data) => ({
+export const saveChartSource = data => ({
   type: CHART_SOURCE_SAVE,
   data,
 });
 
-export const updateChartCurrency = (data) => ({
+export const updateChartCurrency = data => ({
   type: CHART_CURRENCY_UPDATE,
   data,
 });
 
-export const saveChartCurrency = (data) => ({
+export const saveChartCurrency = data => ({
   type: CHART_CURRENCY_SAVE,
   data,
 });
 
-export const updateChartCompare = (data) => ({
+export const updateChartCompare = data => ({
   type: CHART_COMPARE_UPDATE,
   data,
 });
 
-export const saveChartCompare = (data) => ({
+export const saveChartCompare = data => ({
   type: CHART_COMPARE_SAVE,
   data,
 });
-
-

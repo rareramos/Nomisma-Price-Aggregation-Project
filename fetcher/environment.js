@@ -1,19 +1,16 @@
-const environmentSecrets = require('environment-secrets');
-
-const {
-  generateSecretsOrExtWithDefault,
-  wrapWithPropNames,
-} = environmentSecrets;
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { generateSecretsOrExtWithDefault, wrapWithPropNames } = require('environment-secrets');
 
 let extConfig;
 try {
+  // eslint-disable-next-line global-require, import/no-unresolved
   extConfig = require('./secrets'); // import secrets.js if available
 } catch (err) {
   extConfig = {};
 }
 
 const secretsOrExtWithDefault = generateSecretsOrExtWithDefault(
-  extConfig
+  extConfig,
 );
 
 const props = {
@@ -31,6 +28,32 @@ const props = {
     MAKER_TOKEN_CONTRACT_ADDRESS: secretsOrExtWithDefault('0x9f8f72aa9304c8b593d555f12ef6589cc3a579a2'),
     MAKER_PIT_CONTRACT_ADDRESS: secretsOrExtWithDefault('0x69076e44a9c70a67d5b79d95795aba299083c275'),
   }),
+  bitmex: wrapWithPropNames({
+    BITMEX_INSTRUMENTS:
+    secretsOrExtWithDefault('https://www.bitmex.com/api/v1/instrument?filter=%7B%22state%22%3A%20%22Open%22%7D'),
+    BITMEX_BASE_URL: secretsOrExtWithDefault('https://www.bitmex.com/api/v1/'),
+    BITMEX_WS_URL: secretsOrExtWithDefault('wss://www.bitmex.com/realtime'),
+  }),
+  ig: wrapWithPropNames({
+    IG_KEY: secretsOrExtWithDefault(''),
+    IG_IDENTIFIER: secretsOrExtWithDefault(''),
+    IG_PASSWORRD: secretsOrExtWithDefault(''),
+    IG_TEST_SERVER: secretsOrExtWithDefault(true),
+  }),
+  deribit: wrapWithPropNames({
+    DERIBIT_WS_URL: secretsOrExtWithDefault('wss://www.deribit.com/ws/api/v2'),
+    DERIBIT_BASE_URL: secretsOrExtWithDefault('https://www.deribit.com/api/v2'),
+  }),
+  fxcm: wrapWithPropNames({
+    FXCM_TOKEN: secretsOrExtWithDefault(''),
+  }),
+  kraken: wrapWithPropNames({
+    KRAKEN_INSTRUMENTS: secretsOrExtWithDefault('https://futures.kraken.com/derivatives/api/v3/tickers'),
+    KRAKEN_WSS: secretsOrExtWithDefault('wss://futures.kraken.com/ws/v1'),
+  }),
+  publisher: wrapWithPropNames({
+    ENDPOINT: secretsOrExtWithDefault('ws://localhost:38495'),
+  }),
   thirdParty: wrapWithPropNames({
     COINMARKETCAP_API_URL: secretsOrExtWithDefault('https://pro-api.coinmarketcap.com/v1'),
     COINMARKETCAP_API_KEY: secretsOrExtWithDefault('41207459-93eb-4b6e-8e16-3bf522ee4330'),
@@ -40,11 +63,16 @@ const props = {
     ENV: secretsOrExtWithDefault('development'),
     ARR_CHUNK_SIZE: secretsOrExtWithDefault('50'),
     BATCH_TIMESTAMP_ARR_CHUNK_SIZE: secretsOrExtWithDefault('1500'),
+    DEFAULT_LOG_LEVEL: secretsOrExtWithDefault(2),
   }),
   database: wrapWithPropNames({
     MONGODB_URI: secretsOrExtWithDefault('mongodb://127.0.0.1:27017/nomisma'),
     DB_PATH: secretsOrExtWithDefault('nomisma-price-aggr'),
+    CONFIG_PATH: secretsOrExtWithDefault(''),
+  }),
+  cron: wrapWithPropNames({
+    CRON_DAILY_MATCH_INSTRUMENTS: secretsOrExtWithDefault('0 8 * * *'),
+    CRON_DAILY_CHECK_INSTRUMENTS: secretsOrExtWithDefault('30 7 * * *'),
   }),
 };
-
 module.exports = wrapWithPropNames(props);

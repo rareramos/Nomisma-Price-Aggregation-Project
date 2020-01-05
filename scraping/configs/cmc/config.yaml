@@ -1,0 +1,7 @@
+base_url: https://platform.cmcmarkets.com/
+PRICE_AGG_CMC_USERNAME: ''
+PRICE_AGG_CMC_PASSWORD: ''
+delays:
+    product_overview: 20
+    crypto_library: 20
+premium_account: no

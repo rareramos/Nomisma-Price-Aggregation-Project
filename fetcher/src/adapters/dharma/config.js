@@ -26,8 +26,8 @@ export const dharmaEventNamesToColumnNamesMapTermsContract = {
 
 export const dharmaEventNamesToColumnsMapCollateralizer = {
   [collateralLockedEventName]: 'dharma-collateral-locked',
-  'CollateralReturned': 'dharma-collateral-returned',
-  'CollateralSeized': 'dharma-collateral-seized',
+  CollateralReturned: 'dharma-collateral-returned',
+  CollateralSeized: 'dharma-collateral-seized',
 };
 
 export const dharmaEventNameToColumnsMapRepaymentRouter = {

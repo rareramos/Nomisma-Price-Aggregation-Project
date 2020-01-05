@@ -44,6 +44,11 @@ const parseFields = [
   'principalTokenName',
   'platform',
   'principalUsd',
+  'interestInBase',
+  'principalInBase',
+  'repaidInBase',
+  'collateralInBase',
+  'allCollaterals',
   'transactionHash',
 ];
 
@@ -57,9 +62,8 @@ const getParsedTableData = items => items
         ...acc,
         [field]: item[field],
       }),
-      {}
-    )
-  );
+      {},
+    ));
 
 const mergeDatabases = async () => {
   const lastBlock = await getToBlock();
@@ -69,7 +73,11 @@ const mergeDatabases = async () => {
       configItem,
     ) => {
       await acc;
-      log.info(`Preparing to write data for ${configItem.adapterName} to merged table with updateBlock ${lastBlock}`);
+
+      log.debug({
+        message: `Preparing to write data for ${configItem.adapterName} to merged table with updateBlock ${lastBlock}`,
+      });
+
       const lastTimestampObjArr = await configItem.timestampSingletonModel.find();
       if (!lastTimestampObjArr || !lastTimestampObjArr.length) {
         throw new Error(`can not find proper timestamp object for adapter: ${configItem.adapterName}`);
@@ -82,9 +90,13 @@ const mergeDatabases = async () => {
         item => ({
           ...item,
           updateBlock: lastBlock,
-        })
+        }),
       );
-      log.info(`Saving ${tableDataWithUpdateBlock.length} records from ${configItem.adapterName} adapter to db`);
+
+      log.debug({
+        message: `Saving ${tableDataWithUpdateBlock.length} records from ${configItem.adapterName} adapter to db`,
+      });
+
       return LoansTable.insertMany(tableDataWithUpdateBlock);
     },
     Promise.resolve(),
@@ -98,7 +110,7 @@ const mergeDatabases = async () => {
       {
         blockNumber: lastBlock,
       },
-    ]
+    ],
   );
 
   const timestampObjArr = await LoansTableTimestamp.find();

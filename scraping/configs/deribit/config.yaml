@@ -1,0 +1,6 @@
+base_url: https://www.deribit.com/
+PRICE_AGG_DERIBIT_USERNAME: ''
+PRICE_AGG_DERIBIT_PASSWORD: ''
+delays:
+    login_page: 30
+    tab_opening: 5

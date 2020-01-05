@@ -8,6 +8,8 @@ import {
   getCurrentRunnerModelConfig,
   setCurrentRunnerModelsConfig,
 } from 'price-aggregation-db';
+import { utils, api } from '@nomisma/nomisma-contracts-sdk';
+
 import {
   borrowEventName,
   borrowRepaidEventName,
@@ -19,7 +21,6 @@ import {
   getContract,
   getWeb3,
 } from '../../generic';
-import { utils, api } from '@nomisma/nomisma-contracts-sdk';
 import { bnToFloatStringWithFractionDecimals } from '../../../utils/bn-float';
 import { getToBlock } from '../../timestamp/common';
 import environment from '../../../../environment';
@@ -43,10 +44,10 @@ const abi = fs.readFileSync(abiPath, 'utf8');
 const lastBlockRecordName = 'compound-last-block';
 
 const web3 = getWeb3();
-const BN = web3.utils.BN;
+const { BN } = web3.utils;
 
 const getExistingBalancesHash = async (
-  checkExistingBalanceIdentifiers
+  checkExistingBalanceIdentifiers,
 ) => {
   const lastBlock = await getToBlock();
   const existingBalances = await CompoundBalances.find({
@@ -57,7 +58,11 @@ const getExistingBalancesHash = async (
       $gt: lastBlock - parseInt(blockchain.BALANCES_UPDATE_BLOCK_INTERVAL, 10),
     },
   });
-  log.info(`Found ${existingBalances.length} valid balances to reuse`);
+
+  log.debug({
+    message: `Found ${existingBalances.length} valid balances to reuse`,
+  });
+
   const existingBalancesHash = {};
   existingBalances.forEach(({
     asset,
@@ -83,7 +88,7 @@ const getBalanceRequestArray = ({
   existingBalancesHash,
 }) => {
   const requestBalanceForHash = {};
-  potentiallyRequestBalanceFor.forEach(item => {
+  potentiallyRequestBalanceFor.forEach((item) => {
     if (existingBalancesHash[item.asset]) {
       if (!existingBalancesHash[item.asset][item.account]) {
         if (requestBalanceForHash[item.asset]) {
@@ -94,14 +99,12 @@ const getBalanceRequestArray = ({
           };
         }
       }
+    } else if (requestBalanceForHash[item.asset]) {
+      requestBalanceForHash[item.asset][item.account] = true;
     } else {
-      if (requestBalanceForHash[item.asset]) {
-        requestBalanceForHash[item.asset][item.account] = true;
-      } else {
-        requestBalanceForHash[item.asset] = {
-          [item.account]: true,
-        };
-      }
+      requestBalanceForHash[item.asset] = {
+        [item.account]: true,
+      };
     }
   });
 
@@ -111,13 +114,13 @@ const getBalanceRequestArray = ({
       [
         asset,
         addressesObj,
-      ]
+      ],
     ) => [
       ...acc,
       ...Object.entries(addressesObj).reduce(
         (
           innerAcc,
-          [address]
+          [address],
         ) => [
           ...innerAcc,
           {
@@ -125,10 +128,10 @@ const getBalanceRequestArray = ({
             address,
           },
         ],
-        []
+        [],
       ),
     ],
-    []
+    [],
   );
 };
 
@@ -150,7 +153,7 @@ const postProcessData = async ({
       };
     }
   });
-  const dataWithoutUpdateBlock = mappedLoans.map(item => {
+  const dataWithoutUpdateBlock = mappedLoans.map((item) => {
     let currentBalance;
     let newRepaid;
     if (
@@ -169,18 +172,18 @@ const postProcessData = async ({
       const repaidBN = baseMultiplierBN
         .mul(new BN('100'))
         .mul(
-          item.principalWithInterest
+          item.principalWithInterest,
         )
         .div(
           currentBalance
             .add(
-              new BN(item.principalWithInterest)
-            )
+              new BN(item.principalWithInterest),
+            ),
         );
       newRepaid = bnToFloatStringWithFractionDecimals(
         repaidBN.toString(),
         18,
-        3
+        3,
       );
     } else {
       newRepaid = item.repaid;
@@ -224,7 +227,9 @@ const postProcessData = async ({
     transactionHash,
     timestampEnd,
     principal,
+    principalWithInterest,
     totalCollateralValueInLoanTokenTermsToDate,
+    allCollaterals,
   }) => ({
     account,
     asset,
@@ -236,7 +241,9 @@ const postProcessData = async ({
     repaid,
     transactionHash,
     principal,
+    principalWithInterest,
     totalCollateralValueInLoanTokenTermsToDate,
+    allCollaterals,
     loanTimestamp: timestampHash[blockNumber],
     updateBlock: lastBlock,
   }));
@@ -246,17 +253,25 @@ const postProcessData = async ({
   };
 };
 
-const chunkRequestBalances = async balanceRequestArray => {
+const chunkRequestBalances = async (balanceRequestArray) => {
   const contract = getContract({
     abi,
     contractAddress: environment.blockchain.COMPOUND_ADDRESS,
   });
   const lastBlock = await getToBlock();
-  log.info(`About to start fetching balances for ${balanceRequestArray.length} accounts`);
+
+  log.debug({
+    message: `About to start fetching balances for ${balanceRequestArray.length} accounts`,
+  });
+
   const chunked = chunkArr(balanceRequestArray, 1000);
   return chunked.reduce(async (chunksAcc, chunkedArray) => {
     const newChunksAcc = await chunksAcc;
-    log.info(`Requesting balances for chunk of ${chunkedArray.length} accounts`);
+
+    log.debug({
+      message: `Requesting balances for chunk of ${chunkedArray.length} accounts`,
+    });
+
     const balancesMethods = chunkedArray.map(
       ({
         asset,
@@ -264,20 +279,20 @@ const chunkRequestBalances = async balanceRequestArray => {
       }) => contract.methods.getBorrowBalance(
         address,
         asset,
-      ).encodeABI()
+      ).encodeABI(),
     ).map(
       data => dataToCallMethod({
         data,
         contractAddress: contract.address,
-      })
+      }),
     );
     const batchRequester = web3.BatchRequest();
-    balancesMethods.forEach(method => {
+    balancesMethods.forEach((method) => {
       batchRequester.add(method);
     });
     const balancesPayload = await batchRequester.execute();
     const parsedPayload = balancesPayload.response.map(
-      unparsedBalance => web3.utils.toBN(unparsedBalance).toString()
+      unparsedBalance => web3.utils.toBN(unparsedBalance).toString(),
     );
     const compoundBalancesToSave = parsedPayload.map((balance, idx) => ({
       balance,
@@ -286,7 +301,11 @@ const chunkRequestBalances = async balanceRequestArray => {
       filterId: `${chunkedArray[idx].address}-${chunkedArray[idx].asset}`,
       updateBlockNumber: lastBlock,
     }));
-    log.info(`Saving balances for chunk of ${chunkedArray.length} accounts to db`);
+
+    log.debug({
+      message: `Saving balances for chunk of ${chunkedArray.length} accounts to db`,
+    });
+
     await CompoundBalances.insertMany(compoundBalancesToSave);
     return [
       ...newChunksAcc,
@@ -295,18 +314,18 @@ const chunkRequestBalances = async balanceRequestArray => {
   }, Promise.resolve([]));
 };
 
-const calculateAprAndCcrAndMapToTableData = async loansArr => {
+const calculateAprAndCcrAndMapToTableData = async (loansArr) => {
   const lastBlock = await getToBlock();
   const timestamps = await mapTimestampToEventsMapped(
     {
       getWeb3,
-    }
+    },
   )(
     [
       {
         blockNumber: lastBlock,
       },
-    ]
+    ],
   );
   const lastBlockTimestamp = timestamps[0].timestamp;
   const tokens = await getCacheAllTokens();
@@ -318,7 +337,7 @@ const calculateAprAndCcrAndMapToTableData = async loansArr => {
       const newAcc = await acc;
       const loanToken = tokens[loan.asset.toLowerCase()];
       let toReturn;
-      if (!!loanToken) {
+      if (loanToken) {
         const loanSymbol = loanToken.symbol;
         const principalTokenName = loanToken.name;
         const principal = bnToFloatStringWithFractionDecimals(
@@ -327,14 +346,17 @@ const calculateAprAndCcrAndMapToTableData = async loansArr => {
           4,
         );
 
-        const timestampEnd = !!loan.timestampEnd ? loan.timestampEnd : lastBlockTimestamp;
+        const timestampEnd = loan.timestampEnd ? loan.timestampEnd : lastBlockTimestamp;
         let apr;
         if (!loan.interest) {
-          log.info(`Failed to determine apr and interest for loan with asset ${
-            loan.asset
-          } and account ${
-            loan.account
-          }`);
+          log.error({
+            message: `Failed to determine apr and interest for loan with asset ${
+              loan.asset
+            } and account ${
+              loan.account
+            }`,
+          });
+
           apr = null;
         } else {
           apr = calculateLoanApr({
@@ -370,6 +392,10 @@ const calculateAprAndCcrAndMapToTableData = async loansArr => {
           3,
         );
 
+        const interestInBase = loan.interest || '0';
+        const collateralInBase = loan.totalCollateralValueInLoanTokenTermsToDate.toString();
+        const repaidInBase = loan.principalWithInterest.toString();
+
         const item = {
           principalTokenName,
           principalUsd,
@@ -377,25 +403,33 @@ const calculateAprAndCcrAndMapToTableData = async loansArr => {
           principal,
           repaidPercentage: loan.repaid,
           collateralSymbol: null,
-          loanTermSeconds: !!loan.timestampEnd ? loan.loanTimestamp - loan.timestampEnd : null,
+          loanTermSeconds: loan.timestampEnd ? loan.loanTimestamp - loan.timestampEnd : null,
           loanTimestamp: loan.loanTimestamp,
           ccr,
           apr,
           updateBlock: loan.updateBlock,
           platform: 'Compound Finance',
           transactionHash: loan.transactionHash,
+          interestInBase,
+          principalInBase: loan.principal,
+          repaidInBase,
+          collateralInBase,
+          allCollaterals: loan.allCollaterals,
         };
         toReturn = [
           ...newAcc,
           item,
         ];
       } else {
-        log.info(`Loan token ${loan.asset} not found. Bailing`);
+        log.error({
+          message: `Loan token ${loan.asset} not found. Bailing`,
+        });
+
         toReturn = newAcc;
       }
       return toReturn;
     },
-    []
+    [],
   );
 };
 
@@ -427,13 +461,13 @@ const getBlockTimestampsHashForBorrowAndRepayEvents = async ({
   return blockTimestampsHash;
 };
 
-const requestMissingBalancesAndPostProcess = async mappedLoans => {
+const requestMissingBalancesAndPostProcess = async (mappedLoans) => {
   const potentiallyRequestBalanceFor = mappedLoans.filter(
     (
       {
         needsBalanceRequest,
-      }
-    ) => !!needsBalanceRequest
+      },
+    ) => !!needsBalanceRequest,
   );
   const checkExistingBalanceIdentifiers = potentiallyRequestBalanceFor.reduce(
     (
@@ -441,7 +475,7 @@ const requestMissingBalancesAndPostProcess = async mappedLoans => {
       {
         account,
         asset,
-      }
+      },
     ) => {
       const id = `${account}-${asset}`;
       let toReturn;
@@ -452,7 +486,7 @@ const requestMissingBalancesAndPostProcess = async mappedLoans => {
       }
       return toReturn;
     },
-    []
+    [],
   );
 
   const existingBalancesHash = await getExistingBalancesHash(checkExistingBalanceIdentifiers);
@@ -478,7 +512,7 @@ const addCollateralDataToMappedLoans = ({
 }) => {
   // build supply events hash by account
   const supplyEventsAccountHash = {};
-  supplyAddedEvents.forEach(event => {
+  supplyAddedEvents.forEach((event) => {
     if (supplyEventsAccountHash[event.account]) {
       supplyEventsAccountHash[event.account] = [
         ...supplyEventsAccountHash[event.account],
@@ -496,13 +530,17 @@ const addCollateralDataToMappedLoans = ({
       loansAcc,
       loan,
     ) => {
+      const allCollaterals = [];
       const newLoansAcc = await loansAcc;
       const supplies = supplyEventsAccountHash[loan.account];
       const loanToken = tokensHash[loan.asset.toLowerCase()];
       const hashKey = `${loan.account}-${loan.asset}`;
       let totalCollateralValueInLoanTokenTermsToDate;
       if (!loanToken) {
-        log.info(`Unable to determine loanToken: ${loan.asset.toLowerCase()} for collateral value calculation`);
+        log.error({
+          message: `Unable to determine loanToken: ${loan.asset.toLowerCase()} for collateral value calculation`,
+        });
+
         totalCollateralValueInLoanTokenTermsToDate = new BN(0);
       } else if (assetAccountToTotalCollateralHash[hashKey]) {
         totalCollateralValueInLoanTokenTermsToDate = assetAccountToTotalCollateralHash[hashKey];
@@ -517,12 +555,15 @@ const addCollateralDataToMappedLoans = ({
               const supplyToken = tokensHash[supply.asset.toLowerCase()];
               let supplyContributionBN;
               if (!supplyToken) {
-                log.info(`Unable to determine token ${
-                  supply.asset.toLowerCase()
-                  // eslint-disable-next-line max-len
-                }. Supply provided in this token would not contribute to calculation of collateral for loan with txHash: ${
-                  loan.transactionHash
-                }`);
+                log.error({
+                  message: `Unable to determine token ${
+                    supply.asset.toLowerCase()
+                    // eslint-disable-next-line max-len
+                  }. Supply provided in this token would not contribute to calculation of collateral for loan with txHash: ${
+                    loan.transactionHash
+                  }`,
+                });
+
                 supplyContributionBN = new BN(0);
               } else {
                 const exchangeRate = await getCurrentConvertRate({
@@ -530,19 +571,25 @@ const addCollateralDataToMappedLoans = ({
                   convert: loanToken.symbol,
                 });
                 const exchangeRateBN = new BN(
-                  exchangeRate * RATE_PRECISION.toNumber()
+                  exchangeRate * RATE_PRECISION.toNumber(),
                 );
                 supplyContributionBN = exchangeRateBN.mul(
-                  new BN(supply.amount)
+                  new BN(supply.amount),
                 )
                   .div(RATE_PRECISION);
               }
+
+              allCollaterals.push({
+                token: supplyToken.symbol,
+                amount: supplyContributionBN.toString(),
+              });
               return newTotalAcc.add(supplyContributionBN);
             },
-            Promise.resolve(new BN(0))
+            Promise.resolve(new BN(0)),
           );
         assetAccountToTotalCollateralHash[hashKey] = totalCollateralValueInLoanTokenTermsToDate;
       }
+      loan.allCollaterals = allCollaterals;
       return [
         ...newLoansAcc,
         {
@@ -551,7 +598,7 @@ const addCollateralDataToMappedLoans = ({
         },
       ];
     },
-    Promise.resolve([])
+    Promise.resolve([]),
   );
 };
 
@@ -562,16 +609,16 @@ const reconstructLoansWithCumulativeParameters = async () => {
   const supplyAddedModel = modelConfig[supplyReceivedEventName];
 
   const borrowEventsCursor = await borrowTakenModel.aggregate([
-    { $sort: { blockNumber: 1 }},
+    { $sort: { blockNumber: 1 } },
   ]);
   const borrowEvents = await borrowEventsCursor.toArray();
 
   const borrowRepaidEventsCursor = await borrowRepaidModel.aggregate([
-    { $sort: { blockNumber: 1 }},
+    { $sort: { blockNumber: 1 } },
   ]);
   const borrowRepaidEvents = await borrowRepaidEventsCursor.toArray();
   const supplyAddedCursor = await supplyAddedModel.aggregate([
-    { $sort: { blockNumber: 1 }},
+    { $sort: { blockNumber: 1 } },
   ]);
   const supplyAddedEvents = await supplyAddedCursor.toArray();
 
@@ -609,18 +656,25 @@ const runCompound = async () => {
 
   const mappedLoans = await reconstructLoansWithCumulativeParameters();
 
-  log.info(`Initial iteration revealed ${mappedLoans.length} Compound loans`);
+  log.debug({
+    message: `Initial iteration revealed ${mappedLoans.length} Compound loans`,
+  });
 
   const {
     postProcessedData,
     compoundCurrentLastBlock,
   } = await requestMissingBalancesAndPostProcess(mappedLoans);
 
-  log.info(`Doing final calculations on ${postProcessedData.length} Compound loan records`);
+  log.debug({
+    message: `Doing final calculations on ${postProcessedData.length} Compound loan records`,
+  });
 
   const properFormatData = await calculateAprAndCcrAndMapToTableData(postProcessedData);
 
-  log.info(`Saving ${properFormatData.length} Compound loan records to db.`);
+  log.debug({
+    message: `Saving ${properFormatData.length} Compound loan records to db.`,
+  });
+
   await CompoundTableData.insertMany(properFormatData);
   await CompoundDataCurrentTimestamp.updateOne({
     name: lastBlockRecordName,

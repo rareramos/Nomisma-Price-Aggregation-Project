@@ -1,18 +1,18 @@
 import moment from 'moment';
 
-const parseLoanTerm = item => {
+const parseLoanTerm = (item) => {
   // Loan Term
-  let loanTerm = item.loanTerm + ':';
+  let loanTerm = `${item.loanTerm}:`;
   loanTerm = loanTerm.split(':');
-  if (loanTerm[ 0 ] === '00') {
-    loanTerm[ 0 ] = 'open-ended';
+  if (loanTerm[0] === '00') {
+    loanTerm[0] = 'open-ended';
   } else {
-    loanTerm[ 0 ] = loanTerm[ 0 ] + ' days';
+    loanTerm[0] += ' days';
   }
   return loanTerm[0];
 };
 
-const parseCcr = item => `${Math.round((item.collateralTokens[ 0 ].usdAmount / item.totalAmount) * 100)}`;
+const parseCcr = item => `${Math.round((item.collateralTokens[0].usdAmount / item.totalAmount) * 100)}`;
 
 export const serialiseLoanScanResponse = payload => ({
   meta: payload.totalCount,
@@ -31,7 +31,7 @@ export const serialiseLoanScanResponse = payload => ({
   })),
 });
 
-const parseOwnLoanTerm = loanTermInSeconds => {
+const parseOwnLoanTerm = (loanTermInSeconds) => {
   let toReturn;
   if (!loanTermInSeconds) {
     toReturn = 'open-ended';
@@ -47,8 +47,8 @@ export const serialiseOwnResponse = payload => ({
     ...item,
     loanStatus: parseFloat(item.repaidPercentage) === 100 ? 'Repaid' : 'Current',
     loanTerm: parseOwnLoanTerm(item.loanTermSeconds),
-    ccr: !!item.ccr ? item.ccr : 'N/A',
-    repaidPercentage: !!item.repaidPercentage ? item.repaidPercentage : '0',
+    ccr: item.ccr ? item.ccr : 'N/A',
+    repaidPercentage: item.repaidPercentage ? item.repaidPercentage : '0',
     transactionHash: item.transactionHash,
   })),
 });

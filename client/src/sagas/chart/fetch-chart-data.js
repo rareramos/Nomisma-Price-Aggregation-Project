@@ -26,4 +26,3 @@ function* fetchChartData({ data: { protocol, value } }) {
 export function* fetchChartSaga() {
   yield takeEvery(CHART_FETCH, fetchChartData);
 }
-

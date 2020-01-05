@@ -13,8 +13,7 @@ export const getCacheAllTokens = async () => {
       ...acc,
       [item.address.toLowerCase()]: item,
     }),
-    {}
-    );
+    {});
   }
   return allTokens;
 };

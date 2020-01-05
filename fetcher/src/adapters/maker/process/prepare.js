@@ -40,7 +40,7 @@ const daiToRepayBalanceFuncName = 'tab';
  */
 const mrkToRepayBalanceFuncName = 'rap';
 
-const getValidExistingBalancesForCups = async cups => {
+const getValidExistingBalancesForCups = async (cups) => {
   const lastBlock = await getToBlock();
   const existingBalances = await MakerOutstandingBalances.find({
     cup: {
@@ -50,7 +50,11 @@ const getValidExistingBalancesForCups = async cups => {
       $gt: lastBlock - parseInt(blockchain.BALANCES_UPDATE_BLOCK_INTERVAL, 10),
     },
   });
-  log.info(`Found ${existingBalances.length} valid balances to reuse`);
+
+  log.debug({
+    message: `Found ${existingBalances.length} valid balances to reuse`,
+  });
+
   return existingBalances;
 };
 
@@ -61,24 +65,24 @@ const getMissingOutstandingBalancesForCups = async ({
   const web3 = getWeb3();
   const methods = missingBalancesCups.map(
     cup => contract.methods[daiToRepayBalanceFuncName](cup)
-      .encodeABI()
+      .encodeABI(),
   )
     .map(
       data => dataToCallMethod(
         {
           data,
           contractAddress: contract.address,
-        }
-      )
+        },
+      ),
     );
   const lastBlock = await getToBlock();
   const batchRequester = web3.BatchRequest();
-  methods.forEach(method => {
+  methods.forEach((method) => {
     batchRequester.add(method);
   });
   const balancesPayload = await batchRequester.execute();
   const parsedPayload = balancesPayload.response.map(
-    unparsedBalance => web3.utils.toBN(unparsedBalance).toString()
+    unparsedBalance => web3.utils.toBN(unparsedBalance).toString(),
   );
   const resultPayload = parsedPayload.map((balance, idx) => ({
     balance,
@@ -86,16 +90,19 @@ const getMissingOutstandingBalancesForCups = async ({
     updateBlockNumber: lastBlock,
   }));
   if (resultPayload.length) {
-    log.info(`Writting ${resultPayload.length} maker balances records in the database`);
+    log.debug({
+      message: `Writting ${resultPayload.length} maker balances records in the database`,
+    });
+
     await MakerOutstandingBalances.insertMany(resultPayload);
   }
   return resultPayload;
 };
 
-export const mapCupsToOutstandingBalances = async cups => {
+export const mapCupsToOutstandingBalances = async (cups) => {
   const existingBalances = await getValidExistingBalancesForCups(cups);
   const existingBalancesHash = {};
-  existingBalances.forEach(balance => {
+  existingBalances.forEach((balance) => {
     existingBalancesHash[balance.cup] = balance.balance;
   });
   const missingBalances = cups.filter(cup => !existingBalancesHash[cup]);
@@ -103,11 +110,11 @@ export const mapCupsToOutstandingBalances = async cups => {
     missingBalancesCups: missingBalances,
   });
   const missingBalancesRetrievedHash = {};
-  missingBalancesRetrieved.forEach(item => {
+  missingBalancesRetrieved.forEach((item) => {
     missingBalancesRetrievedHash[item.cup] = item.balance;
   });
   const cupsToBalancesHash = {};
-  cups.forEach(cup => {
+  cups.forEach((cup) => {
     if (existingBalancesHash[cup]) {
       cupsToBalancesHash[cup] = existingBalancesHash[cup];
     } else {
@@ -117,34 +124,34 @@ export const mapCupsToOutstandingBalances = async cups => {
   return cupsToBalancesHash;
 };
 
-const getCupsToLookForFeesArr = fullHash => {
+const getCupsToLookForFeesArr = (fullHash) => {
   const web3 = getWeb3();
-  const BN = web3.utils.BN;
+  const { BN } = web3.utils;
   return Object.entries(fullHash).filter(
     (
-      [
-        ,
+      [,
         {
           balance,
         },
-      ]
+      ],
     ) => {
       let toReturn = false;
       if (!new BN(balance).eq(new BN(0))) {
         toReturn = true;
       }
       return toReturn;
-    })
+    },
+  )
     .map(
       (
         [
           cup,
-        ]
-      ) => cup
+        ],
+      ) => cup,
     );
 };
 
-const lookForExistingFeeRecordsForCups = async cups => {
+const lookForExistingFeeRecordsForCups = async (cups) => {
   const lastBlock = await getToBlock();
   // get timestamp for last block
   await chunkedEventsReducerFactory(
@@ -153,7 +160,7 @@ const lookForExistingFeeRecordsForCups = async cups => {
       {
         blockNumber: lastBlock,
       },
-    ]
+    ],
   );
   const timestampArr = await BlockTimestamp.find({
     blockNumber: lastBlock,
@@ -168,7 +175,7 @@ const lookForExistingFeeRecordsForCups = async cups => {
     },
   });
   const existingCupsHash = {};
-  existingFeeRecords.forEach(feeRecord => {
+  existingFeeRecords.forEach((feeRecord) => {
     existingCupsHash[feeRecord.cup] = true;
   });
   const existingFeeRecordsHash = {};
@@ -189,27 +196,33 @@ const fetchSaveMissingFeeRecordsForCups = async ({
 }) => {
   const web3 = getWeb3();
   const contract = getSaiTubContract();
-  const methods = cups.map(cup =>
-    dataToCallMethod({
-      data: contract.methods[mrkToRepayBalanceFuncName](cup).encodeABI(),
-      contractAddress: contract.address,
-    })
-  );
+  const methods = cups.map(cup => dataToCallMethod({
+    data: contract.methods[mrkToRepayBalanceFuncName](cup).encodeABI(),
+    contractAddress: contract.address,
+  }));
   const batchRequester = web3.BatchRequest();
-  methods.forEach(method => {
+  methods.forEach((method) => {
     batchRequester.add(method);
   });
-  log.info(`About to request fee balances for ${cups.length} cups`);
+
+  log.debug({
+    message: `About to request fee balances for ${cups.length} cups`,
+  });
+
   const balancesPayload = await batchRequester.execute();
   const parsedBalances = balancesPayload.response.map(
-    unparsedBalance => web3.utils.toBN(unparsedBalance).toString()
+    unparsedBalance => web3.utils.toBN(unparsedBalance).toString(),
   );
   const balanceObjects = parsedBalances.map((balance, idx) => ({
     balance,
     cup: cups[idx],
     updateBlockNumber: lastBlock,
   }));
-  log.info(`Writting ${balanceObjects.length} missing fee balance records into db`);
+
+  log.debug({
+    message: `Writting ${balanceObjects.length} missing fee balance records into db`,
+  });
+
   MakerOutstandingFees.insertMany(balanceObjects);
   const balancesHash = {};
   balanceObjects.forEach((balaceObj) => {
@@ -238,7 +251,7 @@ const fetchSaveMissingFeeRecordsForCups = async ({
  * @param fullHash
  * @returns {Promise<updatedHash>}
  */
-export const mapHashToOutstandingInterestFees = async fullHash => {
+export const mapHashToOutstandingInterestFees = async (fullHash) => {
   const lookForCupsFeesArr = getCupsToLookForFeesArr(fullHash);
   const {
     existingFeeRecordsHash,
@@ -257,14 +270,14 @@ export const mapHashToOutstandingInterestFees = async fullHash => {
   }
 
   const web3 = getWeb3();
-  const BN = web3.utils.BN;
+  const { BN } = web3.utils;
   Object.keys(fullHash).forEach((cup) => {
-    const balance = fullHash[cup].balance;
+    const { balance } = fullHash[cup];
     if (new BN(balance).eq(new BN(0))) {
-      const wipes = fullHash[cup].wipes;
+      const { wipes } = fullHash[cup];
       let lastBlockTimestampForWipe = 0;
       if (wipes.length) {
-        wipes.forEach(wipe => {
+        wipes.forEach((wipe) => {
           if (wipe.timestamp > lastBlockTimestampForWipe) {
             lastBlockTimestampForWipe = wipe.timestamp;
           }
@@ -274,10 +287,10 @@ export const mapHashToOutstandingInterestFees = async fullHash => {
       }
       fullHash[cup].timestampEnd = lastBlockTimestampForWipe;
       fullHash[cup].outstandingFee = '0';
-    } else if (!!existingFeeRecordsHash[cup]) {
+    } else if (existingFeeRecordsHash[cup]) {
       fullHash[cup].timestampEnd = lastBlockTimestamp;
       fullHash[cup].outstandingFee = existingFeeRecordsHash[cup].balance;
-    } else if (!!loadedFeeRecordsHash[cup]) {
+    } else if (loadedFeeRecordsHash[cup]) {
       fullHash[cup].timestampEnd = lastBlockTimestamp;
       fullHash[cup].outstandingFee = loadedFeeRecordsHash[cup].balance;
     } else {
@@ -323,17 +336,17 @@ export const buildCollateralizationHash = ({
   cupsToLocksHash,
 }) => {
   const collateralizationHash = {};
-  cups.forEach(cup => {
+  cups.forEach((cup) => {
     // we ignore plain collateralization without draws here
     if (!collateralizationHash[cup] && cupsToDrawsHash[cup]) {
       collateralizationHash[cup] = [];
     }
     if (cupsToDrawsHash[cup]) {
-      cupsToDrawsHash[cup].forEach(draw => {
+      cupsToDrawsHash[cup].forEach((draw) => {
         const locksForDraw = !cupsToLocksHash[cup]
           ? []
           : cupsToLocksHash[cup].filter(
-            lock => lock.blockNumber <= draw.blockNumber
+            lock => lock.blockNumber <= draw.blockNumber,
           );
         collateralizationHash[cup] = [
           ...collateralizationHash[cup],
@@ -348,17 +361,17 @@ export const buildCollateralizationHash = ({
   return collateralizationHash;
 };
 
-const mapSigsEventToHash = (eventName) => async cups => {
+const mapSigsEventToHash = eventName => async (cups) => {
   setCurrentRunnerModelsConfig(
     makerSigsModelConfig,
   );
   const modelConfig = getCurrentRunnerModelConfig();
   const model = modelConfig[eventName];
-  const items = await model.find({ cup: { $in: cups }});
+  const items = await model.find({ cup: { $in: cups } });
   const existingBlockNumbers = {};
   const blockNumbers = items
     .map(({ blockNumber }) => blockNumber)
-    .filter(blockNum => {
+    .filter((blockNum) => {
       let toReturn = false;
       if (!existingBlockNumbers[blockNum]) {
         existingBlockNumbers[blockNum] = true;
@@ -377,7 +390,7 @@ const mapSigsEventToHash = (eventName) => async cups => {
   }
 
   const cupToEventsHash = {};
-  items.forEach(item => {
+  items.forEach((item) => {
     if (cupToEventsHash[item.cup]) {
       cupToEventsHash[item.cup] = [
         ...cupToEventsHash[item.cup],
@@ -404,52 +417,51 @@ export const mapCupsToLockHash = mapSigsEventToHash(makerLockEventName);
 
 const mapCupsToWipesHash = mapSigsEventToHash(makerWipeEventName);
 
-const cupsToWipesHashToCupsToFeesHash = async cupsToWipesHash => {
+const cupsToWipesHashToCupsToFeesHash = async (cupsToWipesHash) => {
   const duplicatesHash = {};
   const transactionHashes = Object.values(cupsToWipesHash)
     .reduce(
       (
         acc,
         wipesArr,
-      ) =>
-        [...acc, ...wipesArr],
-      []
+      ) => [...acc, ...wipesArr],
+      [],
     )
     .map(
       (
         {
           transactionHash,
-        }
-      ) => transactionHash
+        },
+      ) => transactionHash,
     )
     .filter(
-      txHash => {
+      (txHash) => {
         let toReturn = false;
         if (!duplicatesHash[txHash]) {
           duplicatesHash[txHash] = true;
           toReturn = true;
         }
         return toReturn;
-      }
+      },
     );
   const fees = await MakerWipeGovTransfers.find({
     transactionHash: { $in: transactionHashes },
   });
   const txHashTofeesHash = {};
-  fees.forEach(fee => {
+  fees.forEach((fee) => {
     txHashTofeesHash[fee.transactionHash] = fee;
   });
   const cupsToFeesHash = {};
-  Object.keys(cupsToWipesHash).forEach(cup => {
+  Object.keys(cupsToWipesHash).forEach((cup) => {
     const perCupTxHashes = [];
     const duplicatePerCupTxHashes = {};
-    cupsToWipesHash[cup].forEach(wipe => {
+    cupsToWipesHash[cup].forEach((wipe) => {
       if (!duplicatePerCupTxHashes[wipe.transactionHash]) {
         duplicatePerCupTxHashes[wipe.transactionHash] = true;
         perCupTxHashes.push(wipe.transactionHash);
       }
     });
-    perCupTxHashes.forEach(txHash => {
+    perCupTxHashes.forEach((txHash) => {
       if (!cupsToFeesHash[cup]) {
         cupsToFeesHash[cup] = [];
       }
@@ -470,14 +482,13 @@ export const combineDrawLockAndBalanceWithWipe = async ({
   const cupsToWipesHash = await mapCupsToWipesHash(cups);
   const cupsToFeesHash = await cupsToWipesHashToCupsToFeesHash(cupsToWipesHash);
   const fullHash = {};
-  cups.forEach(cup => {
+  cups.forEach((cup) => {
     fullHash[cup] = {
-      wipes: !!cupsToWipesHash[cup] ? cupsToWipesHash[cup] : [],
+      wipes: cupsToWipesHash[cup] ? cupsToWipesHash[cup] : [],
       draws: collateralisationHash[cup],
       balance: cupsOutstandingBalances[cup],
-      fees: !!cupsToFeesHash[cup] ? cupsToFeesHash[cup] : [],
+      fees: cupsToFeesHash[cup] ? cupsToFeesHash[cup] : [],
     };
   });
   return fullHash;
 };
-

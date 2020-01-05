@@ -1,0 +1,7 @@
+base_url: https://www.okex.com/future/swap
+perpetual_contracts_url: https://www.okex.com/v2/perpetual/pc/public/contracts/tickers
+future_contracts_url: https://www.okex.com/v2/futures/pc/queryInfo/contractInfo.do
+trading_fees_url: https://www.okex.com/pages/products/fees.html
+delays:
+    swap_overview: 10
+    trading_fee: 30

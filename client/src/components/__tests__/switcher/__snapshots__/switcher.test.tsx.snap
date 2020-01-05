@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switcher test matches switcher component snapshot 1`] = `
+<styled.div>
+  <styled.ul
+    selected={1}
+    setActiveTab={[Function]}
+  >
+    <styled.li
+      key="0"
+      onClick={[Function]}
+      selected={true}
+    />
+    <styled.li
+      key="1"
+      onClick={[Function]}
+      selected={false}
+    />
+    <styled.li
+      key="2"
+      onClick={[Function]}
+      selected={false}
+    />
+  </styled.ul>
+</styled.div>
+`;

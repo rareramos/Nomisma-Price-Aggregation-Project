@@ -3,7 +3,7 @@ import { defaultPeriodValue } from '../../utils/chart';
 
 const initialState = defaultPeriodValue;
 
-const periodReducer = (state = initialState, action) => {
+export const periodReducer = (state = initialState, action) => {
   switch (action.type) {
     case types.CHART_PERIOD_SAVE:
       return action.data;
@@ -11,5 +11,3 @@ const periodReducer = (state = initialState, action) => {
       return state;
   }
 };
-
-export default periodReducer;
