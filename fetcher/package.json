@@ -1,0 +1,40 @@
+{
+  "name": "fetcher",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compound-fetch": "node ./src/cli/index.js compound-fetch",
+    "compound-process": "node ./src/cli/index.js compound-process",
+    "dharma-fetch": "node ./src/cli/index.js dharma-fetch",
+    "dharma-process": "node ./src/cli/index.js dharma-process",
+    "timestamp-fetch": "node ./src/cli/index.js timestamp-fetch",
+    "simple-pipeline": "node ./src/cli/index.js simple-pipeline",
+    "dharma-clean": "node ./src/cli/index dharma-clean",
+    "compound-clean": "node ./src/cli/index compound-clean",
+    "lint": "eslint ./src",
+    "test:mocha": "NODE_ENV=test mocha --recursive --require ./test/global.js --timeout 800000 --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/polyfill": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/register": "^7.4.0",
+    "@nomisma/nomisma-contracts-sdk": "0.4.6-dev.3",
+    "@nomisma/nomisma-database": "2.2.1-dev.5",
+    "babel-eslint": "^10.0.1",
+    "environment-secrets": "^0.0.3",
+    "eslint": "^5.16.0",
+    "eslint-plugin-import": "^2.17.1",
+    "ethers": "^4.0.27",
+    "mocha": "^6.1.4",
+    "mongodb": "^3.2.3",
+    "node-fetch": "^2.4.1",
+    "nomisma-smart-contract-helpers": "git+ssh://git@github.com/NomismaTech/nomisma-smart-contract-helpers.git#0.0.21",
+    "price-aggregation-db": "file:../db",
+    "web3": "1.0.0-beta.55"
+  }
+}
