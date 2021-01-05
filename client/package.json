@@ -41,7 +41,7 @@
   "dependencies": {
     "@nomisma/nomisma-ui": "^0.2.9-dev.133",
     "@nomisma/utils": "^0.1.0-dev.6",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "bootstrap": "^4.3.1",
     "environment-secrets": "^0.0.3",
     "lodash": "^4.17.11",
